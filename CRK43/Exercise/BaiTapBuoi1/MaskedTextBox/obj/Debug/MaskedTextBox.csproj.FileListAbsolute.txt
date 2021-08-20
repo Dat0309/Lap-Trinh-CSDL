@@ -1,0 +1,9 @@
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\MaskedTextBox\bin\Debug\MaskedTextBox.exe.config
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\MaskedTextBox\bin\Debug\MaskedTextBox.exe
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\MaskedTextBox\bin\Debug\MaskedTextBox.pdb
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\MaskedTextBox\obj\Debug\MaskedTextBox.Masked_text_box.resources
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\MaskedTextBox\obj\Debug\MaskedTextBox.Properties.Resources.resources
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\MaskedTextBox\obj\Debug\MaskedTextBox.csproj.GenerateResource.cache
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\MaskedTextBox\obj\Debug\MaskedTextBox.csproj.CoreCompileInputs.cache
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\MaskedTextBox\obj\Debug\MaskedTextBox.exe
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\MaskedTextBox\obj\Debug\MaskedTextBox.pdb

@@ -1,0 +1,10 @@
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\BaiTapBuoi1\bin\Debug\BaiTapBuoi1.exe.config
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\BaiTapBuoi1\bin\Debug\BaiTapBuoi1.exe
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\BaiTapBuoi1\bin\Debug\BaiTapBuoi1.pdb
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\BaiTapBuoi1\obj\Debug\BaiTapBuoi1.csproj.AssemblyReference.cache
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\BaiTapBuoi1\obj\Debug\BaiTapBuoi1.LinkLb.resources
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\BaiTapBuoi1\obj\Debug\BaiTapBuoi1.Properties.Resources.resources
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\BaiTapBuoi1\obj\Debug\BaiTapBuoi1.csproj.GenerateResource.cache
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\BaiTapBuoi1\obj\Debug\BaiTapBuoi1.csproj.CoreCompileInputs.cache
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\BaiTapBuoi1\obj\Debug\BaiTapBuoi1.exe
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\BaiTapBuoi1\obj\Debug\BaiTapBuoi1.pdb

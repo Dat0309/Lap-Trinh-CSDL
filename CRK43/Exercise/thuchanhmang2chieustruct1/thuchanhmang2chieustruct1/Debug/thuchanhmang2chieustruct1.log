@@ -1,0 +1,3 @@
+﻿  Source.cpp
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\thuchanhmang2chieustruct1\thuchanhmang2chieustruct1\Source.cpp(89,13): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  thuchanhmang2chieustruct1.vcxproj -> D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\thuchanhmang2chieustruct1\Debug\thuchanhmang2chieustruct1.exe
