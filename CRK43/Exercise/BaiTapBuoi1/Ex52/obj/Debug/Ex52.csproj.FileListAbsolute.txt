@@ -7,3 +7,4 @@ D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\Ex52\obj\Debug\Ex52.csproj.Gen
 D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\Ex52\obj\Debug\Ex52.csproj.CoreCompileInputs.cache
 D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\Ex52\obj\Debug\Ex52.exe
 D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\Ex52\obj\Debug\Ex52.pdb
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\Ex52\obj\Debug\Ex52.csproj.AssemblyReference.cache
