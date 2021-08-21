@@ -1,0 +1,5 @@
+﻿  Source.cpp
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\string1\string1\Source.cpp(28,4): error C3861: 'NhapChuoi': identifier not found
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\string1\string1\Source.cpp(34,4): error C3861: 'XuatChuoi': identifier not found
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\string1\string1\Source.cpp(66,7): error C2660: 'Menu': function does not take 0 arguments
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\string1\string1\Source.cpp(8,6): message : see declaration of 'Menu'
