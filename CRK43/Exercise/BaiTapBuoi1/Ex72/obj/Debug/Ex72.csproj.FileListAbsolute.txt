@@ -1,0 +1,10 @@
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\Ex72\bin\Debug\Ex72.exe.config
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\Ex72\bin\Debug\Ex72.exe
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\Ex72\bin\Debug\Ex72.pdb
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\Ex72\obj\Debug\Ex72.csproj.AssemblyReference.cache
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\Ex72\obj\Debug\Ex72.DemoTabPage.resources
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\Ex72\obj\Debug\Ex72.Properties.Resources.resources
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\Ex72\obj\Debug\Ex72.csproj.GenerateResource.cache
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\Ex72\obj\Debug\Ex72.csproj.CoreCompileInputs.cache
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\Ex72\obj\Debug\Ex72.exe
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\Ex72\obj\Debug\Ex72.pdb

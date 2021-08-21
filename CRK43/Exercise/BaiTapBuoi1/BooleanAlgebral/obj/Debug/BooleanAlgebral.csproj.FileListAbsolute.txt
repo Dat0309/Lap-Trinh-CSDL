@@ -1,0 +1,10 @@
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\BooleanAlgebral\bin\Debug\BooleanAlgebral.exe.config
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\BooleanAlgebral\bin\Debug\BooleanAlgebral.exe
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\BooleanAlgebral\bin\Debug\BooleanAlgebral.pdb
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\BooleanAlgebral\obj\Debug\BooleanAlgebral.csproj.AssemblyReference.cache
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\BooleanAlgebral\obj\Debug\BooleanAlgebral.Form1.resources
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\BooleanAlgebral\obj\Debug\BooleanAlgebral.Properties.Resources.resources
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\BooleanAlgebral\obj\Debug\BooleanAlgebral.csproj.GenerateResource.cache
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\BooleanAlgebral\obj\Debug\BooleanAlgebral.csproj.CoreCompileInputs.cache
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\BooleanAlgebral\obj\Debug\BooleanAlgebral.exe
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\BooleanAlgebral\obj\Debug\BooleanAlgebral.pdb

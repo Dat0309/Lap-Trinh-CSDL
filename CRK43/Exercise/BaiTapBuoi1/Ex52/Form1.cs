@@ -44,5 +44,10 @@ namespace Ex52
                 i--;
             }
         }
+
+        private void listSinhVien_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

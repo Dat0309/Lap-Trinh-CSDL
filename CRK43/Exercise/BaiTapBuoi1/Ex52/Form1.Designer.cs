@@ -66,6 +66,7 @@ namespace Ex52
             this.listSinhVien.Name = "listSinhVien";
             this.listSinhVien.Size = new System.Drawing.Size(249, 284);
             this.listSinhVien.TabIndex = 2;
+            this.listSinhVien.SelectedIndexChanged += new System.EventHandler(this.listSinhVien_SelectedIndexChanged);
             // 
             // listDanhSach
             // 

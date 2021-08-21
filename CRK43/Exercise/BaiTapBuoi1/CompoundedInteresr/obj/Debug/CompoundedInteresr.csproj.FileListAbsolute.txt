@@ -1,0 +1,10 @@
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\CompoundedInteresr\bin\Debug\CompoundedInteresr.exe.config
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\CompoundedInteresr\bin\Debug\CompoundedInteresr.exe
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\CompoundedInteresr\bin\Debug\CompoundedInteresr.pdb
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\CompoundedInteresr\obj\Debug\CompoundedInteresr.csproj.AssemblyReference.cache
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\CompoundedInteresr\obj\Debug\CompoundedInteresr.Form1.resources
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\CompoundedInteresr\obj\Debug\CompoundedInteresr.Properties.Resources.resources
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\CompoundedInteresr\obj\Debug\CompoundedInteresr.csproj.GenerateResource.cache
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\CompoundedInteresr\obj\Debug\CompoundedInteresr.csproj.CoreCompileInputs.cache
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\CompoundedInteresr\obj\Debug\CompoundedInteresr.exe
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\BaiTapBuoi1\CompoundedInteresr\obj\Debug\CompoundedInteresr.pdb
