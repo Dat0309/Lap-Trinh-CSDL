@@ -20,7 +20,8 @@ namespace MaskedTextBox
         private void button1_Click(object sender, EventArgs e)
         {
             string date = maskedTextBox1.Text;
-            MessageBox.Show(date);
+            string phone = maskedTextBox2.Text;
+            MessageBox.Show(date + phone);
         }
     }
 }
