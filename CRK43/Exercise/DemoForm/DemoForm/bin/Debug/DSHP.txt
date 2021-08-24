@@ -1,0 +1,24 @@
+﻿CT3113D,An toàn và bảo mật hệ thống,3,1,2
+CT4215D,Công nghệ phần mềm,3,1,3
+CT2105D,Cấu trúc dữ liệu và thuật giải 1,3,1,1
+CT3116D,Đồ án cơ sở,3,1,3
+CT4218D,Hệ quản trị CSDL,3,0,4
+CT4205D,Hệ thống mạng không dây,3,0,3
+CT3111D,Lập trình CSDL,4,1,3
+CT3234D,Lập trình Java nâng cao,3,0,3
+CT3124D,Lập trình hướng đối tượng,3,1,2
+CT4213D,Lâp trình Java,3,1,2
+CT2135D,Cơ sở dữ liệu,3,1,2
+CT3113D,Phát triển ứng dụng mã nguồn mở,3,1,4
+CT4232D,Trí tuệ nhân tạo,3,0,4
+CT4543D,Ảo thuật 1,3,0,3
+CT3765D,Ảo thuật 2,4,1,3
+CT3876D,Phát triển ứng dụng di động,3,1,3
+CT2134D,Thiết kế web,3,1,2
+CT2657D,Lâp trình C-Sharp,3,1,2
+CT2135D,Toán rời rạc,3,1,2
+CT4789D,Các phương pháp học máy,3,1,4
+CT4987D,Tư tưởng HCM,3,0,4
+CT3476D,Ảo thuật 3,3,0,3
+CT3789D,Ảo thuật 4,4,1,3
+CT3876D,Phát triển ứng dụng web,3,1,3

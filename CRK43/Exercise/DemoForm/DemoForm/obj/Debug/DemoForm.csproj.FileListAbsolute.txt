@@ -1,0 +1,10 @@
+C:\Users\ADMIN\source\repos\DemoForm\DemoForm\bin\Debug\DemoForm.exe.config
+C:\Users\ADMIN\source\repos\DemoForm\DemoForm\bin\Debug\DemoForm.exe
+C:\Users\ADMIN\source\repos\DemoForm\DemoForm\bin\Debug\DemoForm.pdb
+C:\Users\ADMIN\source\repos\DemoForm\DemoForm\obj\Debug\DemoForm.csproj.AssemblyReference.cache
+C:\Users\ADMIN\source\repos\DemoForm\DemoForm\obj\Debug\DemoForm.Form1.resources
+C:\Users\ADMIN\source\repos\DemoForm\DemoForm\obj\Debug\DemoForm.Properties.Resources.resources
+C:\Users\ADMIN\source\repos\DemoForm\DemoForm\obj\Debug\DemoForm.csproj.GenerateResource.cache
+C:\Users\ADMIN\source\repos\DemoForm\DemoForm\obj\Debug\DemoForm.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\source\repos\DemoForm\DemoForm\obj\Debug\DemoForm.exe
+C:\Users\ADMIN\source\repos\DemoForm\DemoForm\obj\Debug\DemoForm.pdb
