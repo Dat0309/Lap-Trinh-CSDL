@@ -8,3 +8,14 @@ C:\Users\ADMIN\source\repos\DemoForm\DemoForm\obj\Debug\DemoForm.csproj.Generate
 C:\Users\ADMIN\source\repos\DemoForm\DemoForm\obj\Debug\DemoForm.csproj.CoreCompileInputs.cache
 C:\Users\ADMIN\source\repos\DemoForm\DemoForm\obj\Debug\DemoForm.exe
 C:\Users\ADMIN\source\repos\DemoForm\DemoForm\obj\Debug\DemoForm.pdb
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\DemoForm\DemoForm\bin\Debug\DemoForm.exe.config
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\DemoForm\DemoForm\bin\Debug\DemoForm.exe
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\DemoForm\DemoForm\bin\Debug\DemoForm.pdb
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\DemoForm\DemoForm\obj\Debug\DemoForm.csproj.AssemblyReference.cache
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\DemoForm\DemoForm\obj\Debug\DemoForm.Form1.resources
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\DemoForm\DemoForm\obj\Debug\DemoForm.Properties.Resources.resources
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\DemoForm\DemoForm\obj\Debug\DemoForm.csproj.GenerateResource.cache
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\DemoForm\DemoForm\obj\Debug\DemoForm.csproj.CoreCompileInputs.cache
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\DemoForm\DemoForm\obj\Debug\DemoForm.exe
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\DemoForm\DemoForm\obj\Debug\DemoForm.pdb
+D:\NAM3\Lap-Trinh-CSDL\CRK43\Exercise\DemoForm\DemoForm\obj\Debug\DemoForm.frmKetQuaDangKy.resources

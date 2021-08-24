@@ -14,6 +14,8 @@ namespace DemoForm
     public partial class Form1 : Form
     {
         private List<MonHoc> listHocPhan;
+        frmKetQuaDangKy kq = new frmKetQuaDangKy();
+
         public Form1()
         {
             InitializeComponent();
@@ -82,19 +84,42 @@ namespace DemoForm
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            int itemSelect = lvDanhSach.SelectedItems.Count - 1;
-            for(int i = itemSelect; i >= 0; i--)
+            try
             {
-                lvKetQua.Items.Add(lvDanhSach.SelectedItems[i]);
+                var itemSelect = lvDanhSach.SelectedIndices;
+                    foreach (int item in itemSelect)
+                    {
+                        ListViewItem items = new ListViewItem(listHocPhan[item].MaHP.ToString());
+                        items.SubItems.Add(listHocPhan[item].TenHP);
+                        items.SubItems.Add(listHocPhan[item].LoaiHP == 0 ? "Tự chọn" : "Bắt buộc");
+                        items.SubItems.Add(listHocPhan[item].STC.ToString());
+                        items.SubItems.Add($"Năm {listHocPhan[item].Nam}");
+
+                        lvKetQua.Items.Add(items);
+                    }
+            }
+            catch
+            {
+                //var listCheckedItem = lvDanhSach.CheckedIndices;
+                //foreach (int item in listCheckedItem)
+                //{
+                //    ListViewItem items = new ListViewItem(listHocPhan[item].MaHP.ToString());
+                //    items.SubItems.Add(listHocPhan[item].TenHP);
+                //    items.SubItems.Add(listHocPhan[item].LoaiHP == 0 ? "Tự chọn" : "Bắt buộc");
+                //    items.SubItems.Add(listHocPhan[item].STC.ToString());
+                //    items.SubItems.Add($"Năm {listHocPhan[item].Nam}");
+
+                //    lvKetQua.Items.Add(items);
+                //}
             }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int i = lvDanhSach.SelectedItems.Count - 1;
-            while (i >= 0)
+            int i = lvKetQua.SelectedItems.Count - 1;
+            while(i >= 0)
             {
-                lvDanhSach.Items.RemoveAt(lvDanhSach.SelectedIndices[i]);
+                lvKetQua.Items.RemoveAt(lvKetQua.SelectedIndices[i]);
                 i--;
             }
         }
@@ -104,9 +129,53 @@ namespace DemoForm
             this.Close();
         }
 
-        private void btnXuat_Click(object sender, EventArgs e)
-        {
 
+        private void tsmiDangKy_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var itemSelect = lvDanhSach.SelectedIndices;
+                foreach (int item in itemSelect)
+                {
+                    ListViewItem items = new ListViewItem(listHocPhan[item].MaHP.ToString());
+                    items.SubItems.Add(listHocPhan[item].TenHP);
+                    items.SubItems.Add(listHocPhan[item].LoaiHP == 0 ? "Tự chọn" : "Bắt buộc");
+                    items.SubItems.Add(listHocPhan[item].STC.ToString());
+                    items.SubItems.Add($"Năm {listHocPhan[item].Nam}");
+
+                    lvKetQua.Items.Add(items);
+                }
+            }
+            catch {
+                //var listCheckedItem = lvDanhSach.CheckedIndices;
+                //foreach (int item in listCheckedItem)
+                //{
+                //    ListViewItem items = new ListViewItem(listHocPhan[item].MaHP.ToString());
+                //    items.SubItems.Add(listHocPhan[item].TenHP);
+                //    items.SubItems.Add(listHocPhan[item].LoaiHP == 0 ? "Tự chọn" : "Bắt buộc");
+                //    items.SubItems.Add(listHocPhan[item].STC.ToString());
+                //    items.SubItems.Add($"Năm {listHocPhan[item].Nam}");
+
+                //    lvKetQua.Items.Add(items);
+                //}
+            }
+        }
+
+        private void tsmiXoa_Click(object sender, EventArgs e)
+        {
+            int i = lvKetQua.SelectedItems.Count - 1;
+            while (i >= 0)
+            {
+                lvKetQua.Items.RemoveAt(lvKetQua.SelectedIndices[i]);
+                i--;
+            }
+        }
+
+        private void tsmiShowResult_Click(object sender, EventArgs e)
+        { 
+            frmKetQuaDangKy KetQua = new frmKetQuaDangKy();
+            KetQua.ShowDialog();   
+            
         }
     }
 }

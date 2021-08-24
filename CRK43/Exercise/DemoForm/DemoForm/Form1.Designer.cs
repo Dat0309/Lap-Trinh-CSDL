@@ -45,24 +45,36 @@ namespace DemoForm
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cmsDanhSach = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiDangKy = new System.Windows.Forms.ToolStripMenuItem();
             this.lvKetQua = new System.Windows.Forms.ListView();
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cmsKetQua = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiXoa = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtMSSV = new System.Windows.Forms.TextBox();
             this.lbName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnXuat = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.đăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiResult = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiShowResult = new System.Windows.Forms.ToolStripMenuItem();
             this.gbNamNhat.SuspendLayout();
             this.gbNamhai.SuspendLayout();
             this.gbNamBa.SuspendLayout();
             this.gbNamTu.SuspendLayout();
+            this.cmsDanhSach.SuspendLayout();
+            this.cmsKetQua.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flp1
@@ -134,7 +146,7 @@ namespace DemoForm
             this.gbNamTu.Size = new System.Drawing.Size(350, 170);
             this.gbNamTu.TabIndex = 4;
             this.gbNamTu.TabStop = false;
-            this.gbNamTu.Text = "Năm nhất";
+            this.gbNamTu.Text = "Năm tư";
             // 
             // flp4
             // 
@@ -154,6 +166,7 @@ namespace DemoForm
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
+            this.lvDanhSach.ContextMenuStrip = this.cmsDanhSach;
             this.lvDanhSach.FullRowSelect = true;
             this.lvDanhSach.GridLines = true;
             this.lvDanhSach.HideSelection = false;
@@ -187,6 +200,20 @@ namespace DemoForm
             // 
             this.columnHeader5.Text = "Khóa học";
             // 
+            // cmsDanhSach
+            // 
+            this.cmsDanhSach.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiDangKy});
+            this.cmsDanhSach.Name = "cmsDanhSach";
+            this.cmsDanhSach.Size = new System.Drawing.Size(118, 26);
+            // 
+            // tsmiDangKy
+            // 
+            this.tsmiDangKy.Name = "tsmiDangKy";
+            this.tsmiDangKy.Size = new System.Drawing.Size(117, 22);
+            this.tsmiDangKy.Text = "Đăng ký";
+            this.tsmiDangKy.Click += new System.EventHandler(this.tsmiDangKy_Click);
+            // 
             // lvKetQua
             // 
             this.lvKetQua.BackColor = System.Drawing.Color.PaleTurquoise;
@@ -196,6 +223,7 @@ namespace DemoForm
             this.columnHeader8,
             this.columnHeader9,
             this.columnHeader10});
+            this.lvKetQua.ContextMenuStrip = this.cmsKetQua;
             this.lvKetQua.FullRowSelect = true;
             this.lvKetQua.GridLines = true;
             this.lvKetQua.HideSelection = false;
@@ -229,13 +257,27 @@ namespace DemoForm
             // 
             this.columnHeader10.Text = "Khóa học";
             // 
+            // cmsKetQua
+            // 
+            this.cmsKetQua.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiXoa});
+            this.cmsKetQua.Name = "cmsKetQua";
+            this.cmsKetQua.Size = new System.Drawing.Size(95, 26);
+            // 
+            // tsmiXoa
+            // 
+            this.tsmiXoa.Name = "tsmiXoa";
+            this.tsmiXoa.Size = new System.Drawing.Size(94, 22);
+            this.tsmiXoa.Text = "Xóa";
+            this.tsmiXoa.Click += new System.EventHandler(this.tsmiXoa_Click);
+            // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAdd.Location = new System.Drawing.Point(923, 614);
+            this.btnAdd.Location = new System.Drawing.Point(1094, 620);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(132, 34);
             this.btnAdd.TabIndex = 7;
@@ -248,7 +290,7 @@ namespace DemoForm
             this.btnDelete.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(923, 660);
+            this.btnDelete.Location = new System.Drawing.Point(956, 620);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(132, 34);
             this.btnDelete.TabIndex = 8;
@@ -256,19 +298,19 @@ namespace DemoForm
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(556, 618);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(191, 20);
-            this.textBox1.TabIndex = 9;
+            this.txtName.Location = new System.Drawing.Point(556, 618);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(191, 20);
+            this.txtName.TabIndex = 9;
             // 
-            // textBox2
+            // txtMSSV
             // 
-            this.textBox2.Location = new System.Drawing.Point(556, 662);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(191, 20);
-            this.textBox2.TabIndex = 10;
+            this.txtMSSV.Location = new System.Drawing.Point(556, 662);
+            this.txtMSSV.Name = "txtMSSV";
+            this.txtMSSV.Size = new System.Drawing.Size(191, 20);
+            this.txtMSSV.TabIndex = 10;
             // 
             // lbName
             // 
@@ -290,25 +332,12 @@ namespace DemoForm
             this.label1.TabIndex = 12;
             this.label1.Text = "Mã số sinh viên";
             // 
-            // btnXuat
-            // 
-            this.btnXuat.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnXuat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnXuat.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXuat.Location = new System.Drawing.Point(1080, 614);
-            this.btnXuat.Name = "btnXuat";
-            this.btnXuat.Size = new System.Drawing.Size(132, 34);
-            this.btnXuat.TabIndex = 13;
-            this.btnXuat.Text = "Xuất kết quả";
-            this.btnXuat.UseVisualStyleBackColor = false;
-            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
-            // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExit.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(1080, 660);
+            this.btnExit.Location = new System.Drawing.Point(1094, 677);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(132, 34);
             this.btnExit.TabIndex = 14;
@@ -316,18 +345,65 @@ namespace DemoForm
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.đăngNhậpToolStripMenuItem,
+            this.tsmiResult});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1238, 24);
+            this.menuStrip1.TabIndex = 17;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // đăngNhậpToolStripMenuItem
+            // 
+            this.đăngNhậpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.đăngXuấtToolStripMenuItem,
+            this.đổiMậtKhẩuToolStripMenuItem});
+            this.đăngNhậpToolStripMenuItem.Name = "đăngNhậpToolStripMenuItem";
+            this.đăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.đăngNhậpToolStripMenuItem.Text = "Tài khoản";
+            // 
+            // đăngXuấtToolStripMenuItem
+            // 
+            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
+            // 
+            // đổiMậtKhẩuToolStripMenuItem
+            // 
+            this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
+            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
+            // 
+            // tsmiResult
+            // 
+            this.tsmiResult.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiShowResult});
+            this.tsmiResult.Name = "tsmiResult";
+            this.tsmiResult.Size = new System.Drawing.Size(104, 20);
+            this.tsmiResult.Text = "Kết quả đăng ký";
+            // 
+            // tsmiShowResult
+            // 
+            this.tsmiShowResult.Name = "tsmiShowResult";
+            this.tsmiShowResult.Size = new System.Drawing.Size(185, 22);
+            this.tsmiShowResult.Text = "Xem kết quả đăng ký";
+            this.tsmiShowResult.Click += new System.EventHandler(this.tsmiShowResult_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1238, 725);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnXuat);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbName);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtMSSV);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lvKetQua);
@@ -336,6 +412,8 @@ namespace DemoForm
             this.Controls.Add(this.gbNamBa);
             this.Controls.Add(this.gbNamhai);
             this.Controls.Add(this.gbNamNhat);
+            this.Location = new System.Drawing.Point(850, 850);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "DemoDangKy";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -343,6 +421,10 @@ namespace DemoForm
             this.gbNamhai.ResumeLayout(false);
             this.gbNamBa.ResumeLayout(false);
             this.gbNamTu.ResumeLayout(false);
+            this.cmsDanhSach.ResumeLayout(false);
+            this.cmsKetQua.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,11 +445,10 @@ namespace DemoForm
         private System.Windows.Forms.ListView lvKetQua;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtMSSV;
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnXuat;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
@@ -379,6 +460,16 @@ namespace DemoForm
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.ContextMenuStrip cmsDanhSach;
+        private System.Windows.Forms.ToolStripMenuItem tsmiDangKy;
+        private System.Windows.Forms.ContextMenuStrip cmsKetQua;
+        private System.Windows.Forms.ToolStripMenuItem tsmiXoa;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem đăngNhậpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiResult;
+        private System.Windows.Forms.ToolStripMenuItem tsmiShowResult;
     }
 }
 
