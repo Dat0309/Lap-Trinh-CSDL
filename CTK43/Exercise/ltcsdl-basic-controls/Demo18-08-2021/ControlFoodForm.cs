@@ -29,7 +29,24 @@ namespace Demo18_08_2021
 
         private void btnSelectImage_Click(object sender, EventArgs e)
         {
-            
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Title = "Select Picture";
+            dlg.Filter = "Image Files (JPEG, GIF, BMP, etc.)|"
+                + "*.jpg;*.jpeg;*.gif;*.bmp;"
+                + "*.tif;*.tiff;*.png|"
+                + "JPEG files (*.jpg;*.jpeg)|*.jpg;*.jpeg|"
+                + "GIF files (*.gif)|*.gif|"
+                + "BMP files (*.bmp)|*.bmp|"
+                + "TIFF files (*.tif;*.tiff)|*.tif;*.tiff|"
+                + "PNG files (*.png)|*.png|"
+                + "All files (*.*)|*.*";
+            dlg.InitialDirectory = Environment.CurrentDirectory;
+            if(dlg.ShowDialog() == DialogResult.OK)
+            {
+                var fileName = dlg.FileName;
+                txtPic.Text = fileName;
+                pictureBox1.Load(fileName);
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
