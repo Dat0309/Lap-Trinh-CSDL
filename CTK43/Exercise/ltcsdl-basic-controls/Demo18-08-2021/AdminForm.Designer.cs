@@ -49,6 +49,8 @@
             this.tsmiDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.xemDanhSáchHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnAll = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -63,11 +65,17 @@
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flpCategory = new System.Windows.Forms.FlowLayoutPanel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pbHinhMonAn = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblTenMon = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.ctmsListView.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHinhMonAn)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -251,6 +259,11 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.lblTenMon);
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.groupBox2);
+            this.tabPage2.Controls.Add(this.btnAll);
+            this.tabPage2.Controls.Add(this.btnSearch);
             this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.txtSearch);
             this.tabPage2.Controls.Add(this.label5);
@@ -265,6 +278,28 @@
             this.tabPage2.Text = "Món ăn/uống";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // btnAll
+            // 
+            this.btnAll.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnAll.Location = new System.Drawing.Point(180, 10);
+            this.btnAll.Name = "btnAll";
+            this.btnAll.Size = new System.Drawing.Size(107, 23);
+            this.btnAll.TabIndex = 7;
+            this.btnAll.Text = "Tất cả món ăn";
+            this.btnAll.UseVisualStyleBackColor = false;
+            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnSearch.Location = new System.Drawing.Point(886, 14);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 6;
+            this.btnSearch.Text = "Tìm";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(968, 11);
@@ -277,7 +312,7 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(671, 15);
+            this.txtSearch.Location = new System.Drawing.Point(590, 15);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(290, 20);
             this.txtSearch.TabIndex = 4;
@@ -285,7 +320,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(570, 15);
+            this.label5.Location = new System.Drawing.Point(490, 15);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 13);
             this.label5.TabIndex = 3;
@@ -310,14 +345,17 @@
             this.columnHeader9,
             this.columnHeader10,
             this.columnHeader11});
+            this.lvFoodList.FullRowSelect = true;
             this.lvFoodList.GridLines = true;
             this.lvFoodList.HideSelection = false;
             this.lvFoodList.Location = new System.Drawing.Point(301, 45);
             this.lvFoodList.Name = "lvFoodList";
-            this.lvFoodList.Size = new System.Drawing.Size(691, 422);
+            this.lvFoodList.Size = new System.Drawing.Size(691, 334);
             this.lvFoodList.TabIndex = 1;
             this.lvFoodList.UseCompatibleStateImageBehavior = false;
             this.lvFoodList.View = System.Windows.Forms.View.Details;
+            this.lvFoodList.SelectedIndexChanged += new System.EventHandler(this.lvFoodList_SelectedIndexChanged);
+            this.lvFoodList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lvFoodList_MouseDoubleClick);
             // 
             // columnHeader5
             // 
@@ -342,12 +380,12 @@
             // columnHeader9
             // 
             this.columnHeader9.Text = "Nhóm món ăn/uống";
-            this.columnHeader9.Width = 101;
+            this.columnHeader9.Width = 122;
             // 
             // columnHeader10
             // 
             this.columnHeader10.Text = "Mô tả";
-            this.columnHeader10.Width = 224;
+            this.columnHeader10.Width = 196;
             // 
             // columnHeader11
             // 
@@ -373,6 +411,45 @@
             this.flpCategory.Size = new System.Drawing.Size(279, 331);
             this.flpCategory.TabIndex = 0;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.pbHinhMonAn);
+            this.groupBox2.Location = new System.Drawing.Point(301, 385);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(201, 180);
+            this.groupBox2.TabIndex = 8;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Hình món ăn";
+            // 
+            // pbHinhMonAn
+            // 
+            this.pbHinhMonAn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbHinhMonAn.Location = new System.Drawing.Point(3, 16);
+            this.pbHinhMonAn.Name = "pbHinhMonAn";
+            this.pbHinhMonAn.Size = new System.Drawing.Size(195, 161);
+            this.pbHinhMonAn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbHinhMonAn.TabIndex = 0;
+            this.pbHinhMonAn.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(509, 401);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(74, 13);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Tên món ăn";
+            // 
+            // lblTenMon
+            // 
+            this.lblTenMon.AutoSize = true;
+            this.lblTenMon.Location = new System.Drawing.Point(512, 429);
+            this.lblTenMon.Name = "lblTenMon";
+            this.lblTenMon.Size = new System.Drawing.Size(12, 13);
+            this.lblTenMon.TabIndex = 10;
+            this.lblTenMon.Text = "/";
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,6 +467,8 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbHinhMonAn)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -429,5 +508,11 @@
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.FlowLayoutPanel flpCategory;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnAll;
+        private System.Windows.Forms.Label lblTenMon;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.PictureBox pbHinhMonAn;
     }
 }

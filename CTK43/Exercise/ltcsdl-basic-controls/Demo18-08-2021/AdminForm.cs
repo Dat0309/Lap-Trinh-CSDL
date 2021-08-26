@@ -57,6 +57,19 @@ namespace Demo18_08_2021
             }
         }
 
+		private void AddFood(Food food)
+        {
+			ListViewItem item = new ListViewItem(food.Id.ToString());
+			item.SubItems.Add(food.Name);
+			item.SubItems.Add(food.Unit);
+			item.SubItems.Add(food.UnitPrice.ToString());
+			item.SubItems.Add(food.CategoryId.ToString());
+			item.SubItems.Add(food.Description);
+			item.SubItems.Add(food.ImageLink);
+
+			lvFoodList.Items.Add(item);
+		}
+
 		private void LoadCategory()
         {
             foreach (var cat in WorkingContext.CategoryList)
@@ -73,6 +86,8 @@ namespace Demo18_08_2021
 				flpCategory.Controls.Add(btn);
             }
         }
+
+
 
 		private void CategoryBtn_Click(object sender, EventArgs e)
         {
@@ -171,7 +186,69 @@ namespace Demo18_08_2021
         private void button1_Click(object sender, EventArgs e)
         {
 			ControlFoodForm formFood = new ControlFoodForm();
-			formFood.ShowDialog();
+			if(formFood.ShowDialog() == DialogResult.OK)
+            {
+				var food = formFood.returnFood;
+				AddFood(food);
+            }
+        }
+
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+			string name;
+			var foods = WorkingContext.FoodList;
+			if (txtSearch.Text.Trim().Length != 0 && txtSearch.Text.Trim().CompareTo("Nhập và7o tên món ăn") != 0)
+			{
+				name = txtSearch.Text.Trim();
+				foods = foods.Where(f => f.Name == name).ToList();
+			}
+			LoadTableFoodDetail(foods);
+		}
+
+        private void btnAll_Click(object sender, EventArgs e)
+        {
+			LoadTableFoodDetail(WorkingContext.FoodList);
+		}
+
+        private void lvFoodList_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+			var item = lvFoodList.SelectedItems[0];
+			FormEdit dialog = new FormEdit();
+			dialog._Id = Convert.ToInt32(item.SubItems[0].Text);
+			dialog.name = item.SubItems[1].Text;
+			dialog.unit = item.SubItems[2].Text;
+			dialog.unitPrice = Convert.ToInt32(item.SubItems[3].Text);
+			dialog.category = Convert.ToInt32(item.SubItems[4].Text);
+			dialog.description = item.SubItems[5].Text;
+			dialog.link = item.SubItems[6].Text;
+
+			if (dialog.ShowDialog() == DialogResult.OK)
+			{
+				LoadTableFoodDetail(WorkingContext.FoodList);
+			}
+
+		}
+
+        private void lvFoodList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+			var count = lvFoodList.SelectedItems.Count;
+
+			if(count > 0)
+            {
+				var item = lvFoodList.SelectedItems[0];
+
+				lblTenMon.Text = item.SubItems[1].Text;
+                try
+                {
+					pbHinhMonAn.Load(item.SubItems[6].Text);
+				}
+                catch (Exception)
+                {
+					pbHinhMonAn.Load("food.png");
+				}
+				
+            }
         }
     }
-}
+    }

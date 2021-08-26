@@ -44,11 +44,13 @@ namespace Demo18_08_2021
             this.txtPic = new System.Windows.Forms.TextBox();
             this.cbbCategory = new System.Windows.Forms.ComboBox();
             this.btnSelectImage = new System.Windows.Forms.Button();
-            this.txtUnitPrince = new System.Windows.Forms.ListBox();
             this.etbDetail = new System.Windows.Forms.RichTextBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.nudUnitPrice = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudUnitPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -67,6 +69,7 @@ namespace Demo18_08_2021
             this.pictureBox1.Location = new System.Drawing.Point(3, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(252, 183);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -183,17 +186,6 @@ namespace Demo18_08_2021
             this.btnSelectImage.UseVisualStyleBackColor = true;
             this.btnSelectImage.Click += new System.EventHandler(this.btnSelectImage_Click);
             // 
-            // txtUnitPrince
-            // 
-            this.txtUnitPrince.FormattingEnabled = true;
-            this.txtUnitPrince.Items.AddRange(new object[] {
-            "1000",
-            "2000"});
-            this.txtUnitPrince.Location = new System.Drawing.Point(405, 155);
-            this.txtUnitPrince.Name = "txtUnitPrince";
-            this.txtUnitPrince.Size = new System.Drawing.Size(250, 17);
-            this.txtUnitPrince.TabIndex = 17;
-            // 
             // etbDetail
             // 
             this.etbDetail.Location = new System.Drawing.Point(405, 241);
@@ -212,14 +204,40 @@ namespace Demo18_08_2021
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // nudUnitPrice
+            // 
+            this.nudUnitPrice.Location = new System.Drawing.Point(405, 155);
+            this.nudUnitPrice.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.nudUnitPrice.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudUnitPrice.Name = "nudUnitPrice";
+            this.nudUnitPrice.Size = new System.Drawing.Size(250, 20);
+            this.nudUnitPrice.TabIndex = 20;
+            this.nudUnitPrice.Value = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            // 
             // ControlFoodForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(781, 360);
+            this.Controls.Add(this.nudUnitPrice);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.etbDetail);
-            this.Controls.Add(this.txtUnitPrince);
             this.Controls.Add(this.btnSelectImage);
             this.Controls.Add(this.cbbCategory);
             this.Controls.Add(this.txtPic);
@@ -239,6 +257,7 @@ namespace Demo18_08_2021
             this.Load += new System.EventHandler(this.ControlFoodForm_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudUnitPrice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,8 +280,9 @@ namespace Demo18_08_2021
         private System.Windows.Forms.TextBox txtPic;
         private System.Windows.Forms.ComboBox cbbCategory;
         private System.Windows.Forms.Button btnSelectImage;
-        private System.Windows.Forms.ListBox txtUnitPrince;
         private System.Windows.Forms.RichTextBox etbDetail;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.NumericUpDown nudUnitPrice;
     }
 }

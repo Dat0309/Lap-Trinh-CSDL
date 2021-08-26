@@ -13,7 +13,8 @@ namespace Demo18_08_2021
     public partial class ControlFoodForm : Form
     {
         private int _foodId;
-        
+        public DTO.Food returnFood;
+
         public ControlFoodForm(int foodId = 0)
         {
             InitializeComponent();
@@ -51,17 +52,24 @@ namespace Demo18_08_2021
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //var name = txtName.Text;
-            //var unit = txtUnit.Text;
-            //var description = etbDetail.Text;
-            //var link = txtPic.Text;
-            //var price = Convert.ToInt32(txtUnitPrince);
-            //var category = Convert.ToInt32(cbbCategory.SelectedValue);
+            var name = txtName.Text;
+            var unit = txtUnit.Text;
+            var description = etbDetail.Text;
+            var link = txtPic.Text;
+            var price = Convert.ToInt32(nudUnitPrice.Value);
+            var category = Convert.ToInt32(cbbCategory.SelectedValue);
 
-            //if(_foodId == 0){
-            //    int id = WorkingContext.FoodList.Any() ? WorkingContext.FoodList.Max(f => f.Id) + 1 : 1;
-            //    var food = new Food(id, name, unit, price, description, link, category);
-            //}
+            if (_foodId == 0)
+            {
+                int id = WorkingContext.FoodList.Any() ? WorkingContext.FoodList.Max(f => f.Id) + 1 : 1;
+                returnFood = new DTO.Food(id, name, unit, price, description, link, category);
+                WorkingContext.FoodList.Add(returnFood);
+            }
+            else
+            {
+
+            }
+            DialogResult = DialogResult.OK;
         }
     }
 }

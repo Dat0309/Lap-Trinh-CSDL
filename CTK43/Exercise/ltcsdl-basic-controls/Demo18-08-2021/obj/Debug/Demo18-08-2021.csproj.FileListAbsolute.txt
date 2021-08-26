@@ -11,3 +11,4 @@ D:\NAM3\Lap-Trinh-CSDL\CTK43\Exercise\ltcsdl-basic-controls\Demo18-08-2021\obj\D
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Exercise\ltcsdl-basic-controls\Demo18-08-2021\obj\Debug\Demo18-08-2021.exe
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Exercise\ltcsdl-basic-controls\Demo18-08-2021\obj\Debug\Demo18-08-2021.pdb
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Exercise\ltcsdl-basic-controls\Demo18-08-2021\obj\Debug\Demo18_08_2021.ControlFoodForm.resources
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Exercise\ltcsdl-basic-controls\Demo18-08-2021\obj\Debug\Demo18_08_2021.FormEdit.resources
