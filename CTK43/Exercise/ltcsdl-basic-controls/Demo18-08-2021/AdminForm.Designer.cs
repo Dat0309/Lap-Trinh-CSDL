@@ -49,6 +49,10 @@
             this.tsmiDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.xemDanhSáchHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnSaveFile = new System.Windows.Forms.Button();
+            this.lblTenMon = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pbHinhMonAn = new System.Windows.Forms.PictureBox();
             this.btnAll = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -65,17 +69,13 @@
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flpCategory = new System.Windows.Forms.FlowLayoutPanel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pbHinhMonAn = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblTenMon = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.ctmsListView.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbHinhMonAn)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -259,8 +259,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnSaveFile);
             this.tabPage2.Controls.Add(this.lblTenMon);
-            this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.btnAll);
             this.tabPage2.Controls.Add(this.btnSearch);
@@ -277,6 +277,44 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Món ăn/uống";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnSaveFile
+            // 
+            this.btnSaveFile.BackColor = System.Drawing.Color.Aquamarine;
+            this.btnSaveFile.Location = new System.Drawing.Point(903, 589);
+            this.btnSaveFile.Name = "btnSaveFile";
+            this.btnSaveFile.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveFile.TabIndex = 11;
+            this.btnSaveFile.Text = "Lưu";
+            this.btnSaveFile.UseVisualStyleBackColor = false;
+            this.btnSaveFile.Click += new System.EventHandler(this.btnSaveFile_Click);
+            // 
+            // lblTenMon
+            // 
+            this.lblTenMon.AutoSize = true;
+            this.lblTenMon.Location = new System.Drawing.Point(512, 429);
+            this.lblTenMon.Name = "lblTenMon";
+            this.lblTenMon.Size = new System.Drawing.Size(0, 13);
+            this.lblTenMon.TabIndex = 10;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.pbHinhMonAn);
+            this.groupBox2.Location = new System.Drawing.Point(301, 385);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(201, 180);
+            this.groupBox2.TabIndex = 8;
+            this.groupBox2.TabStop = false;
+            // 
+            // pbHinhMonAn
+            // 
+            this.pbHinhMonAn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbHinhMonAn.Location = new System.Drawing.Point(3, 16);
+            this.pbHinhMonAn.Name = "pbHinhMonAn";
+            this.pbHinhMonAn.Size = new System.Drawing.Size(195, 161);
+            this.pbHinhMonAn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbHinhMonAn.TabIndex = 0;
+            this.pbHinhMonAn.TabStop = false;
             // 
             // btnAll
             // 
@@ -411,45 +449,6 @@
             this.flpCategory.Size = new System.Drawing.Size(279, 331);
             this.flpCategory.TabIndex = 0;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.pbHinhMonAn);
-            this.groupBox2.Location = new System.Drawing.Point(301, 385);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(201, 180);
-            this.groupBox2.TabIndex = 8;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Hình món ăn";
-            // 
-            // pbHinhMonAn
-            // 
-            this.pbHinhMonAn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbHinhMonAn.Location = new System.Drawing.Point(3, 16);
-            this.pbHinhMonAn.Name = "pbHinhMonAn";
-            this.pbHinhMonAn.Size = new System.Drawing.Size(195, 161);
-            this.pbHinhMonAn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbHinhMonAn.TabIndex = 0;
-            this.pbHinhMonAn.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(509, 401);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 13);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Tên món ăn";
-            // 
-            // lblTenMon
-            // 
-            this.lblTenMon.AutoSize = true;
-            this.lblTenMon.Location = new System.Drawing.Point(512, 429);
-            this.lblTenMon.Name = "lblTenMon";
-            this.lblTenMon.Size = new System.Drawing.Size(12, 13);
-            this.lblTenMon.TabIndex = 10;
-            this.lblTenMon.Text = "/";
-            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -466,9 +465,9 @@
             this.ctmsListView.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbHinhMonAn)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
 		}
@@ -511,8 +510,8 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnAll;
         private System.Windows.Forms.Label lblTenMon;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.PictureBox pbHinhMonAn;
+        private System.Windows.Forms.Button btnSaveFile;
     }
 }

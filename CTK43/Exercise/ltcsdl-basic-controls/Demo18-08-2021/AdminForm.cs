@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Demo18_08_2021.DTO;
+using System.IO;
 
 namespace Demo18_08_2021
 {
@@ -198,7 +199,7 @@ namespace Demo18_08_2021
         {
 			string name;
 			var foods = WorkingContext.FoodList;
-			if (txtSearch.Text.Trim().Length != 0 && txtSearch.Text.Trim().CompareTo("Nhập và7o tên món ăn") != 0)
+			if (txtSearch.Text.Trim().Length != 0 && txtSearch.Text.Trim().CompareTo("Nhập vào tên món ăn") != 0)
 			{
 				name = txtSearch.Text.Trim();
 				foods = foods.Where(f => f.Name == name).ToList();
@@ -249,6 +250,24 @@ namespace Demo18_08_2021
 				}
 				
             }
+        }
+
+        private void btnSaveFile_Click(object sender, EventArgs e)
+        {
+			var fileName = "Text.txt";
+			StreamWriter sw = new StreamWriter(fileName);
+			using (sw)
+			{
+				foreach (ListViewItem item in lvFoodList.Items)
+				{
+					string tmp = "";
+					foreach (ListViewItem.ListViewSubItem i in item.SubItems)
+					{
+						tmp += i.Text + ", ";
+					}
+					sw.WriteLine(tmp);
+				}
+			}
         }
     }
     }
