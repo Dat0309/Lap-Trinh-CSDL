@@ -136,6 +136,14 @@ begin
 end
 go
 
+exec dbo.BillDetail_Insert '4','5','1'
+exec dbo.BillDetail_Insert '4','7','2'
+exec dbo.BillDetail_Insert '5','8','3'
+exec dbo.BillDetail_Insert '6','2','5'
+exec dbo.BillDetail_Insert '7','3','1'
+exec dbo.BillDetail_Insert '8','9','5'
+exec dbo.BillDetail_Insert '8','12','6'
+
 create procedure BillDetail_Update
 @ID int,
 @InvoiceID int,
@@ -182,6 +190,11 @@ begin
 	insert into Bills(Name, TableID, Amount, Discount, Tax, Status, CheckoutDate, Account) values (@Name, @TableID, @Amount, @Discount, @Tax, @Status,@CheckoutDate, @Account)
 end
 go
+
+exec dbo.Bills_Insert 'Hoa don 6','2','200000','0.05','0','1','05/06/2021','lgcong'
+exec dbo.Bills_Insert 'Hoa don 3','2','150000','0.05','0','1','05/06/2021','lgcong'
+exec dbo.Bills_Insert 'Hoa don 4','2','300000','0.05','0','1','05/07/2021','pltnga'
+exec dbo.Bills_Insert 'Hoa don 5','2','100000','0.05','0','0','05/08/2021','tdquy'
 
 create procedure Bills_Update
 @ID int,
@@ -278,6 +291,8 @@ begin
 end
 go
 
+exec dbo.Role_Insert 'CEO','NULL','NULL'
+
 create procedure Role_Update
 @ID int,
 @RoleName nvarchar(1000),
@@ -328,6 +343,8 @@ begin
 		print('Khong ton tai RoleID')
 end
 go
+
+exec dbo.RoleAcc_Insert 2,'lgcong', '1', ''
 
 create procedure RoleAcc_Update
 @RoleID int,
@@ -421,3 +438,87 @@ go
 --drop proc [dbo].[_GetByIDAll]
 exec dbo._GetByIDAll 1,'Role'
 exec dbo._GetByIDAll 1,'Roles'
+
+--4.Viết thủ tục _Delete để xóa dữ liệu của bất kỳ bảng nào có ID là kiểu int, khóa chính và tự tăng.(role, billDetail, food, bills, table, category)
+create proc [dbo].[_Delete]
+@ID nvarchar(1000),
+@TableName nvarchar(1000)
+as
+begin
+	if(@TableName in ('Role','BillDetails','Food', 'Table','Category', 'Bills'))
+	begin
+		declare @Sql nvarchar(1000)
+		set @Sql = 'Delete from '+@TableName +' where ID = ' + @ID
+		exec (@Sql)
+	end
+	else
+		print('Bảng không có ID là kiểu int, hoặc không tồn tại bảng')
+end
+go
+
+select * from Role
+exec dbo._Delete 5, 'Role'
+
+--5.Viết thủ tục để khi thêm quyền vào bảng Role thì tự động gán hết quyền cho các User
+
+--6.Viết hàm tính số tiền bán được theo ngày
+select * from Bills
+
+create function tinhTienBanDuocTheoNgay(@Ngay smalldatetime)
+returns int
+as
+begin
+	declare @soTien int
+	select @soTien = SUM(b.Amount)
+	from Bills b
+	where b.CheckoutDate = @Ngay and b.Status = 1
+	return @soTien
+end
+
+print dbo.tinhTienBanDuocTheoNgay('05/06/2021')
+
+--7.Viết hàm đếm số lượng món ăn bán được theo ngày
+select * from BillDetails
+
+create function soLuongMonAnBanTheoNgay(@Date smalldatetime)
+returns int
+as
+begin
+	declare @soLuong int
+	select @soLuong = SUM(bd.Quantity) 
+	from BillDetails bd, Bills b
+	where b.CheckoutDate = @Date and b.ID = bd.InvoiceID
+	return @soLuong
+end
+
+print dbo.soLuongMonAnBanTheoNgay('05/06/2021')
+
+--8.Viết thủ tục thống kê số tiền bán được theo từng loại món ăn, theo ngày
+
+create proc [dbo].[_ThongKe]
+@Date smalldatetime
+as
+begin
+	select c.Name as Loai,sum(f.Price*bd.Quantity) as SoTienBan
+	from Food f, Bills b, BillDetails bd, Category c
+	where b.CheckoutDate =@Date and b.ID = bd.InvoiceID and bd.FoodID = f.ID and c.ID = f.FoodCategoryID
+	group by f.FoodCategoryID, c.Name
+end
+go
+
+exec dbo._ThongKe '05/06/2021'
+
+--9.Viết thủ tục nhập hai bàn làm một
+
+--10.Viết thủ tục tách bàn
+
+--11.Tìm tất cả các món ăn mà khách không đặt
+create proc [dbo].[_MonKhachKhongDat]
+as
+begin
+	select f.Name
+	from Food f
+	where f.ID not in (Select FoodID from BillDetails)
+end
+
+exec dbo._MonKhachKhongDat
