@@ -14,15 +14,21 @@ namespace Demo18_08_2021
 {
 	public partial class AdminForm : Form
 	{
-		public AdminForm()
+		private Contex context;
+		private List<Food> foods;
+		private List<Category> categories;
+        public AdminForm(Contex context)
 		{
+			this.context = context;
 			InitializeComponent();
+			foods = context.GetFood();
+			categories = context.GetCate();
 		}
 
 		private void AdminForm_Load(object sender, EventArgs e)
 		{
 			LoadTableToLvDetail();
-			LoadTableFoodDetail(WorkingContext.FoodList);
+			LoadTableFoodDetail(context.GetFood());
 			LoadCategory();
 			SetUpSearch();
 		}
@@ -73,7 +79,7 @@ namespace Demo18_08_2021
 
 		private void LoadCategory()
         {
-            foreach (var cat in WorkingContext.CategoryList)
+            foreach (var cat in categories)
             {
 				int id = cat.Id;
 				Button btn = new Button();
@@ -93,12 +99,12 @@ namespace Demo18_08_2021
 		private void CategoryBtn_Click(object sender, EventArgs e)
         {
 			int _currentCategory = Convert.ToInt32((sender as Button).Tag);
-			var foods = WorkingContext.FoodList;
+			var food = foods;
 			if(_currentCategory > 0)
             {
-				foods = foods.Where(f => f.CategoryId == _currentCategory).ToList();
+				food = food.Where(f => f.CategoryId == _currentCategory).ToList();
             }
-			LoadTableFoodDetail(foods);
+			LoadTableFoodDetail(food);
         }
 
 		private void SetUpSearch()
@@ -186,7 +192,7 @@ namespace Demo18_08_2021
 
         private void button1_Click(object sender, EventArgs e)
         {
-			ControlFoodForm formFood = new ControlFoodForm();
+			ControlFoodForm formFood = new ControlFoodForm(context);
 			if(formFood.ShowDialog() == DialogResult.OK)
             {
 				var food = formFood.returnFood;
@@ -198,18 +204,18 @@ namespace Demo18_08_2021
         private void btnSearch_Click(object sender, EventArgs e)
         {
 			string name;
-			var foods = WorkingContext.FoodList;
+			var food = foods;
 			if (txtSearch.Text.Trim().Length != 0 && txtSearch.Text.Trim().CompareTo("Nhập vào tên món ăn") != 0)
 			{
 				name = txtSearch.Text.Trim();
-				foods = foods.Where(f => f.Name == name).ToList();
+				food = food.Where(f => f.Name == name).ToList();
 			}
-			LoadTableFoodDetail(foods);
+			LoadTableFoodDetail(food);
 		}
 
         private void btnAll_Click(object sender, EventArgs e)
         {
-			LoadTableFoodDetail(WorkingContext.FoodList);
+			LoadTableFoodDetail(foods);
 		}
 
         private void lvFoodList_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -226,7 +232,7 @@ namespace Demo18_08_2021
 
 			if (dialog.ShowDialog() == DialogResult.OK)
 			{
-				LoadTableFoodDetail(WorkingContext.FoodList);
+				LoadTableFoodDetail(foods);
 			}
 
 		}
@@ -254,20 +260,22 @@ namespace Demo18_08_2021
 
         private void btnSaveFile_Click(object sender, EventArgs e)
         {
-			var fileName = "Text.txt";
-			StreamWriter sw = new StreamWriter(fileName);
-			using (sw)
-			{
-				foreach (ListViewItem item in lvFoodList.Items)
-				{
-					string tmp = "";
-					foreach (ListViewItem.ListViewSubItem i in item.SubItems)
-					{
-						tmp += i.Text + ", ";
-					}
-					sw.WriteLine(tmp);
-				}
-			}
+			//var fileName = "Text.txt";
+			//StreamWriter sw = new StreamWriter(fileName);
+			//using (sw)
+			//{
+			//	foreach (ListViewItem item in lvFoodList.Items)
+			//	{
+			//		string tmp = "";
+			//		foreach (ListViewItem.ListViewSubItem i in item.SubItems)
+			//		{
+			//			tmp += i.Text + ", ";
+			//		}
+			//		sw.WriteLine(tmp);
+			//	}
+			//}
+
+			context.SaveFood();
         }
     }
     }

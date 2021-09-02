@@ -14,11 +14,15 @@ namespace Demo18_08_2021
     {
         private int _foodId;
         public DTO.Food returnFood;
+        private Contex context;
+        private List<DTO.Food> foods;
 
-        public ControlFoodForm(int foodId = 0)
+        public ControlFoodForm(Contex context, int foodId = 0)
         {
             InitializeComponent();
             _foodId = foodId;
+            this.context = context;
+            foods = context.GetFood();
         }
 
         private void ControlFoodForm_Load(object sender, EventArgs e)
@@ -61,9 +65,9 @@ namespace Demo18_08_2021
 
             if (_foodId == 0)
             {
-                int id = WorkingContext.FoodList.Any() ? WorkingContext.FoodList.Max(f => f.Id) + 1 : 1;
+                int id = foods.Any() ? foods.Max(f => f.Id) + 1 : 1;
                 returnFood = new DTO.Food(id, name, unit, price, description, link, category);
-                WorkingContext.FoodList.Add(returnFood);
+                foods.Add(returnFood);
             }
             else
             {

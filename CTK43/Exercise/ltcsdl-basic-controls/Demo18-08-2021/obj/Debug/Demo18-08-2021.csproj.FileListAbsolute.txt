@@ -12,3 +12,9 @@ D:\NAM3\Lap-Trinh-CSDL\CTK43\Exercise\ltcsdl-basic-controls\Demo18-08-2021\obj\D
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Exercise\ltcsdl-basic-controls\Demo18-08-2021\obj\Debug\Demo18-08-2021.pdb
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Exercise\ltcsdl-basic-controls\Demo18-08-2021\obj\Debug\Demo18_08_2021.ControlFoodForm.resources
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Exercise\ltcsdl-basic-controls\Demo18-08-2021\obj\Debug\Demo18_08_2021.FormEdit.resources
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Exercise\ltcsdl-basic-controls\Demo18-08-2021\bin\Debug\Data\data.txt
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Exercise\ltcsdl-basic-controls\Demo18-08-2021\bin\Debug\Data\data.json
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Exercise\ltcsdl-basic-controls\Demo18-08-2021\bin\Debug\Newtonsoft.Json.dll
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Exercise\ltcsdl-basic-controls\Demo18-08-2021\bin\Debug\Newtonsoft.Json.xml
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Exercise\ltcsdl-basic-controls\Demo18-08-2021\obj\Debug\Demo18-08-2021.csproj.CopyComplete
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Exercise\ltcsdl-basic-controls\Demo18-08-2021\bin\Debug\Data\CategoryData.txt

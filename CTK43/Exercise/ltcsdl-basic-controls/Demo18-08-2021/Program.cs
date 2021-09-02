@@ -14,9 +14,12 @@ namespace Demo18_08_2021
 		[STAThread]
 		static void Main()
 		{
+			ICategoryData categorySource = new IO.CategoryDataSource("Data\\CategoryData.txt");
+			IDataSource dataSource = new IO.JsonDataSource("Data\\data.json");
+			Contex context = new Contex(dataSource, categorySource);
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new frmMain());
+			Application.Run(new frmMain(context));
 		}
 	}
 }

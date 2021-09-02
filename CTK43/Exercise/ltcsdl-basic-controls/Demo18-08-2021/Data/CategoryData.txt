@@ -1,0 +1,10 @@
+﻿1^Hải sản
+2^Lẩu 
+3^Rau 
+4^Gà 
+5^Khai vị 
+6^Bò 
+7^Đặc biệt 
+8^Nước ngọt 
+9^Bia
+10^Đào tiên

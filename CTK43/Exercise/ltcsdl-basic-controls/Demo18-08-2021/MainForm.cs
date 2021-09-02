@@ -14,10 +14,12 @@ namespace Demo18_08_2021
 {
 	public partial class frmMain : Form
 	{
+		private Contex context;
 		private List<DiningTable> tableList;
 
-		public frmMain()
+		public frmMain(Contex context)
 		{
+			this.context = context;
 			InitializeComponent();
 		}
 
@@ -65,7 +67,7 @@ namespace Demo18_08_2021
 
 		private void tsmiAdmin_Click(object sender, EventArgs e)
 		{
-			AdminForm form = new AdminForm();
+			AdminForm form = new AdminForm(context);
 			form.ShowDialog();
 		}
 
