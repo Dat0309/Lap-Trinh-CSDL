@@ -13,6 +13,7 @@ namespace Lab02_GV
 {
     public partial class frmGiaoVien : Form
     {
+        QuanLyGiaoVien qlgv = new QuanLyGiaoVien();
         public frmGiaoVien()
         {
             InitializeComponent();
@@ -116,12 +117,13 @@ namespace Lab02_GV
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            qlgv.Them(GetGiaoVien());
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            
+            frmSearch frm = new frmSearch();
+            frm.ShowDialog();
         }
     }
 }

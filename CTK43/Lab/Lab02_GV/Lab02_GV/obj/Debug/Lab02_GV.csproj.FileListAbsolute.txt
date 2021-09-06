@@ -9,3 +9,4 @@ D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab02_GV\Lab02_GV\obj\Debug\Lab02_GV.csproj.Gen
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab02_GV\Lab02_GV\obj\Debug\Lab02_GV.csproj.CoreCompileInputs.cache
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab02_GV\Lab02_GV\obj\Debug\Lab02_GV.exe
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab02_GV\Lab02_GV\obj\Debug\Lab02_GV.pdb
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab02_GV\Lab02_GV\obj\Debug\Lab02_GV.frmSearch.resources

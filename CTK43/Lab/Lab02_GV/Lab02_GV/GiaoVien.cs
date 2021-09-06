@@ -78,5 +78,6 @@ namespace Lab02_GV
 
             return str.ToString();
         }
+
     }
 }
