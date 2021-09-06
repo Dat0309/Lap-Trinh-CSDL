@@ -1,0 +1,10 @@
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab02\Lab02\bin\Debug\Lab02.exe.config
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab02\Lab02\bin\Debug\Lab02.exe
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab02\Lab02\bin\Debug\Lab02.pdb
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab02\Lab02\obj\Debug\Lab02.csproj.AssemblyReference.cache
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab02\Lab02\obj\Debug\Lab02.frmTrungTam.resources
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab02\Lab02\obj\Debug\Lab02.Properties.Resources.resources
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab02\Lab02\obj\Debug\Lab02.csproj.GenerateResource.cache
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab02\Lab02\obj\Debug\Lab02.csproj.CoreCompileInputs.cache
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab02\Lab02\obj\Debug\Lab02.exe
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab02\Lab02\obj\Debug\Lab02.pdb
