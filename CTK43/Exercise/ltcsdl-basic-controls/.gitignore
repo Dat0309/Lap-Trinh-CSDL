@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Demo18-08-2021/bin/Debug
+/Demo18-08-2021/obj/Debug
+/github-token.txt
