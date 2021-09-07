@@ -117,12 +117,18 @@ namespace Lab02_GV
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            qlgv.Them(GetGiaoVien());
+            var gv = GetGiaoVien();
+            var them = qlgv.Them(gv);
+            if (!them)
+                MessageBox.Show("Giáo viên có mã số " + gv.MaSo + " đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                MessageBox.Show("Success", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            frmSearch frm = new frmSearch();
+            frmSearch frm = new frmSearch(qlgv);
             frm.ShowDialog();
         }
     }

@@ -19,11 +19,56 @@ namespace Lab02_GV
             InitializeComponent();
         }
 
-        private void btnSearchName_Click(object sender, EventArgs e)
+        public frmSearch(QuanLyGiaoVien qlgv) : this()
         {
-            string name = txtKey.Text;
-            var gv = qlgv.Tim(name, KieuTim.TheoHoTen);
-            if(gv is null)
+            this.qlgv = qlgv;
+        }
+
+        private void rdTen_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdTen.Checked)
+            {
+                lbTimKiem.Text = rdTen.Text;
+                txtKey.Text = "";
+            }
+        }
+
+        private void rdMa_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdMa.Checked)
+            {
+                lbTimKiem.Text = rdMa.Text;
+                txtKey.Text = "";
+            }
+        }
+
+        private void rdSDT_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdSDT.Checked)
+            {
+                lbTimKiem.Text = rdSDT.Text;
+                txtKey.Text = "";
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            var kieu = KieuTim.TheoHoTen;
+            if (rdMa.Checked)
+            {
+                kieu = KieuTim.TheoMa;
+            }
+            else if (rdTen.Checked)
+            {
+                kieu = KieuTim.TheoHoTen;
+            }
+            else if (rdSDT.Checked)
+            {
+                kieu = KieuTim.TheoSDT;
+            }
+
+            var gv = qlgv.Tim(txtKey.Text, kieu);
+            if (gv is null)
             {
                 MessageBox.Show("Không tìm thấy", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -33,16 +78,6 @@ namespace Lab02_GV
                 frmTBGiaoVien.SetText(gv.ToString());
                 frmTBGiaoVien.ShowDialog();
             }
-        }
-
-        private void btnSearchCode_Click(object sender, EventArgs e)
-        {       
-
-        }
-
-        private void btnSearchSDT_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -30,22 +30,26 @@ namespace Lab02_GV
         public GiaoVien Tim(string value, KieuTim kieu)
         {
             GiaoVien giaoVien = null;
-
             switch (kieu)
             {
                 case KieuTim.TheoMa:
-                    giaoVien = dsGiaoVien.Find(gv => gv.MaSo == value);
+                    giaoVien = dsGiaoVien.Find(gv => gv.MaSo.Trim() == value.Trim());
                     break;
                 case KieuTim.TheoHoTen:
-                    giaoVien = dsGiaoVien.Find(gv => gv.HoTen.ToLower() == value.ToLower());
+                    giaoVien = dsGiaoVien.Find(gv => gv.HoTen.Trim() == value.Trim());
                     break;
                 case KieuTim.TheoSDT:
-                    giaoVien = dsGiaoVien.Find(gv => gv.SoDT == value);
+                    giaoVien = dsGiaoVien.Find(gv => gv.SoDT.Trim() == value.Trim());
                     break;
                 default:
                     break;
             }
             return giaoVien;
+        }
+
+        public int dem()
+        {
+            return dsGiaoVien.Count;
         }
 
         public void Xoa(GiaoVien gv)
