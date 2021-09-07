@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Lab03_Demo.File;
+using System.IO;
 
 namespace Lab03_Demo
 {
@@ -202,5 +203,77 @@ namespace Lab03_Demo
             }
         }
 
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog file = new OpenFileDialog();
+            file.Title = "Open File Image";
+            file.Filter = "Image Files (BMP, JPEG, PNG)|"
+                + "*.bmp;*.jpg;*.jpeg;*.png|"
+                + "BMP files (*.bmp)|*.bmp|"
+                + "JPEG files (*.jpg;*.jpeg)|*.jpg;*.jpeg|"
+                + "PNG files (*.png)|*.png|"
+                + "All files (*.*)|*.*";
+            file.InitialDirectory = Environment.CurrentDirectory;
+            if(file.ShowDialog() == DialogResult.OK)
+            {
+                var fileName = file.FileName;
+                txtHinh.Text = fileName;
+                pbHinh.Load(fileName);
+            }
+        }
+
+        private void mởFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnBrowse.PerformClick();
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnThoat.PerformClick();
+        }
+
+        private void thêmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnThem.PerformClick();
+        }
+
+        private void xóaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnXoa.PerformClick();
+        }
+
+        private void sửaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnSua.PerformClick();
+        }
+
+        private void fontToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FontDialog fontDialog = fontDialog1;
+            var ok = fontDialog.ShowDialog();
+            if (ok == DialogResult.OK)
+                lvSinhVien.Font = fontDialog.Font;
+        }
+
+        private void màuChữToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDialog = colorDialog1;
+            var ok = colorDialog.ShowDialog();
+            if (ok == DialogResult.OK)
+                lvSinhVien.ForeColor = colorDialog.Color;
+        }
+
+        private void sắpXếpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTuyChon frm = new frmTuyChon(qlsv, lvSinhVien, false);
+            frm.ShowDialog();
+            
+        }
+
+        private void tìmKiếmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTuyChon frm = new frmTuyChon(qlsv, lvSinhVien, true);
+            frm.ShowDialog();
+        }
     }
 }

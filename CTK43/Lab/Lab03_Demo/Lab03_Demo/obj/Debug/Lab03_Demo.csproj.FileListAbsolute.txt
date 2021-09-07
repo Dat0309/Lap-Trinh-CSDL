@@ -9,3 +9,4 @@ D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab03_Demo\Lab03_Demo\obj\Debug\Lab03_Demo.cspr
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab03_Demo\Lab03_Demo\obj\Debug\Lab03_Demo.exe
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab03_Demo\Lab03_Demo\obj\Debug\Lab03_Demo.pdb
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab03_Demo\Lab03_Demo\bin\Debug\DanhSachSV.txt
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab03_Demo\Lab03_Demo\obj\Debug\Lab03_Demo.frmTuyChon.resources
