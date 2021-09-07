@@ -1,0 +1,11 @@
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab03_Demo\Lab03_Demo\bin\Debug\Lab03_Demo.exe.config
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab03_Demo\Lab03_Demo\bin\Debug\Lab03_Demo.exe
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab03_Demo\Lab03_Demo\bin\Debug\Lab03_Demo.pdb
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab03_Demo\Lab03_Demo\obj\Debug\Lab03_Demo.csproj.AssemblyReference.cache
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab03_Demo\Lab03_Demo\obj\Debug\Lab03_Demo.frmSinhVien.resources
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab03_Demo\Lab03_Demo\obj\Debug\Lab03_Demo.Properties.Resources.resources
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab03_Demo\Lab03_Demo\obj\Debug\Lab03_Demo.csproj.GenerateResource.cache
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab03_Demo\Lab03_Demo\obj\Debug\Lab03_Demo.csproj.CoreCompileInputs.cache
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab03_Demo\Lab03_Demo\obj\Debug\Lab03_Demo.exe
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab03_Demo\Lab03_Demo\obj\Debug\Lab03_Demo.pdb
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab03_Demo\Lab03_Demo\bin\Debug\DanhSachSV.txt
