@@ -1,0 +1,11 @@
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_Demo\Lab04_Demo\bin\Debug\Lab04_Demo.exe.config
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_Demo\Lab04_Demo\bin\Debug\Lab04_Demo.exe
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_Demo\Lab04_Demo\bin\Debug\Lab04_Demo.pdb
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_Demo\Lab04_Demo\obj\Debug\Lab04_Demo.csproj.AssemblyReference.cache
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_Demo\Lab04_Demo\obj\Debug\Lab04_Demo.frmPicture.resources
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_Demo\Lab04_Demo\obj\Debug\Lab04_Demo.Properties.Resources.resources
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_Demo\Lab04_Demo\obj\Debug\Lab04_Demo.csproj.GenerateResource.cache
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_Demo\Lab04_Demo\obj\Debug\Lab04_Demo.csproj.CoreCompileInputs.cache
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_Demo\Lab04_Demo\obj\Debug\Lab04_Demo.exe
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_Demo\Lab04_Demo\obj\Debug\Lab04_Demo.pdb
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_Demo\Lab04_Demo\obj\Debug\Lab04_Demo.frmPictureView.resources

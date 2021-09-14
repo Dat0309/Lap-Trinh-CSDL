@@ -82,6 +82,8 @@ namespace Lab03_Demo
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.tssSoLuong = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -90,6 +92,7 @@ namespace Lab03_Demo
             ((System.ComponentModel.ISupportInitialize)(this.pbHinh)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -111,6 +114,7 @@ namespace Lab03_Demo
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.statusStrip1);
             this.groupBox1.Controls.Add(this.btnThoat);
             this.groupBox1.Controls.Add(this.btnMacDinh);
             this.groupBox1.Controls.Add(this.btnSua);
@@ -588,6 +592,22 @@ namespace Lab03_Demo
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Filter = "File GIF|*.Gif|File JPEG|*.Jpg";
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tssSoLuong});
+            this.statusStrip1.Location = new System.Drawing.Point(3, 604);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(605, 22);
+            this.statusStrip1.TabIndex = 25;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // tssSoLuong
+            // 
+            this.tssSoLuong.Name = "tssSoLuong";
+            this.tssSoLuong.Size = new System.Drawing.Size(70, 17);
+            this.tssSoLuong.Text = "Số sinh viên";
+            // 
             // frmSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -607,6 +627,8 @@ namespace Lab03_Demo
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -666,6 +688,8 @@ namespace Lab03_Demo
         private System.Windows.Forms.ToolStripMenuItem tìmKiếmToolStripMenuItem;
         private System.Windows.Forms.FontDialog fontDialog1;
         private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel tssSoLuong;
     }
 }
 

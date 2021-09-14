@@ -123,6 +123,7 @@ namespace Lab03_Demo
             qlsv = new QuanLySinhVien();
             qlsv.DocTuFile();
             LoadListView();
+            updateSoLuong();
         }
 
         private void lvSinhVien_SelectedIndexChanged(object sender, EventArgs e)
@@ -150,6 +151,7 @@ namespace Lab03_Demo
             {
                 this.qlsv.Them(sv);
                 this.LoadListView();
+                updateSoLuong();
             }
         }
 
@@ -166,11 +168,12 @@ namespace Lab03_Demo
             for(i = count; i>=0; i--)
             {
                 item = this.lvSinhVien.Items[i];
-                if (item.Checked)
+                if (item.Checked || item.Selected)
                     qlsv.Xoa(item.SubItems[0].Text, SoSanhTheoMa);
             }
             this.LoadListView();
             this.btnMacDinh.PerformClick();
+            updateSoLuong();
         }
         private int SoSanhTheoMa(object obj1, object obj2)
         {
@@ -274,6 +277,11 @@ namespace Lab03_Demo
         {
             frmTuyChon frm = new frmTuyChon(qlsv, lvSinhVien, true);
             frm.ShowDialog();
+        }
+        private void updateSoLuong()
+        {
+            var count = lvSinhVien.Items.Count;
+            tssSoLuong.Text = $" Tổng số sinh viên : {count}";
         }
     }
 }
