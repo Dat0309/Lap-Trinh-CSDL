@@ -13,16 +13,18 @@ namespace Lab04_Demo
 {
     public partial class frmPicture : Form
     {
+        public PictureBox pbPic;
         bool ctrl;
         Point p = new Point();
         public frmPicture()
         {
             InitializeComponent();
         }
-        public frmPicture(string name)
+        public frmPicture(string name) : this()
         {
             this.pbHinh.ImageLocation = name;
             this.toolStripStatusLabel1.Text = name;
+            pbPic = this.pbHinh;
         }
 
         private void frmPicture_Load(object sender, EventArgs e)
@@ -78,13 +80,13 @@ namespace Lab04_Demo
             }
         }
 
-        private void tsmiZoomOut_Click(object sender, EventArgs e)
+        public void tsmiZoomOut_Click(object sender, EventArgs e)
         {
             this.pbHinh.Width += 50;
             this.pbHinh.Height += 50;
         }
 
-        private void tsmiZoomIn_Click(object sender, EventArgs e)
+        public void tsmiZoomIn_Click(object sender, EventArgs e)
         {
             this.pbHinh.Width -= 50;
             this.pbHinh.Height -= 50;
@@ -100,7 +102,7 @@ namespace Lab04_Demo
             this.pbHinh.Location = new Point(p.X - e.NewValue, p.Y);
         }
 
-        private void tsmiEdit_Click(object sender, EventArgs e)
+        public void tsmiEdit_Click(object sender, EventArgs e)
         {
             Process.Start("mspaint", this.pbHinh.ImageLocation);
         }

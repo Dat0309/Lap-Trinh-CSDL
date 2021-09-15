@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Lab04_Demo
+namespace Lab04_Demo_File_Explorer
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Lab04_Demo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPictureView());
+            Application.Run(new frmExplorer());
         }
     }
 }

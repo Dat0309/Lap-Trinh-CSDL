@@ -37,8 +37,8 @@ namespace Lab04_Demo
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.staToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.layoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.layoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.arrangeIconToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cascadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ararngeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -84,14 +84,14 @@ namespace Lab04_Demo
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.newToolStripMenuItem.Text = "New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.saveAsToolStripMenuItem.Text = "Save As";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
@@ -105,6 +105,7 @@ namespace Lab04_Demo
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
             // 
@@ -123,6 +124,15 @@ namespace Lab04_Demo
             this.staToolStripMenuItem.Name = "staToolStripMenuItem";
             this.staToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.staToolStripMenuItem.Text = "StatusStrip";
+            this.staToolStripMenuItem.Click += new System.EventHandler(this.staToolStripMenuItem_Click);
+            // 
+            // toolStripToolStripMenuItem
+            // 
+            this.toolStripToolStripMenuItem.CheckOnClick = true;
+            this.toolStripToolStripMenuItem.Name = "toolStripToolStripMenuItem";
+            this.toolStripToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.toolStripToolStripMenuItem.Text = "ToolStrip";
+            this.toolStripToolStripMenuItem.Click += new System.EventHandler(this.toolStripToolStripMenuItem_Click);
             // 
             // layoutToolStripMenuItem
             // 
@@ -137,48 +147,53 @@ namespace Lab04_Demo
             this.layoutToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.layoutToolStripMenuItem.Text = "Layout";
             // 
-            // toolStripToolStripMenuItem
-            // 
-            this.toolStripToolStripMenuItem.CheckOnClick = true;
-            this.toolStripToolStripMenuItem.Name = "toolStripToolStripMenuItem";
-            this.toolStripToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
-            this.toolStripToolStripMenuItem.Text = "ToolStrip";
-            // 
             // arrangeIconToolStripMenuItem
             // 
+            this.arrangeIconToolStripMenuItem.CheckOnClick = true;
             this.arrangeIconToolStripMenuItem.Name = "arrangeIconToolStripMenuItem";
             this.arrangeIconToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.arrangeIconToolStripMenuItem.Text = "ArrangeIcons";
+            this.arrangeIconToolStripMenuItem.Click += new System.EventHandler(this.arrangeIconToolStripMenuItem_Click);
             // 
             // cascadeToolStripMenuItem
             // 
+            this.cascadeToolStripMenuItem.CheckOnClick = true;
             this.cascadeToolStripMenuItem.Name = "cascadeToolStripMenuItem";
             this.cascadeToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.cascadeToolStripMenuItem.Text = "Cascade";
+            this.cascadeToolStripMenuItem.Click += new System.EventHandler(this.cascadeToolStripMenuItem_Click);
             // 
             // ararngeToolStripMenuItem
             // 
+            this.ararngeToolStripMenuItem.CheckOnClick = true;
             this.ararngeToolStripMenuItem.Name = "ararngeToolStripMenuItem";
             this.ararngeToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.ararngeToolStripMenuItem.Text = "Ararnge Horizontal";
+            this.ararngeToolStripMenuItem.Click += new System.EventHandler(this.ararngeToolStripMenuItem_Click);
             // 
             // arrangeVerticalToolStripMenuItem
             // 
+            this.arrangeVerticalToolStripMenuItem.CheckOnClick = true;
             this.arrangeVerticalToolStripMenuItem.Name = "arrangeVerticalToolStripMenuItem";
             this.arrangeVerticalToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.arrangeVerticalToolStripMenuItem.Text = "Arrange Vertical";
+            this.arrangeVerticalToolStripMenuItem.Click += new System.EventHandler(this.arrangeVerticalToolStripMenuItem_Click);
             // 
             // maximizeAllToolStripMenuItem
             // 
+            this.maximizeAllToolStripMenuItem.CheckOnClick = true;
             this.maximizeAllToolStripMenuItem.Name = "maximizeAllToolStripMenuItem";
             this.maximizeAllToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.maximizeAllToolStripMenuItem.Text = "MaximizeAll";
+            this.maximizeAllToolStripMenuItem.Click += new System.EventHandler(this.maximizeAllToolStripMenuItem_Click);
             // 
             // minimizeAllToolStripMenuItem
             // 
+            this.minimizeAllToolStripMenuItem.CheckOnClick = true;
             this.minimizeAllToolStripMenuItem.Name = "minimizeAllToolStripMenuItem";
             this.minimizeAllToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.minimizeAllToolStripMenuItem.Text = "MinimizeAll";
+            this.minimizeAllToolStripMenuItem.Click += new System.EventHandler(this.minimizeAllToolStripMenuItem_Click);
             // 
             // toolStrip1
             // 
@@ -199,7 +214,8 @@ namespace Lab04_Demo
             this.tsZoomOut.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsZoomOut.Name = "tsZoomOut";
             this.tsZoomOut.Size = new System.Drawing.Size(23, 22);
-            this.tsZoomOut.Text = "toolStripButton1";
+            this.tsZoomOut.Text = "Zoom +";
+            this.tsZoomOut.Click += new System.EventHandler(this.tsZoomOut_Click);
             // 
             // tsZoomIn
             // 
@@ -208,7 +224,8 @@ namespace Lab04_Demo
             this.tsZoomIn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsZoomIn.Name = "tsZoomIn";
             this.tsZoomIn.Size = new System.Drawing.Size(23, 22);
-            this.tsZoomIn.Text = "toolStripButton2";
+            this.tsZoomIn.Text = "Zoom -";
+            this.tsZoomIn.Click += new System.EventHandler(this.tsZoomIn_Click);
             // 
             // tsOpenPaint
             // 
@@ -217,7 +234,8 @@ namespace Lab04_Demo
             this.tsOpenPaint.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsOpenPaint.Name = "tsOpenPaint";
             this.tsOpenPaint.Size = new System.Drawing.Size(23, 22);
-            this.tsOpenPaint.Text = "toolStripButton3";
+            this.tsOpenPaint.Text = "Edit";
+            this.tsOpenPaint.Click += new System.EventHandler(this.tsOpenPaint_Click);
             // 
             // statusStrip1
             // 
