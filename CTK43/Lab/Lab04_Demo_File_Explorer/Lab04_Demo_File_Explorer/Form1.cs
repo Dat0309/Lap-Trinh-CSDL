@@ -106,7 +106,7 @@ namespace Lab04_Demo_File_Explorer
             catch { }
         }
 
-        private void InsertFileListView(TreeNode tnParent)
+        private void InsertFile(TreeNode tnParent)
         {
             try
             {
@@ -162,7 +162,7 @@ namespace Lab04_Demo_File_Explorer
                         InsertFolder(tnParent);
                     }
                     InsertFileTreeView(tnParent);
-                    InsertFileListView(tnParent);
+                    InsertFile(tnParent);
                 }
             }
         }
@@ -223,7 +223,6 @@ namespace Lab04_Demo_File_Explorer
             {
                 list.Add(curPath + "\\" + item.Text);
                 File.Delete(curPath + "\\" + item.Text);
-                frmExplorer_Load(sender, e);
             }
         }
     }
