@@ -9,6 +9,7 @@ namespace Lab04_Demo_File_Explorer
 {
     public partial class frmExplorer : Form
     {
+        string[] archive_formats = { "iso", "7z", "rar", "zip" };
         string curPath;
         public frmExplorer()
         {
@@ -212,8 +213,40 @@ namespace Lab04_Demo_File_Explorer
 
         private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            var list = Clipboard.GetFileDropList();
+            if (list.Count > 0)
+            {
+                foreach (var item in list)
+                {
+                }
+            }
         }
+
+        //ListViewItem createNewListItem(Object obj)
+        //{
+        //    ListViewItem item = null;
+        //    if(obj is DirectoryInfo)
+        //    {
+        //        item = new ListViewItem(((DirectoryInfo)obj).Name, 1);
+        //        item.SubItems.Add(new ListViewItem.ListViewSubItem(item, "Directory"));
+        //        item.SubItems.Add(new ListViewItem.ListViewSubItem(item, ((DirectoryInfo)obj).LastAccessTime.ToShortDateString()));
+        //        item.ImageKey = "File";
+        //    }
+        //    else if(obj is FileInfo)
+        //    {
+        //        item = new ListViewItem(((FileInfo)obj).Name);
+        //        item.SubItems.Add(new ListViewItem.ListViewSubItem(item, "File"));
+        //        item.SubItems.Add(new ListViewItem.ListViewSubItem(item, ((FileInfo)obj).LastAccessTime.ToShortDateString()));
+        //        string[] tmp = item.Text.Split('.');
+        //        if (tmp[tmp.Length - 1] == "exe")
+        //            item.ImageIndex = 5;
+        //        else if (Array.Exists(archive_formats, t => t == tmp[tmp.Length - 1]))
+        //            item.ImageIndex = 3;
+        //        else
+        //            item.ImageIndex = 4;
+        //    }
+        //    return item;
+        //}
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
