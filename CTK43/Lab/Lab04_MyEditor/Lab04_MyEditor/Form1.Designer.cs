@@ -50,13 +50,7 @@ namespace Lab04_MyEditor
             this.cascadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.frmEditorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.frmEditorToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tsccbFont = new System.Windows.Forms.ToolStripComboBox();
-            this.tsccbSize = new System.Windows.Forms.ToolStripComboBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.tsbNew = new System.Windows.Forms.ToolStripButton();
             this.tsbbOpen = new System.Windows.Forms.ToolStripButton();
             this.tsbSave = new System.Windows.Forms.ToolStripButton();
@@ -70,7 +64,11 @@ namespace Lab04_MyEditor
             this.tsbBold = new System.Windows.Forms.ToolStripButton();
             this.tsbItalic = new System.Windows.Forms.ToolStripButton();
             this.tsbUnder = new System.Windows.Forms.ToolStripButton();
+            this.tsccbFont = new System.Windows.Forms.ToolStripComboBox();
+            this.tsccbSize = new System.Windows.Forms.ToolStripComboBox();
             this.tsColor = new System.Windows.Forms.ToolStripButton();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -112,28 +110,28 @@ namespace Lab04_MyEditor
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.newToolStripMenuItem.Text = "New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
@@ -145,7 +143,7 @@ namespace Lab04_MyEditor
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.printToolStripMenuItem.Text = "Print";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
@@ -157,7 +155,7 @@ namespace Lab04_MyEditor
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -175,21 +173,21 @@ namespace Lab04_MyEditor
             // cutToolStripMenuItem
             // 
             this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
-            this.cutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cutToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
             this.cutToolStripMenuItem.Text = "Cut";
             this.cutToolStripMenuItem.Click += new System.EventHandler(this.cutToolStripMenuItem_Click);
             // 
             // copyToolStripMenuItem
             // 
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
             this.copyToolStripMenuItem.Text = "Copy";
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
             // pasteToolStripMenuItem
             // 
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
-            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
             this.pasteToolStripMenuItem.Text = "Paste";
             this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
             // 
@@ -206,14 +204,14 @@ namespace Lab04_MyEditor
             // fontToolStripMenuItem
             // 
             this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
-            this.fontToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fontToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.fontToolStripMenuItem.Text = "Font...";
             this.fontToolStripMenuItem.Click += new System.EventHandler(this.fontToolStripMenuItem_Click);
             // 
             // colorToolStripMenuItem
             // 
             this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
-            this.colorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.colorToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.colorToolStripMenuItem.Text = "Color...";
             this.colorToolStripMenuItem.Click += new System.EventHandler(this.colorToolStripMenuItem_Click);
             // 
@@ -222,9 +220,7 @@ namespace Lab04_MyEditor
             this.windowToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cascadeToolStripMenuItem,
             this.tileToolStripMenuItem,
-            this.toolStripSeparator3,
-            this.frmEditorToolStripMenuItem,
-            this.frmEditorToolStripMenuItem1});
+            this.toolStripSeparator3});
             this.windowToolStripMenuItem.Enabled = false;
             this.windowToolStripMenuItem.Name = "windowToolStripMenuItem";
             this.windowToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
@@ -233,31 +229,19 @@ namespace Lab04_MyEditor
             // cascadeToolStripMenuItem
             // 
             this.cascadeToolStripMenuItem.Name = "cascadeToolStripMenuItem";
-            this.cascadeToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.cascadeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cascadeToolStripMenuItem.Text = "Cascade";
             // 
             // tileToolStripMenuItem
             // 
             this.tileToolStripMenuItem.Name = "tileToolStripMenuItem";
-            this.tileToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.tileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tileToolStripMenuItem.Text = "Tile";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(130, 6);
-            // 
-            // frmEditorToolStripMenuItem
-            // 
-            this.frmEditorToolStripMenuItem.Name = "frmEditorToolStripMenuItem";
-            this.frmEditorToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.frmEditorToolStripMenuItem.Text = "1 frmEditor";
-            // 
-            // frmEditorToolStripMenuItem1
-            // 
-            this.frmEditorToolStripMenuItem1.Name = "frmEditorToolStripMenuItem1";
-            this.frmEditorToolStripMenuItem1.Size = new System.Drawing.Size(133, 22);
-            this.frmEditorToolStripMenuItem1.Text = "2 frmEditor";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
             // 
             // toolStrip1
             // 
@@ -283,46 +267,6 @@ namespace Lab04_MyEditor
             this.toolStrip1.Size = new System.Drawing.Size(1031, 25);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // tsccbFont
-            // 
-            this.tsccbFont.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.tsccbFont.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
-            this.tsccbFont.Name = "tsccbFont";
-            this.tsccbFont.Size = new System.Drawing.Size(121, 25);
-            this.tsccbFont.SelectedIndexChanged += new System.EventHandler(this.tsccbFont_SelectedIndexChanged);
-            // 
-            // tsccbSize
-            // 
-            this.tsccbSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.tsccbSize.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
-            this.tsccbSize.Items.AddRange(new object[] {
-            "10",
-            "11",
-            "12",
-            "14",
-            "16",
-            "18",
-            "20",
-            "22",
-            "24",
-            "26",
-            "28",
-            "36",
-            "48",
-            "72"});
-            this.tsccbSize.Name = "tsccbSize";
-            this.tsccbSize.Size = new System.Drawing.Size(75, 25);
-            this.tsccbSize.SelectedIndexChanged += new System.EventHandler(this.tsccbSize_SelectedIndexChanged);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "Text File|*.txt|Any File|*.*";
-            // 
-            // saveFileDialog1
-            // 
-            this.saveFileDialog1.Filter = "Text File|*.txt|Any File|*.*";
             // 
             // tsbNew
             // 
@@ -450,6 +394,37 @@ namespace Lab04_MyEditor
             this.tsbUnder.Size = new System.Drawing.Size(23, 22);
             this.tsbUnder.Text = "Font Underscore";
             // 
+            // tsccbFont
+            // 
+            this.tsccbFont.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tsccbFont.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
+            this.tsccbFont.Name = "tsccbFont";
+            this.tsccbFont.Size = new System.Drawing.Size(121, 25);
+            this.tsccbFont.SelectedIndexChanged += new System.EventHandler(this.tsccbFont_SelectedIndexChanged);
+            // 
+            // tsccbSize
+            // 
+            this.tsccbSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tsccbSize.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
+            this.tsccbSize.Items.AddRange(new object[] {
+            "10",
+            "11",
+            "12",
+            "14",
+            "16",
+            "18",
+            "20",
+            "22",
+            "24",
+            "26",
+            "28",
+            "36",
+            "48",
+            "72"});
+            this.tsccbSize.Name = "tsccbSize";
+            this.tsccbSize.Size = new System.Drawing.Size(75, 25);
+            this.tsccbSize.SelectedIndexChanged += new System.EventHandler(this.tsccbSize_SelectedIndexChanged);
+            // 
             // tsColor
             // 
             this.tsColor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -459,6 +434,15 @@ namespace Lab04_MyEditor
             this.tsColor.Size = new System.Drawing.Size(23, 22);
             this.tsColor.Text = "Color";
             this.tsColor.Click += new System.EventHandler(this.tsColor_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "Text File|*.txt|Any File|*.*";
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.Filter = "Text File|*.txt|Any File|*.*";
             // 
             // statusStrip1
             // 
@@ -524,8 +508,6 @@ namespace Lab04_MyEditor
         private System.Windows.Forms.ToolStripMenuItem cascadeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tileToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem frmEditorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem frmEditorToolStripMenuItem1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tsbNew;
         private System.Windows.Forms.ToolStripButton tsbbOpen;
