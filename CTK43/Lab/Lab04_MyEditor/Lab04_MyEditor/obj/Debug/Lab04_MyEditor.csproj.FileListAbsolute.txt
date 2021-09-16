@@ -1,0 +1,11 @@
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\bin\Debug\Lab04_MyEditor.exe.config
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\bin\Debug\Lab04_MyEditor.exe
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\bin\Debug\Lab04_MyEditor.pdb
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\obj\Debug\Lab04_MyEditor.csproj.AssemblyReference.cache
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\obj\Debug\Lab04_MyEditor.Form1.resources
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\obj\Debug\Lab04_MyEditor.Properties.Resources.resources
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\obj\Debug\Lab04_MyEditor.csproj.GenerateResource.cache
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\obj\Debug\Lab04_MyEditor.csproj.CoreCompileInputs.cache
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\obj\Debug\Lab04_MyEditor.exe
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\obj\Debug\Lab04_MyEditor.pdb
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\obj\Debug\Lab04_MyEditor.frmEditor.resources
