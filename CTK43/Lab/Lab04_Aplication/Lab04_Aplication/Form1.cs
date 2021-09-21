@@ -40,10 +40,10 @@ namespace Lab04_Aplication
         }
 
         //Hiển thị danh sách sinh viên ra ListView
-        private void LoadSVToListView()
+        private void LoadSVToListView(List<SinhVien> danhsach)
         {
             lvSV.Items.Clear();
-            foreach (SinhVien sv in context.GetSV())
+            foreach (SinhVien sv in danhsach)
                 ThemSV(sv);
         }
         //Lấy thông tin sinh viên khi chọn
@@ -152,13 +152,13 @@ namespace Lab04_Aplication
                 if(dlg == DialogResult.Yes)
                 {
                     UpDateSV(sv);
-                    LoadSVToListView();
+                    LoadSVToListView(qlsv.ds);
                 }
             }
             else
             {
                 qlsv.Them(GetSVControl());
-                LoadSVToListView();
+                LoadSVToListView(qlsv.ds);
             }
         }
 
@@ -166,7 +166,7 @@ namespace Lab04_Aplication
         {
             qlsv = new QLSV(context);
             //qlsv.DocTuFile();
-            LoadSVToListView();
+            LoadSVToListView(qlsv.ds);
         }
 
         private void lvSV_SelectedIndexChanged(object sender, EventArgs e)
@@ -190,7 +190,7 @@ namespace Lab04_Aplication
                 if (item.Selected)
                     qlsv.Xoa(item.SubItems[0].Text, SoSanhTheoMa);
             }
-            LoadSVToListView();
+            LoadSVToListView(qlsv.ds);
         }
         private int SoSanhTheoMa(object obj1, object obj2)
         {
@@ -203,15 +203,9 @@ namespace Lab04_Aplication
             DialogResult dlg = MessageBox.Show("Bạn có chắc không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (dlg == DialogResult.Yes)
             {
-                int count, i;
-                ListViewItem item;
-                count = lvSV.Items.Count - 1;
-                for (i = count; i >= 0; i--)
-                {
-                    item = lvSV.Items[i];
-                    lvSV.Items.Remove(item);
-                }
-                LoadSVToListView();
+                qlsv.ds.Clear();
+                qlsv.DocTuFile();
+                LoadSVToListView(qlsv.ds);
             }
             return;
         }

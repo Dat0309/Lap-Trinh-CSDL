@@ -82,6 +82,7 @@ namespace Lab04_Aplication.Model
                 sv.email = s[8];
                 Them(sv);
             }
+            sr.Close();
         }
         public void Xoa(object obj, SoSanh ss)
         {
