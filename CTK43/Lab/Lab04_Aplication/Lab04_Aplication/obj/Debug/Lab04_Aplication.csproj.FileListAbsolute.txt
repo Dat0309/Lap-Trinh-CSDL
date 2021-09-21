@@ -1,0 +1,13 @@
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_Aplication\Lab04_Aplication\bin\Debug\Lab04_Aplication.exe.config
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_Aplication\Lab04_Aplication\bin\Debug\Lab04_Aplication.exe
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_Aplication\Lab04_Aplication\bin\Debug\Lab04_Aplication.pdb
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_Aplication\Lab04_Aplication\bin\Debug\Guna.UI.dll
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_Aplication\Lab04_Aplication\obj\Debug\Lab04_Aplication.csproj.AssemblyReference.cache
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_Aplication\Lab04_Aplication\obj\Debug\Lab04_Aplication.Form1.resources
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_Aplication\Lab04_Aplication\obj\Debug\Lab04_Aplication.Properties.Resources.resources
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_Aplication\Lab04_Aplication\obj\Debug\Lab04_Aplication.csproj.GenerateResource.cache
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_Aplication\Lab04_Aplication\obj\Debug\Lab04_Aplication.csproj.CoreCompileInputs.cache
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_Aplication\Lab04_Aplication\obj\Debug\Lab04_Aplication.csproj.CopyComplete
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_Aplication\Lab04_Aplication\obj\Debug\Lab04_Aplication.exe
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_Aplication\Lab04_Aplication\obj\Debug\Lab04_Aplication.pdb
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_Aplication\Lab04_Aplication\bin\Debug\Data\DSSV.txt
