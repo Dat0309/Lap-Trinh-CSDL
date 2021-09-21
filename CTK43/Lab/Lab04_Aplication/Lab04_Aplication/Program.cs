@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Lab04_Aplication.Data;
 
 namespace Lab04_Aplication
 {
@@ -14,9 +15,11 @@ namespace Lab04_Aplication
         [STAThread]
         static void Main()
         {
+            IDataSource dataSource = new DataSource("Data\\DSSV.txt");
+            Contex context = new Contex(dataSource);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Form1(context));
         }
     }
 }

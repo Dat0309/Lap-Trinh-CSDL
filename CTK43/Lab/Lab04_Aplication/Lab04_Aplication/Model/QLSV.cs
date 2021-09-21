@@ -4,17 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using Lab04_Aplication.Data;
 
 namespace Lab04_Aplication.Model
 {
     public class QLSV
     {
+        Contex context;
         public delegate int SoSanh(object sv1, object sv2);
         public List<SinhVien> ds;
 
-        public QLSV()
+        public QLSV(Contex context)
         {
-            this.ds = new List<SinhVien>();
+            this.context = context;
+            this.ds = context.GetSV();
         }
 
         public void Them(SinhVien sv)
@@ -82,7 +85,7 @@ namespace Lab04_Aplication.Model
         }
         public void Xoa(object obj, SoSanh ss)
         {
-            int i = ds.Count - 1;
+            int i = ds.Count-1;
             for (; i > 0; i--)
                 if (ss(obj, this[i]) == 0)
                     ds.RemoveAt(i);

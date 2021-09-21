@@ -13,10 +13,14 @@ namespace Lab04_Aplication
 {
     public partial class Form1 : Form
     {
+        public Contex context;
+        private List<SinhVien> students;
         QLSV qlsv;
-        public Form1()
+        public Form1(Contex context)
         {
             InitializeComponent();
+            this.context = context;
+            students = context.GetSV();
         }
 
         #region các hàm xử lý chức năng
@@ -39,7 +43,7 @@ namespace Lab04_Aplication
         private void LoadSVToListView()
         {
             lvSV.Items.Clear();
-            foreach (SinhVien sv in qlsv.ds)
+            foreach (SinhVien sv in context.GetSV())
                 ThemSV(sv);
         }
         //Lấy thông tin sinh viên khi chọn
@@ -160,8 +164,8 @@ namespace Lab04_Aplication
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            qlsv = new QLSV();
-            qlsv.DocTuFile();
+            qlsv = new QLSV(context);
+            //qlsv.DocTuFile();
             LoadSVToListView();
         }
 
@@ -192,6 +196,32 @@ namespace Lab04_Aplication
         {
             SinhVien sv = obj2 as SinhVien;
             return sv.mssv.CompareTo(obj1);
+        }
+
+        private void tsmLoad_Click(object sender, EventArgs e)
+        {
+            DialogResult dlg = MessageBox.Show("Bạn có chắc không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (dlg == DialogResult.Yes)
+            {
+                int count, i;
+                ListViewItem item;
+                count = lvSV.Items.Count - 1;
+                for (i = count; i >= 0; i--)
+                {
+                    item = lvSV.Items[i];
+                    lvSV.Items.Remove(item);
+                }
+                LoadSVToListView();
+            }
+            return;
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dlg = MessageBox.Show("Bạn muốn lưu danh sách lại hay không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (dlg == DialogResult.Yes)
+                context.SaveSV();
+            return;
         }
     }
 }
