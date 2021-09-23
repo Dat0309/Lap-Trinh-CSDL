@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Lab04_Aplication.Model;
+using System.Text.RegularExpressions;
 
 namespace Lab04_Aplication
 {
@@ -75,7 +76,11 @@ namespace Lab04_Aplication
             rbNu.Checked = (sv.phai == false ? true : false);
             mtbSdt.Text = sv.sdt;
             txtEmail.Text = sv.email;
-            pbHinhAnh.Load(sv.hinh);
+            try
+            {
+                pbHinhAnh.Load(sv.hinh);
+            }
+            catch { }
         }
         //Thêm sinh viên từ control
         private SinhVien GetSVControl()
@@ -146,20 +151,49 @@ namespace Lab04_Aplication
             {
                 return (obj2 as SinhVien).mssv.CompareTo(obj1.ToString());
             });
-            if (sv != null)
+
+            if (validation() && validationEmail())
             {
-                DialogResult dlg = MessageBox.Show("Mã sinh viên đã tồn tại!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if(dlg == DialogResult.Yes)
+                if (sv != null)
                 {
-                    UpDateSV(sv);
+                    DialogResult dlg = MessageBox.Show("Mã sinh viên đã tồn tại!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (dlg == DialogResult.Yes)
+                    {
+                        UpDateSV(sv);
+                        LoadSVToListView(qlsv.ds);
+                    }
+                }
+                else
+                {
+                    qlsv.Them(GetSVControl());
                     LoadSVToListView(qlsv.ds);
                 }
             }
+            else if(!validation())
+            {
+                MessageBox.Show("Yêu cầu nhập đầy đủ các thông tin!","Cảnh báo",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
             else
             {
-                qlsv.Them(GetSVControl());
-                LoadSVToListView(qlsv.ds);
+                MessageBox.Show("Nhập sai định dạng Email, Xin mời nhập lại!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        private bool validation()
+        {
+            if (string.IsNullOrEmpty(txtHoTen.Text)) return false;
+            else if (string.IsNullOrEmpty(txtDiaChi.Text)) return false;
+            else if (string.IsNullOrEmpty(txtEmail.Text)) return false;
+            else if (string.IsNullOrEmpty(mtbMSSV.Text)) return false;
+            else if (string.IsNullOrEmpty(mtbSdt.Text)) return false;
+            else if (string.IsNullOrEmpty(cbbLop.Text)) return false;
+            else return true;
+        }
+
+        private bool validationEmail()
+        {
+            Regex reg = new Regex(@"\S+@\S+\.\S+");
+            if (!reg.IsMatch(txtEmail.Text)) return false;
+            return true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
