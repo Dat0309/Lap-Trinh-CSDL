@@ -73,12 +73,12 @@ namespace Lab05.Data
                 sinhvien.mssv, 
                 sinhvien.ho,
                 sinhvien.ten, 
-                sinhvien.ngaySinh, 
+                sinhvien.ngaySinh.ToShortDateString(),
                 sinhvien.lop,
                 sinhvien.cmnd,
                 sinhvien.sdt, 
                 sinhvien.diaChi,
-                sinhvien.gioiTinh,
+                (sinhvien.gioiTinh == true?"1":"0"),
                 dsMonHoc);
         }
         private List<string> addMonHoc(string line)

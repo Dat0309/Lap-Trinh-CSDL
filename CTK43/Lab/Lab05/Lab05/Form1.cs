@@ -14,6 +14,7 @@ namespace Lab05
     public partial class Form1 : Form
     {
         Context context;
+        private List<string> dsMon;
         private List<SinhVien> dssv;
         QLSV qlsv;
 
@@ -22,6 +23,17 @@ namespace Lab05
             InitializeComponent();
             this.context = context;
             dssv = context.GetSV();
+            dsMon = new List<string>
+            {
+                "Mạng máy tính",
+                "Hệ điều hành",
+                "Lập trình CSDL",
+                "Lập trình mạng",
+                "Đồ án cơ sở",
+                "Phương pháp NCKH",
+                "Lập trình trên thiết bị di động",
+                "An toàn và bảo mật hệ thống"
+            };
         }
 
         #region Định nghĩa các hàm xử lý
@@ -102,14 +114,16 @@ namespace Lab05
             sv.sdt = mtbSDT.Text;
             sv.diaChi = txtDiaChi.Text;
             sv.gioiTinh = (rbNam.Checked == true ? true : false);
+            List<string> dsmh = new List<string>();
             foreach (var item in clbDKM.CheckedItems)
             {
-                sv.monHoc.Add(item as string);
+                dsmh.Add(item as string);
             }
+            sv.monHoc = dsmh;
             return sv;
         }
 
-        private SinhVien UpDateSV(SinhVien sv)
+        private SinhVien UpdateSV(SinhVien sv)
         {
             SinhVien svUpdate = GetSVControl();
             sv.mssv = svUpdate.mssv;
@@ -154,31 +168,55 @@ namespace Lab05
             else if (clbDKM.CheckedItems.Count == 0) return false;
             else return true;
         }
+        private bool ValidationEqualTo(string value, int l)
+        {
+            if (value.Length == l)
+                return true;
+            return false;
+        }
+
         #endregion
         private void Form1_Load(object sender, EventArgs e)
         {
+            foreach (var item in dsMon)
+                clbDKM.Items.Add(item, false);
             qlsv = new QLSV(context);
             LoadSVToListView(qlsv.dssv);
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-
+            DialogResult dlg = MessageBox.Show("Cậu có chắc không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if(dlg == DialogResult.OK)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-
+            SinhVien sv = qlsv.Tim(GetSVControl().mssv, delegate (object obj1, object obj2)
+            {
+                return (obj2 as SinhVien).mssv.CompareTo(obj1.ToString());
+            });
+            if (Validation())
+            {
+                    DialogResult dlg = MessageBox.Show("Mã sinh viên đã tồn tại", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    if (dlg == DialogResult.Yes)
+                    {
+                        UpdateSV(sv);
+                        LoadSVToListView(qlsv.dssv);
+                        context.SaveSV();
+                        MessageBox.Show("Cập nhật sinh viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ClearForm();
+                    }
+            }
         }
 
         private void btnTim_Click(object sender, EventArgs e)
         {
-
+            frmTimKiem frm = new frmTimKiem(qlsv);
+            frm.ShowDialog();
         }
 
         private void lvSV_SelectedIndexChanged(object sender, EventArgs e)
@@ -190,6 +228,99 @@ namespace Lab05
                 ThietLapControl(GetSVLV(item));
             }
 
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            SinhVien sv = qlsv.Tim(GetSVControl().mssv, delegate (object obj1, object obj2)
+            {
+                return (obj2 as SinhVien).mssv.CompareTo(obj1.ToString());
+            });
+
+            if (Validation())
+            {
+                if (sv != null) 
+                    {
+                        DialogResult dlg = MessageBox.Show("Mã sinh viên đã tồn tại, Bạn muốn cập nhật không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        if (dlg == DialogResult.Yes)
+                        {
+                            UpdateSV(sv);
+                            LoadSVToListView(qlsv.dssv);
+                            context.SaveSV();
+                            MessageBox.Show("Cập nhật sinh viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            ClearForm();
+                        }
+                    }
+                    else
+                    {
+                        qlsv.Them(GetSVControl());
+                        LoadSVToListView(qlsv.dssv);
+                        context.SaveSV();
+                        MessageBox.Show("Thêm sinh viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ClearForm();
+                    }
+            }
+            else
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin trước khi thêm", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }
+
+        private void tsmXoa_Click(object sender, EventArgs e)
+        {
+            if(clbDKM.CheckedItems.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn môn học");
+                return;
+            }
+            foreach (var item in clbDKM.CheckedItems)
+            {
+                dsMon.Remove(item as string);
+            }
+
+            clbDKM.Items.Clear();
+            foreach (var monHoc in dsMon)
+                clbDKM.Items.Add(monHoc, false);
+
+        }
+        private int SoSanhTheoMa(object obj1, object obj2)
+        {
+            SinhVien sv = obj2 as SinhVien;
+            return sv.mssv.CompareTo(obj1);
+        }
+
+        private void cmsXoaSV_Click(object sender, EventArgs e)
+        {
+            int count, i;
+            ListViewItem item;
+            count = lvSV.Items.Count - 1;
+            for (i = count; i > 0; i--)
+            {
+                item = lvSV.Items[i];
+                if (item.Selected || item.Checked)
+                    qlsv.Xoa(item.SubItems[0].Text, SoSanhTheoMa);
+            }
+            LoadSVToListView(qlsv.dssv);
+            context.SaveSV();
+        }
+
+        private void cmsThem_Click(object sender, EventArgs e)
+        {
+            frmThemMH frm = new frmThemMH();
+            var dialog = frm.ShowDialog();
+
+            if(dialog == DialogResult.OK)
+            {
+                string tenMH = frm.tenMonHoc;
+                if(dsMon.Exists(mh => mh == tenMH))
+                {
+                    MessageBox.Show("Môn học đã tồn tại");
+                    return;
+                }
+                dsMon.Add(tenMH);
+                clbDKM.Items.Clear();
+                foreach (var monHoc in dsMon)
+                    clbDKM.Items.Add(monHoc, false);
+            }
         }
     }
 }

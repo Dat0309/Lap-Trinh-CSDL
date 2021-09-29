@@ -29,6 +29,7 @@ namespace Lab05
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.mtbMSSV = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,6 +42,8 @@ namespace Lab05
             this.mtbCMND = new System.Windows.Forms.MaskedTextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.clbDKM = new System.Windows.Forms.CheckedListBox();
+            this.cmsComboBox = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmXoa = new System.Windows.Forms.ToolStripMenuItem();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -48,7 +51,6 @@ namespace Lab05
             this.rbNam = new System.Windows.Forms.RadioButton();
             this.rbNu = new System.Windows.Forms.RadioButton();
             this.txtTen = new System.Windows.Forms.MaskedTextBox();
-            this.cbbLop = new System.Windows.Forms.ComboBox();
             this.mtbSDT = new System.Windows.Forms.MaskedTextBox();
             this.btnTim = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
@@ -66,7 +68,13 @@ namespace Lab05
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cbbLop = new Guna.UI.WinForms.GunaComboBox();
+            this.cmsLV = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsXoaSV = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsThem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsComboBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.cmsLV.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -170,22 +178,29 @@ namespace Lab05
             // clbDKM
             // 
             this.clbDKM.CheckOnClick = true;
+            this.clbDKM.ContextMenuStrip = this.cmsComboBox;
             this.clbDKM.FormattingEnabled = true;
             this.clbDKM.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.clbDKM.Items.AddRange(new object[] {
-            "Mạng máy tính",
-            "Hệ điều hành",
-            "Lập trình CSDL",
-            "Lập trình mạng",
-            "Đồ án cơ sở",
-            "Phương pháp NCKH",
-            "Lập trình trên thiết bị di động",
-            "An toàn và bảo mật hệ thống"});
             this.clbDKM.Location = new System.Drawing.Point(214, 245);
             this.clbDKM.MultiColumn = true;
             this.clbDKM.Name = "clbDKM";
             this.clbDKM.Size = new System.Drawing.Size(732, 68);
             this.clbDKM.TabIndex = 11;
+            // 
+            // cmsComboBox
+            // 
+            this.cmsComboBox.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmXoa,
+            this.cmsThem});
+            this.cmsComboBox.Name = "cmsComboBox";
+            this.cmsComboBox.Size = new System.Drawing.Size(105, 48);
+            // 
+            // tsmXoa
+            // 
+            this.tsmXoa.Name = "tsmXoa";
+            this.tsmXoa.Size = new System.Drawing.Size(180, 22);
+            this.tsmXoa.Text = "Xóa";
+            this.tsmXoa.Click += new System.EventHandler(this.tsmXoa_Click);
             // 
             // label8
             // 
@@ -255,18 +270,10 @@ namespace Lab05
             this.txtTen.Size = new System.Drawing.Size(243, 21);
             this.txtTen.TabIndex = 18;
             // 
-            // cbbLop
-            // 
-            this.cbbLop.FormattingEnabled = true;
-            this.cbbLop.Location = new System.Drawing.Point(703, 121);
-            this.cbbLop.Name = "cbbLop";
-            this.cbbLop.Size = new System.Drawing.Size(243, 23);
-            this.cbbLop.TabIndex = 19;
-            // 
             // mtbSDT
             // 
             this.mtbSDT.Location = new System.Drawing.Point(703, 164);
-            this.mtbSDT.Mask = "0000.000.000";
+            this.mtbSDT.Mask = "0000000000";
             this.mtbSDT.Name = "mtbSDT";
             this.mtbSDT.Size = new System.Drawing.Size(243, 21);
             this.mtbSDT.TabIndex = 20;
@@ -319,7 +326,7 @@ namespace Lab05
             this.groupBox1.Size = new System.Drawing.Size(994, 262);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Danh sách sinh viên";
+            this.groupBox1.Text = "Danh sach sinh vien";
             // 
             // lvSV
             // 
@@ -335,6 +342,7 @@ namespace Lab05
             this.columnHeader8,
             this.columnHeader9,
             this.columnHeader10});
+            this.lvSV.ContextMenuStrip = this.cmsLV;
             this.lvSV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvSV.FullRowSelect = true;
             this.lvSV.GridLines = true;
@@ -393,18 +401,63 @@ namespace Lab05
             this.columnHeader10.Text = "Môn đăng ký";
             this.columnHeader10.Width = 151;
             // 
+            // cbbLop
+            // 
+            this.cbbLop.BackColor = System.Drawing.Color.Transparent;
+            this.cbbLop.BaseColor = System.Drawing.Color.White;
+            this.cbbLop.BorderColor = System.Drawing.Color.Gray;
+            this.cbbLop.BorderSize = 1;
+            this.cbbLop.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbLop.FocusedColor = System.Drawing.Color.Empty;
+            this.cbbLop.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbLop.ForeColor = System.Drawing.Color.Black;
+            this.cbbLop.FormattingEnabled = true;
+            this.cbbLop.Items.AddRange(new object[] {
+            "CTK42",
+            "CTK43",
+            "CTK44",
+            "CTK45"});
+            this.cbbLop.Location = new System.Drawing.Point(703, 119);
+            this.cbbLop.Name = "cbbLop";
+            this.cbbLop.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.cbbLop.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cbbLop.Size = new System.Drawing.Size(243, 26);
+            this.cbbLop.TabIndex = 26;
+            // 
+            // cmsLV
+            // 
+            this.cmsLV.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsXoaSV});
+            this.cmsLV.Name = "cmsLV";
+            this.cmsLV.Size = new System.Drawing.Size(95, 26);
+            // 
+            // cmsXoaSV
+            // 
+            this.cmsXoaSV.Name = "cmsXoaSV";
+            this.cmsXoaSV.Size = new System.Drawing.Size(94, 22);
+            this.cmsXoaSV.Text = "Xóa";
+            this.cmsXoaSV.Click += new System.EventHandler(this.cmsXoaSV_Click);
+            // 
+            // cmsThem
+            // 
+            this.cmsThem.Name = "cmsThem";
+            this.cmsThem.Size = new System.Drawing.Size(180, 22);
+            this.cmsThem.Text = "Thêm";
+            this.cmsThem.Click += new System.EventHandler(this.cmsThem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1018, 643);
+            this.Controls.Add(this.cbbLop);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnTim);
             this.Controls.Add(this.mtbSDT);
-            this.Controls.Add(this.cbbLop);
             this.Controls.Add(this.txtTen);
             this.Controls.Add(this.rbNu);
             this.Controls.Add(this.rbNam);
@@ -428,7 +481,9 @@ namespace Lab05
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.cmsComboBox.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.cmsLV.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -455,7 +510,6 @@ namespace Lab05
         private System.Windows.Forms.RadioButton rbNam;
         private System.Windows.Forms.RadioButton rbNu;
         private System.Windows.Forms.MaskedTextBox txtTen;
-        private System.Windows.Forms.ComboBox cbbLop;
         private System.Windows.Forms.MaskedTextBox mtbSDT;
         private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.Button btnThem;
@@ -473,6 +527,12 @@ namespace Lab05
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
+        private Guna.UI.WinForms.GunaComboBox cbbLop;
+        private System.Windows.Forms.ContextMenuStrip cmsComboBox;
+        private System.Windows.Forms.ToolStripMenuItem tsmXoa;
+        private System.Windows.Forms.ContextMenuStrip cmsLV;
+        private System.Windows.Forms.ToolStripMenuItem cmsXoaSV;
+        private System.Windows.Forms.ToolStripMenuItem cmsThem;
     }
 }
 

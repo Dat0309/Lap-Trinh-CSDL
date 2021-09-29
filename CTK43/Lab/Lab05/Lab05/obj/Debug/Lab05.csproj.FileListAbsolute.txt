@@ -9,3 +9,6 @@ D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab05\Lab05\obj\Debug\Lab05.csproj.CoreCompileI
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab05\Lab05\obj\Debug\Lab05.exe
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab05\Lab05\obj\Debug\Lab05.pdb
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab05\Lab05\bin\Debug\Data\DSSV.txt
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab05\Lab05\bin\Debug\Guna.UI.dll
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab05\Lab05\obj\Debug\Lab05.csproj.CopyComplete
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab05\Lab05\obj\Debug\Lab05.frmTimKiem.resources

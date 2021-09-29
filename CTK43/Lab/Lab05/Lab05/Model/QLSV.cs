@@ -48,7 +48,19 @@ namespace Lab05.Model
                     break;
                 }
             }
-            return sv;
+            return sv;  
+        }
+        public List<SinhVien> DSTim(object obj, SoSanh ss)
+        {
+            List<SinhVien> dskq = new List<SinhVien>();
+            foreach (SinhVien item in dssv)
+            {
+                if(ss(obj, item) == 0)
+                {
+                    dskq.Add(item);
+                }
+            }
+            return dskq;
         }
 
         public bool Sua(SinhVien svSua, object obj, SoSanh ss)

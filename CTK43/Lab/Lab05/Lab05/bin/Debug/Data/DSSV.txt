@@ -1,6 +1,7 @@
-﻿1914775*Đinh Trọng*Đạt*9/03/2001*CTK43*285871211*0865447141*Đồi Thông Tin, P8, Đà Lạt*1*Đồ án cơ sở,Phương pháp NCKH,Lập trình trên thiết bị di động,Lập trình CSDL
-1914899*Trần Minh*Cảnh*6/05/2000*CTK43*285123411*0987676781*Đồi Thông Tin, P8, Đà Lạt*0*Đồ án cơ sở,Lập trình trên thiết bị di động,Lập tarình CSDL
-1911135*Mai Ngọc*Trí*1/1/2001*CTK43*285845611*0865447141*Trần Khánh Dư, P8, Đà Lạt*1*Đồ án cơ sở,Phương pháp NCKH,Mạng máy tính,An toàn và bảo mật
+1914775*Đinh Trọng*Đạt*9/3/2001*CTK43*285871211*0865447141*Đồi Thông Tin, P8, Đà Lạt*1*Đồ án cơ sở,Phương pháp NCKH,Lập trình trên thiết bị di động,Lập trình CSDL
+1914899*Trần Minh*Cảnh*6/5/2000*CTK43*285123411*0987676781*Đồi Thông Tin, P8, Đà Lạt*0*Đồ án cơ sở,Lập trình trên thiết bị di động,Lập tarình CSDL
+1911135*Mai Ngọc*Trí Em*1/1/2001*CTK43*285845611*0865447141*Trần Khánh Dư, P8, Đà Lạt*0*Mạng máy tính,Đồ án cơ sở,Phương pháp NCKH
 2115207*Đinh Trọng*Hiếu*8/16/2003*CTK45*285670211*0865447141*Đồng Phú, Bình Phước*1*Đồ án cơ sở,Phương pháp NCKH,Lập trình trên thiết bị di động,Lập trình CSDL
 1914111*Đào Xuân*Hải*3/16/2001*CTK43*285876541*0865447141*Đồi Thông Tin, P8, Đà Lạt*1*Đồ án cơ sở,Phương pháp NCKH,Lập trình trên thiết bị di động,Lập trình CSDL
 1914775*Lưu Nguyễn Vân*Em*8/28/2001*CTK43*284570211*0865447141*Đà Lạt*0*Đồ án cơ sở,Phương pháp NCKH,Lập trình trên thiết bị di động,Lập trình CSDL
+2134123*Mai Ngọc*Trí*1/1/2001*CTK43*285845611*0865447141*Trần Khánh Dư, P8, Đà Lạt*1*Mạng máy tính,Đồ án cơ sở,Phương pháp NCKH
