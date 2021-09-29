@@ -1,5 +1,6 @@
 ﻿<SinhViens>
-	<SinhVien ID="1914775">
+	<SinhVien>
+		<mssv>1914775</mssv>
 		<ho>Đinh Trọng</ho>
 		<ten>Đạt</ten>
 		<ngaySinh>9/03/2001</ngaySinh>
@@ -10,7 +11,8 @@
 		<gioiTinh>1</gioiTinh>
 		<monHoc>Mạng máy tính,Hệ điều hành,Lập trình CSDL,Lập trình trên thiết bị di động</monHoc>
 	</SinhVien>
-	<SinhVien ID="1914899">
+	<SinhVien>
+		<mssv>1914899</mssv>
 		<ho>Đinh Trọng</ho>
 		<ten>Hiếu</ten>
 		<ngaySinh>6/15/2003</ngaySinh>

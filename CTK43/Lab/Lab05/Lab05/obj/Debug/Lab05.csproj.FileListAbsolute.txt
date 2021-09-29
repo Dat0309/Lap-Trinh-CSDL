@@ -16,3 +16,4 @@ D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab05\Lab05\bin\Debug\Data\DSSV.json
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab05\Lab05\bin\Debug\Newtonsoft.Json.dll
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab05\Lab05\bin\Debug\Newtonsoft.Json.xml
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab05\Lab05\obj\Debug\Lab05.frmThemMH.resources
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab05\Lab05\bin\Debug\Data\DSSV.xml

@@ -44,6 +44,7 @@ namespace Lab05
             this.clbDKM = new System.Windows.Forms.CheckedListBox();
             this.cmsComboBox = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmXoa = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsThem = new System.Windows.Forms.ToolStripMenuItem();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -68,10 +69,9 @@ namespace Lab05
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cbbLop = new Guna.UI.WinForms.GunaComboBox();
             this.cmsLV = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsXoaSV = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsThem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cbbLop = new Guna.UI.WinForms.GunaComboBox();
             this.cmsComboBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.cmsLV.SuspendLayout();
@@ -150,7 +150,7 @@ namespace Lab05
             this.txtHo.Location = new System.Drawing.Point(214, 75);
             this.txtHo.Name = "txtHo";
             this.txtHo.Size = new System.Drawing.Size(269, 21);
-            this.txtHo.TabIndex = 7;
+            this.txtHo.TabIndex = 2;
             // 
             // dtpNgaySinh
             // 
@@ -158,7 +158,7 @@ namespace Lab05
             this.dtpNgaySinh.Location = new System.Drawing.Point(214, 123);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(269, 21);
-            this.dtpNgaySinh.TabIndex = 8;
+            this.dtpNgaySinh.TabIndex = 4;
             // 
             // mtbCMND
             // 
@@ -166,14 +166,14 @@ namespace Lab05
             this.mtbCMND.Mask = "000000000";
             this.mtbCMND.Name = "mtbCMND";
             this.mtbCMND.Size = new System.Drawing.Size(269, 21);
-            this.mtbCMND.TabIndex = 9;
+            this.mtbCMND.TabIndex = 5;
             // 
             // txtDiaChi
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(214, 209);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(732, 21);
-            this.txtDiaChi.TabIndex = 10;
+            this.txtDiaChi.TabIndex = 6;
             // 
             // clbDKM
             // 
@@ -185,7 +185,7 @@ namespace Lab05
             this.clbDKM.MultiColumn = true;
             this.clbDKM.Name = "clbDKM";
             this.clbDKM.Size = new System.Drawing.Size(732, 68);
-            this.clbDKM.TabIndex = 11;
+            this.clbDKM.TabIndex = 10;
             // 
             // cmsComboBox
             // 
@@ -198,9 +198,16 @@ namespace Lab05
             // tsmXoa
             // 
             this.tsmXoa.Name = "tsmXoa";
-            this.tsmXoa.Size = new System.Drawing.Size(180, 22);
+            this.tsmXoa.Size = new System.Drawing.Size(104, 22);
             this.tsmXoa.Text = "Xóa";
             this.tsmXoa.Click += new System.EventHandler(this.tsmXoa_Click);
+            // 
+            // cmsThem
+            // 
+            this.cmsThem.Name = "cmsThem";
+            this.cmsThem.Size = new System.Drawing.Size(104, 22);
+            this.cmsThem.Text = "Thêm";
+            this.cmsThem.Click += new System.EventHandler(this.cmsThem_Click);
             // 
             // label8
             // 
@@ -248,7 +255,7 @@ namespace Lab05
             this.rbNam.Location = new System.Drawing.Point(703, 36);
             this.rbNam.Name = "rbNam";
             this.rbNam.Size = new System.Drawing.Size(52, 19);
-            this.rbNam.TabIndex = 16;
+            this.rbNam.TabIndex = 7;
             this.rbNam.Text = "Nam";
             this.rbNam.UseVisualStyleBackColor = true;
             // 
@@ -258,7 +265,7 @@ namespace Lab05
             this.rbNu.Location = new System.Drawing.Point(778, 37);
             this.rbNu.Name = "rbNu";
             this.rbNu.Size = new System.Drawing.Size(41, 19);
-            this.rbNu.TabIndex = 17;
+            this.rbNu.TabIndex = 8;
             this.rbNu.TabStop = true;
             this.rbNu.Text = "Nữ";
             this.rbNu.UseVisualStyleBackColor = true;
@@ -268,7 +275,7 @@ namespace Lab05
             this.txtTen.Location = new System.Drawing.Point(703, 75);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(243, 21);
-            this.txtTen.TabIndex = 18;
+            this.txtTen.TabIndex = 3;
             // 
             // mtbSDT
             // 
@@ -276,14 +283,14 @@ namespace Lab05
             this.mtbSDT.Mask = "0000000000";
             this.mtbSDT.Name = "mtbSDT";
             this.mtbSDT.Size = new System.Drawing.Size(243, 21);
-            this.mtbSDT.TabIndex = 20;
+            this.mtbSDT.TabIndex = 9;
             // 
             // btnTim
             // 
             this.btnTim.Location = new System.Drawing.Point(408, 331);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(103, 30);
-            this.btnTim.TabIndex = 21;
+            this.btnTim.TabIndex = 11;
             this.btnTim.Text = "Tìm kiếm";
             this.btnTim.UseVisualStyleBackColor = true;
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
@@ -293,7 +300,7 @@ namespace Lab05
             this.btnThem.Location = new System.Drawing.Point(556, 331);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(103, 30);
-            this.btnThem.TabIndex = 22;
+            this.btnThem.TabIndex = 12;
             this.btnThem.Text = "Thêm mới";
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -303,7 +310,7 @@ namespace Lab05
             this.btnCapNhat.Location = new System.Drawing.Point(703, 331);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(103, 30);
-            this.btnCapNhat.TabIndex = 23;
+            this.btnCapNhat.TabIndex = 13;
             this.btnCapNhat.Text = "Cập nhật";
             this.btnCapNhat.UseVisualStyleBackColor = true;
             this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
@@ -313,7 +320,7 @@ namespace Lab05
             this.btnThoat.Location = new System.Drawing.Point(843, 331);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(103, 30);
-            this.btnThoat.TabIndex = 24;
+            this.btnThoat.TabIndex = 14;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
@@ -401,6 +408,20 @@ namespace Lab05
             this.columnHeader10.Text = "Môn đăng ký";
             this.columnHeader10.Width = 151;
             // 
+            // cmsLV
+            // 
+            this.cmsLV.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsXoaSV});
+            this.cmsLV.Name = "cmsLV";
+            this.cmsLV.Size = new System.Drawing.Size(95, 26);
+            // 
+            // cmsXoaSV
+            // 
+            this.cmsXoaSV.Name = "cmsXoaSV";
+            this.cmsXoaSV.Size = new System.Drawing.Size(94, 22);
+            this.cmsXoaSV.Text = "Xóa";
+            this.cmsXoaSV.Click += new System.EventHandler(this.cmsXoaSV_Click);
+            // 
             // cbbLop
             // 
             this.cbbLop.BackColor = System.Drawing.Color.Transparent;
@@ -423,28 +444,8 @@ namespace Lab05
             this.cbbLop.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cbbLop.OnHoverItemForeColor = System.Drawing.Color.White;
             this.cbbLop.Size = new System.Drawing.Size(243, 26);
-            this.cbbLop.TabIndex = 26;
-            // 
-            // cmsLV
-            // 
-            this.cmsLV.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cmsXoaSV});
-            this.cmsLV.Name = "cmsLV";
-            this.cmsLV.Size = new System.Drawing.Size(95, 26);
-            // 
-            // cmsXoaSV
-            // 
-            this.cmsXoaSV.Name = "cmsXoaSV";
-            this.cmsXoaSV.Size = new System.Drawing.Size(94, 22);
-            this.cmsXoaSV.Text = "Xóa";
-            this.cmsXoaSV.Click += new System.EventHandler(this.cmsXoaSV_Click);
-            // 
-            // cmsThem
-            // 
-            this.cmsThem.Name = "cmsThem";
-            this.cmsThem.Size = new System.Drawing.Size(180, 22);
-            this.cmsThem.Text = "Thêm";
-            this.cmsThem.Click += new System.EventHandler(this.cmsThem_Click);
+            this.cbbLop.TabIndex = 0;
+            this.cbbLop.TextChanged += new System.EventHandler(this.cbbLop_TextChanged);
             // 
             // Form1
             // 

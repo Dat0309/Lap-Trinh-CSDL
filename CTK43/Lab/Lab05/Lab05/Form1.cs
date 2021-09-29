@@ -199,9 +199,9 @@ namespace Lab05
             {
                 return (obj2 as SinhVien).mssv.CompareTo(obj1.ToString());
             });
-            if (Validation())
-            {
-                    DialogResult dlg = MessageBox.Show("Mã sinh viên đã tồn tại", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                if (Validation())
+                {
+                    DialogResult dlg = MessageBox.Show("Bạn có muốn cập nhật không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     if (dlg == DialogResult.Yes)
                     {
                         UpdateSV(sv);
@@ -210,7 +210,7 @@ namespace Lab05
                         MessageBox.Show("Cập nhật sinh viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ClearForm();
                     }
-            }
+                }
         }
 
         private void btnTim_Click(object sender, EventArgs e)
@@ -321,6 +321,15 @@ namespace Lab05
                 foreach (var monHoc in dsMon)
                     clbDKM.Items.Add(monHoc, false);
             }
+        }
+
+        private void cbbLop_TextChanged(object sender, EventArgs e)
+        {
+            string[] khoa = cbbLop.Text.Split('K');
+            int CurrentYear = 0;
+            CurrentYear = int.Parse(khoa[1])-24;
+            string fm = string.Format("{0}{1}", CurrentYear, "10");
+            mtbMSSV.Text = fm;
         }
     }
 }
