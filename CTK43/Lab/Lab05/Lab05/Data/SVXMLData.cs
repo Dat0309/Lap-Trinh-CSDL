@@ -63,6 +63,7 @@ namespace Lab05.Data
 
         public void Save(List<SinhVien> dssv)
         {
+            root.RemoveAll();
             foreach  (SinhVien item in dssv)
             {
                 string dsMonHoc = string.Join(",", item.monHoc);

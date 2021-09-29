@@ -3,30 +3,6 @@
     <mssv>1914775</mssv>
     <ho>Đinh Trọng</ho>
     <ten>Đạt</ten>
-    <ngaySinh>9/03/2001</ngaySinh>
-    <lop>CTK43</lop>
-    <cmnd>123456789</cmnd>
-    <sdt>09878765678</sdt>
-    <diaChi>Đà Lạt, Lâm Đồng</diaChi>
-    <gioiTinh>1</gioiTinh>
-    <monHoc>Mạng máy tính,Hệ điều hành,Lập trình CSDL,Lập trình trên thiết bị di động</monHoc>
-  </SinhVien>
-  <SinhVien>
-    <mssv>1914899</mssv>
-    <ho>Đinh Trọng</ho>
-    <ten>Hiếu</ten>
-    <ngaySinh>6/15/2003</ngaySinh>
-    <lop>CTK45</lop>
-    <cmnd>123456789</cmnd>
-    <sdt>09878765678</sdt>
-    <diaChi>Đà Lạt, Lâm Đồng</diaChi>
-    <gioiTinh>1</gioiTinh>
-    <monHoc>Mạng máy tính,Hệ điều hành,Lập trình CSDL,Lập trình trên thiết bị di động</monHoc>
-  </SinhVien>
-  <SinhVien>
-    <mssv>1914775</mssv>
-    <ho>Đinh Trọng</ho>
-    <ten>Đạt</ten>
     <ngaySinh>9/3/2001</ngaySinh>
     <lop>CTK43</lop>
     <cmnd>123456789</cmnd>
@@ -36,51 +12,15 @@
     <monHoc>Mạng máy tính,Hệ điều hành,Lập trình CSDL,Lập trình trên thiết bị di động</monHoc>
   </SinhVien>
   <SinhVien>
-    <mssv>1914899</mssv>
+    <mssv>1910123</mssv>
     <ho>Đinh Trọng</ho>
     <ten>Hiếu</ten>
-    <ngaySinh>6/15/2003</ngaySinh>
-    <lop>CTK45</lop>
-    <cmnd>123456789</cmnd>
-    <sdt>09878765678</sdt>
-    <diaChi>Đà Lạt, Lâm Đồng</diaChi>
-    <gioiTinh>1</gioiTinh>
-    <monHoc>Mạng máy tính,Hệ điều hành,Lập trình CSDL,Lập trình trên thiết bị di động</monHoc>
-  </SinhVien>
-  <SinhVien>
-    <mssv>1914809</mssv>
-    <ho>Trần Minh</ho>
-    <ten>Cảnh</ten>
-    <ngaySinh>5/6/2000</ngaySinh>
-    <lop>CTK43</lop>
-    <cmnd>123456312</cmnd>
-    <sdt>0987876567</sdt>
-    <diaChi>Đà Lạt, Lâm Đồng</diaChi>
-    <gioiTinh>0</gioiTinh>
-    <monHoc>Mạng máy tính,Hệ điều hành,Lập trình CSDL,Đồ án cơ sở,Phương pháp NCKH,Lập trình trên thiết bị di động</monHoc>
-  </SinhVien>
-  <SinhVien>
-    <mssv>1914775</mssv>
-    <ho>Đinh Trọng</ho>
-    <ten>Đạt</ten>
     <ngaySinh>9/3/2001</ngaySinh>
     <lop>CTK43</lop>
     <cmnd>123456789</cmnd>
-    <sdt>09878765678</sdt>
+    <sdt>0987876567</sdt>
     <diaChi>Đà Lạt, Lâm Đồng</diaChi>
     <gioiTinh>1</gioiTinh>
     <monHoc>Mạng máy tính,Hệ điều hành,Lập trình CSDL,Lập trình trên thiết bị di động</monHoc>
-  </SinhVien>
-  <SinhVien>
-    <mssv>1914809</mssv>
-    <ho>Trần Minh</ho>
-    <ten>Cảnh</ten>
-    <ngaySinh>5/6/2000</ngaySinh>
-    <lop>CTK43</lop>
-    <cmnd>123456312</cmnd>
-    <sdt>0987876567</sdt>
-    <diaChi>Đà Lạt, Lâm Đồng</diaChi>
-    <gioiTinh>0</gioiTinh>
-    <monHoc>Mạng máy tính,Hệ điều hành,Lập trình CSDL,Đồ án cơ sở,Phương pháp NCKH,Lập trình trên thiết bị di động</monHoc>
   </SinhVien>
 </SinhViens>

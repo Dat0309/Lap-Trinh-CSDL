@@ -325,11 +325,15 @@ namespace Lab05
 
         private void cbbLop_TextChanged(object sender, EventArgs e)
         {
-            string[] khoa = cbbLop.Text.Split('K');
-            int CurrentYear = 0;
-            CurrentYear = int.Parse(khoa[1])-24;
-            string fm = string.Format("{0}{1}", CurrentYear, "10");
-            mtbMSSV.Text = fm;
+            try
+            {
+                string[] khoa = cbbLop.Text.Split('K');
+                int CurrentYear = 0;
+                CurrentYear = int.Parse(khoa[1]) - 24;
+                string fm = string.Format("{0}{1}", CurrentYear, "10");
+                mtbMSSV.Text = fm;
+            }
+            catch {}
         }
     }
 }

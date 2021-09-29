@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Lab05.Context">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAgIAAAAAAAAAAAQAAQAAAQAAAAA=</HashCode>
+      <FileName>Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab05.Form1">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>NAgiJAEAACSkABAAOiCBwDD/AxQKAQQAACQqCAIoRBg=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab05.frmThemMH">
+    <Position X="11.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQACAAABAAAACAAAACAAEYAAAAAGAAAAAAAAA=</HashCode>
+      <FileName>frmThemMH.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab05.frmTimKiem">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAEAEAACAAABAACACABAD+AwAGAAAAACACAAAIBAA=</HashCode>
+      <FileName>frmTimKiem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab05.Program">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab05.Data.SVJsonData" BaseTypeListCollapsed="true">
+    <Position X="6.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Data\SVJsonData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Lab05.Data.SVTextData" BaseTypeListCollapsed="true">
+    <Position X="9.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAIAAAAAAAAAAAgAAAAAAAAQBAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Data\SVTextData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Lab05.Data.SVXMLData" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAQAgAgAAAAAAQAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Data\SVXMLData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Lab05.Model.QLSV">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="Lab05.Model.QLSV.SoSanh" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Model\QLSV.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAgCCAAAAAAAAAAgAAAAIAAAAAAAAw=</HashCode>
+      <FileName>Model\QLSV.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab05.Model.SinhVien">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEQAAAAAAAAIAAiAAAAACAAAAAAAAwAgAAAAg=</HashCode>
+      <FileName>Model\SinhVien.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab05.Properties.Resources">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab05.Properties.Settings">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Lab05.Data.ISVDataSource">
+    <Position X="4.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\ISVDataSource.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
