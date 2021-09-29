@@ -16,7 +16,8 @@ namespace Lab05
         static void Main()
         {
             ISVDataSource dataSource = new SVTextData("Data\\DSSV.txt");
-            Context context = Context.getInstance(dataSource);
+            ISVDataSource jsonData = new SVJsonData("Data\\DSSV.json");
+            Context context = Context.getInstance(jsonData);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1(context));

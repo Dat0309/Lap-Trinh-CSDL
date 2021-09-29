@@ -1,0 +1,24 @@
+﻿<SinhViens>
+	<SinhVien ID="1914775">
+		<ho>Đinh Trọng</ho>
+		<ten>Đạt</ten>
+		<ngaySinh>9/03/2001</ngaySinh>
+		<lop>CTK43</lop>
+		<cmnd>123456789</cmnd>
+		<sdt>09878765678</sdt>
+		<diaChi>Đà Lạt, Lâm Đồng</diaChi>
+		<gioiTinh>1</gioiTinh>
+		<monHoc>Mạng máy tính,Hệ điều hành,Lập trình CSDL,Lập trình trên thiết bị di động</monHoc>
+	</SinhVien>
+	<SinhVien ID="1914899">
+		<ho>Đinh Trọng</ho>
+		<ten>Hiếu</ten>
+		<ngaySinh>6/15/2003</ngaySinh>
+		<lop>CTK45</lop>
+		<cmnd>123456789</cmnd>
+		<sdt>09878765678</sdt>
+		<diaChi>Đà Lạt, Lâm Đồng</diaChi>
+		<gioiTinh>1</gioiTinh>
+		<monHoc>Mạng máy tính,Hệ điều hành,Lập trình CSDL,Lập trình trên thiết bị di động</monHoc>
+	</SinhVien>
+</SinhViens>

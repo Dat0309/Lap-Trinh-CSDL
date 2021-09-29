@@ -1,0 +1,26 @@
+﻿[
+    {
+        "mssv": "1914775",
+        "ho": "Đinh Trọng",
+        "cmnd": "098374653",
+        "gioiTinh": 1,
+        "ngaySinh": "9/03/2001",
+        "diaChi": "Đà Lạt, Lâm Đồng",
+        "ten": "Đạt",
+        "lop": "CTK43",
+        "sdt": "0865447141",
+        "monHoc": [ "Mạng máy tính","Hệ điều hành","Lập trình CSDL","Lập trình trên thiết bị di động" ]
+    },
+    {
+        "mssv": "1914899",
+        "ho": "Trần Minhh",
+        "cmnd": "897645367",
+        "gioiTinh": 0,
+        "ngaySinh": "6/05/2000",
+        "diaChi": "Đà Lạt, Lâm Đồng",
+        "ten": "Cảnh",
+        "lop": "CTK43",
+        "sdt": "1234565434",
+        "monHoc": [ "Mạng máy tính","Hệ điều hành","Lập trình CSDL","Lập trình trên thiết bị di động" ]
+    }
+]
