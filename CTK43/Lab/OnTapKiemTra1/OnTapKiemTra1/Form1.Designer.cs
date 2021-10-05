@@ -30,7 +30,11 @@ namespace OnTapKiemTra1
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tvKhoa = new System.Windows.Forms.TreeView();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.rbSDT = new System.Windows.Forms.RadioButton();
+            this.rbHoTen = new System.Windows.Forms.RadioButton();
+            this.rbMSSV = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.lvSV = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -39,41 +43,84 @@ namespace OnTapKiemTra1
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label1 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tvKhoa = new System.Windows.Forms.TreeView();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.txtSearch);
+            this.groupBox1.Controls.Add(this.rbSDT);
+            this.groupBox1.Controls.Add(this.rbHoTen);
+            this.groupBox1.Controls.Add(this.rbMSSV);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lvSV);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(358, 17);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1002, 858);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
             // 
-            // tvKhoa
+            // txtSearch
             // 
-            this.tvKhoa.Location = new System.Drawing.Point(18, 126);
-            this.tvKhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tvKhoa.Name = "tvKhoa";
-            this.tvKhoa.Size = new System.Drawing.Size(330, 748);
-            this.tvKhoa.TabIndex = 1;
+            this.txtSearch.Location = new System.Drawing.Point(361, 65);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(347, 24);
+            this.txtSearch.TabIndex = 5;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // rbSDT
+            // 
+            this.rbSDT.AutoSize = true;
+            this.rbSDT.Location = new System.Drawing.Point(583, 37);
+            this.rbSDT.Margin = new System.Windows.Forms.Padding(4);
+            this.rbSDT.Name = "rbSDT";
+            this.rbSDT.Size = new System.Drawing.Size(125, 22);
+            this.rbSDT.TabIndex = 4;
+            this.rbSDT.TabStop = true;
+            this.rbSDT.Text = "Số điện thoại";
+            this.rbSDT.UseVisualStyleBackColor = true;
+            // 
+            // rbHoTen
+            // 
+            this.rbHoTen.AutoSize = true;
+            this.rbHoTen.Location = new System.Drawing.Point(470, 37);
+            this.rbHoTen.Margin = new System.Windows.Forms.Padding(4);
+            this.rbHoTen.Name = "rbHoTen";
+            this.rbHoTen.Size = new System.Drawing.Size(76, 22);
+            this.rbHoTen.TabIndex = 3;
+            this.rbHoTen.TabStop = true;
+            this.rbHoTen.Text = "Họ tên";
+            this.rbHoTen.UseVisualStyleBackColor = true;
+            // 
+            // rbMSSV
+            // 
+            this.rbMSSV.AutoSize = true;
+            this.rbMSSV.Location = new System.Drawing.Point(361, 35);
+            this.rbMSSV.Margin = new System.Windows.Forms.Padding(4);
+            this.rbMSSV.Name = "rbMSSV";
+            this.rbMSSV.Size = new System.Drawing.Size(72, 22);
+            this.rbMSSV.TabIndex = 2;
+            this.rbMSSV.TabStop = true;
+            this.rbMSSV.Text = "MSSV";
+            this.rbMSSV.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(163, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 18);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Tìm theo:";
             // 
             // lvSV
             // 
@@ -90,7 +137,7 @@ namespace OnTapKiemTra1
             this.lvSV.GridLines = true;
             this.lvSV.HideSelection = false;
             this.lvSV.Location = new System.Drawing.Point(0, 109);
-            this.lvSV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lvSV.Margin = new System.Windows.Forms.Padding(4);
             this.lvSV.Name = "lvSV";
             this.lvSV.Size = new System.Drawing.Size(998, 748);
             this.lvSV.TabIndex = 0;
@@ -132,59 +179,19 @@ namespace OnTapKiemTra1
             this.columnHeader7.Text = "Lớp";
             this.columnHeader7.Width = 223;
             // 
-            // label1
+            // columnHeader8
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(163, 37);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 18);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Tìm theo:";
+            this.columnHeader8.Text = "Khoa";
+            this.columnHeader8.Width = 202;
             // 
-            // radioButton1
+            // tvKhoa
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(361, 35);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(72, 22);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "MSSV";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(470, 37);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(76, 22);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Họ tên";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(583, 37);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(125, 22);
-            this.radioButton3.TabIndex = 4;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Số điện thoại";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(361, 65);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(347, 24);
-            this.textBox1.TabIndex = 5;
+            this.tvKhoa.Location = new System.Drawing.Point(18, 126);
+            this.tvKhoa.Margin = new System.Windows.Forms.Padding(4);
+            this.tvKhoa.Name = "tvKhoa";
+            this.tvKhoa.Size = new System.Drawing.Size(330, 748);
+            this.tvKhoa.TabIndex = 1;
+            this.tvKhoa.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvKhoa_AfterSelect);
             // 
             // label2
             // 
@@ -196,11 +203,6 @@ namespace OnTapKiemTra1
             this.label2.TabIndex = 2;
             this.label2.Text = "Chọn lớp để hiển thị danh sách sinh viên";
             // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Khoa";
-            this.columnHeader8.Width = 202;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -210,7 +212,7 @@ namespace OnTapKiemTra1
             this.Controls.Add(this.tvKhoa);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -224,7 +226,7 @@ namespace OnTapKiemTra1
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbMSSV;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListView lvSV;
         private System.Windows.Forms.ColumnHeader columnHeader1;
@@ -235,9 +237,9 @@ namespace OnTapKiemTra1
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.TreeView tvKhoa;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.RadioButton rbSDT;
+        private System.Windows.Forms.RadioButton rbHoTen;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ColumnHeader columnHeader8;
     }
