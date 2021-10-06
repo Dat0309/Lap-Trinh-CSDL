@@ -14,3 +14,10 @@ D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\OnTapKiemTra1\OnTapKiemTra1\bin\Debug\Guna.UI.d
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\OnTapKiemTra1\OnTapKiemTra1\obj\Debug\OnTapKiemTra1.csproj.CopyComplete
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\OnTapKiemTra1\OnTapKiemTra1\bin\Debug\Newtonsoft.Json.dll
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\OnTapKiemTra1\OnTapKiemTra1\bin\Debug\Newtonsoft.Json.xml
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\OnTapKiemTra1\OnTapKiemTra1\bin\Debug\EPPlus.dll
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\OnTapKiemTra1\OnTapKiemTra1\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\OnTapKiemTra1\OnTapKiemTra1\bin\Debug\NuGet.Frameworks.dll
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\OnTapKiemTra1\OnTapKiemTra1\bin\Debug\System.ComponentModel.Annotations.dll
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\OnTapKiemTra1\OnTapKiemTra1\bin\Debug\EPPlus.xml
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\OnTapKiemTra1\OnTapKiemTra1\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\OnTapKiemTra1\OnTapKiemTra1\bin\Debug\NuGet.Frameworks.xml

@@ -12,8 +12,7 @@ using OnTapKiemTra1.Model;
 using OnTapKiemTra1.IO;
 using System.IO;
 using Newtonsoft.Json;
-using Microsoft.Office.Interop.Excel;
-using app = Microsoft.Office.Interop.Excel.Application;
+using OfficeOpenXml;
 
 namespace OnTapKiemTra1
 {
@@ -139,11 +138,56 @@ namespace OnTapKiemTra1
                 serializer.Serialize(file, sv);
             }
         }
-        private void WriteToExcel(ListView lv, string path)
+        private void WriteToExcel(ListView lv,List<SinhVien> listSV, string path)
         {
-            app obj = new app();
-            obj.Application.Workbooks.Add(Type.Missing);
+            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+            using (ExcelPackage p = new ExcelPackage())
+            {
+                p.Workbook.Worksheets.Add("sheet 1");
+                ExcelWorksheet ws = p.Workbook.Worksheets[0];
+                ws.Name = "sheet 1";
+                ws.Cells.Style.Font.Size = 11;
+                ws.Cells.Style.Font.Name = "Calibri";
 
+                List<string> arrCollumHeader = new List<string>();
+                foreach (ColumnHeader item in lv.Columns)
+                {
+                    arrCollumHeader.Add(item.Text);
+                }
+                var countColHeader = arrCollumHeader.Count();
+
+                int colIndex = 1;
+                int rowIndex = 1;
+                //Tao cac Header
+                foreach (var item in arrCollumHeader)
+                {
+                    var cell = ws.Cells[rowIndex, colIndex];
+                    var style = cell.Style.Font;
+                    style.Bold = true;
+
+                    cell.Value = item;
+                    colIndex++;
+                }
+
+                //Lay danh sach sinh vien
+                foreach (var item in listSV)
+                {
+                    colIndex = 1;
+                    rowIndex++;
+                    ws.Cells[rowIndex, colIndex++].Value = item.StudentId;
+                    ws.Cells[rowIndex, colIndex++].Value = item.FirstName;
+                    ws.Cells[rowIndex, colIndex++].Value = item.LastName;
+                    ws.Cells[rowIndex, colIndex++].Value = item.Gender;
+                    ws.Cells[rowIndex, colIndex++].Value = item.DateOfBirth.ToShortDateString();
+                    ws.Cells[rowIndex, colIndex++].Value = item.PhoneNumber;
+                    ws.Cells[rowIndex, colIndex++].Value = item.ClassName;
+                    ws.Cells[rowIndex, colIndex++].Value = item.FacultyName;
+                    ws.Cells[rowIndex, colIndex++].Value = item.Address;
+                }
+                //save file
+                Byte[] bin = p.GetAsByteArray();
+                File.WriteAllBytes(path, bin);
+            }
         }
         #endregion
         private void Form1_Load(object sender, EventArgs e)
@@ -295,14 +339,15 @@ namespace OnTapKiemTra1
                 saveFileDlg.FileName = selectedNode.Text;
                 saveFileDlg.InitialDirectory = @"D:\";
                 saveFileDlg.DefaultExt = "xlsx";
-                saveFileDlg.Filter = "Excel 2012 files(xlsx) (*.xlsx)|*.xlsx";
+                saveFileDlg.Filter = "Excel 2007 files(xlsx) (*.xlsx)|*.xlsx";
 
                 DialogResult dlg = saveFileDlg.ShowDialog();
                 if (dlg == DialogResult.OK)
                 {
                     string path = string.Format(@"{0}", saveFileDlg.FileName);
                     dskq = qlsv.DSTim(selectedNode.Text.Trim(), SoSanhTheoLop);
-                    
+                    WriteToExcel(lvSV,dskq, path);
+                    MessageBox.Show("Xuất file thành công");
                 }
             }
             else

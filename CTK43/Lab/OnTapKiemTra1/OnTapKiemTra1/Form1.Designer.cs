@@ -37,14 +37,15 @@ namespace OnTapKiemTra1
             this.rbMSSV = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.lvSV = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MSSV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Ho = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Ten = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.GioiTinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NgaySinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Sdt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Lop = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Khoa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DiaChi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cmsListView = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiThem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiXoa = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,10 +55,9 @@ namespace OnTapKiemTra1
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsmNhap = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmLuu = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmIn = new System.Windows.Forms.ToolStripMenuItem();
             this.jsonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.excelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tsmIn = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.cmsListView.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -139,15 +139,15 @@ namespace OnTapKiemTra1
             // lvSV
             // 
             this.lvSV.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9});
+            this.MSSV,
+            this.Ho,
+            this.Ten,
+            this.GioiTinh,
+            this.NgaySinh,
+            this.Sdt,
+            this.Lop,
+            this.Khoa,
+            this.DiaChi});
             this.lvSV.ContextMenuStrip = this.cmsListView;
             this.lvSV.FullRowSelect = true;
             this.lvSV.GridLines = true;
@@ -161,45 +161,49 @@ namespace OnTapKiemTra1
             this.lvSV.View = System.Windows.Forms.View.Details;
             this.lvSV.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lvSV_MouseDoubleClick);
             // 
-            // columnHeader1
+            // MSSV
             // 
-            this.columnHeader1.Text = "MSSV";
-            this.columnHeader1.Width = 77;
+            this.MSSV.Text = "MSSV";
+            this.MSSV.Width = 77;
             // 
-            // columnHeader2
+            // Ho
             // 
-            this.columnHeader2.Text = "Họ và tên lót";
-            this.columnHeader2.Width = 232;
+            this.Ho.Text = "Họ và tên lót";
+            this.Ho.Width = 232;
             // 
-            // columnHeader3
+            // Ten
             // 
-            this.columnHeader3.Text = "Tên";
-            this.columnHeader3.Width = 108;
+            this.Ten.Text = "Tên";
+            this.Ten.Width = 108;
             // 
-            // columnHeader4
+            // GioiTinh
             // 
-            this.columnHeader4.Text = "Giới tính";
-            this.columnHeader4.Width = 95;
+            this.GioiTinh.Text = "Giới tính";
+            this.GioiTinh.Width = 95;
             // 
-            // columnHeader5
+            // NgaySinh
             // 
-            this.columnHeader5.Text = "Ngày sinh";
-            this.columnHeader5.Width = 120;
+            this.NgaySinh.Text = "Ngày sinh";
+            this.NgaySinh.Width = 120;
             // 
-            // columnHeader6
+            // Sdt
             // 
-            this.columnHeader6.Text = "Số điện thoại";
-            this.columnHeader6.Width = 148;
+            this.Sdt.Text = "Số điện thoại";
+            this.Sdt.Width = 148;
             // 
-            // columnHeader7
+            // Lop
             // 
-            this.columnHeader7.Text = "Lớp";
-            this.columnHeader7.Width = 223;
+            this.Lop.Text = "Lớp";
+            this.Lop.Width = 223;
             // 
-            // columnHeader8
+            // Khoa
             // 
-            this.columnHeader8.Text = "Khoa";
-            this.columnHeader8.Width = 202;
+            this.Khoa.Text = "Khoa";
+            this.Khoa.Width = 202;
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.Text = "Địa chỉ";
             // 
             // cmsListView
             // 
@@ -273,29 +277,25 @@ namespace OnTapKiemTra1
             this.tsmLuu.Size = new System.Drawing.Size(39, 20);
             this.tsmLuu.Text = "Lưu";
             // 
-            // tsmIn
-            // 
-            this.tsmIn.Name = "tsmIn";
-            this.tsmIn.Size = new System.Drawing.Size(29, 20);
-            this.tsmIn.Text = "In";
-            // 
             // jsonToolStripMenuItem
             // 
             this.jsonToolStripMenuItem.Name = "jsonToolStripMenuItem";
-            this.jsonToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.jsonToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
             this.jsonToolStripMenuItem.Text = "Json";
             this.jsonToolStripMenuItem.Click += new System.EventHandler(this.jsonToolStripMenuItem_Click);
             // 
             // excelToolStripMenuItem
             // 
             this.excelToolStripMenuItem.Name = "excelToolStripMenuItem";
-            this.excelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.excelToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
             this.excelToolStripMenuItem.Text = "Excel";
             this.excelToolStripMenuItem.Click += new System.EventHandler(this.excelToolStripMenuItem_Click);
             // 
-            // columnHeader9
+            // tsmIn
             // 
-            this.columnHeader9.Text = "Địa chỉ";
+            this.tsmIn.Name = "tsmIn";
+            this.tsmIn.Size = new System.Drawing.Size(29, 20);
+            this.tsmIn.Text = "In";
             // 
             // Form1
             // 
@@ -328,19 +328,19 @@ namespace OnTapKiemTra1
         private System.Windows.Forms.RadioButton rbMSSV;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListView lvSV;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader MSSV;
+        private System.Windows.Forms.ColumnHeader Ho;
+        private System.Windows.Forms.ColumnHeader Ten;
+        private System.Windows.Forms.ColumnHeader GioiTinh;
+        private System.Windows.Forms.ColumnHeader NgaySinh;
+        private System.Windows.Forms.ColumnHeader Sdt;
+        private System.Windows.Forms.ColumnHeader Lop;
         private System.Windows.Forms.TreeView tvKhoa;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.RadioButton rbSDT;
         private System.Windows.Forms.RadioButton rbHoTen;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader Khoa;
         private System.Windows.Forms.ContextMenuStrip cmsListView;
         private System.Windows.Forms.ToolStripMenuItem tsmiThem;
         private System.Windows.Forms.ToolStripMenuItem tsmiXoa;
@@ -351,7 +351,7 @@ namespace OnTapKiemTra1
         private System.Windows.Forms.ToolStripMenuItem jsonToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem excelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmIn;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader DiaChi;
     }
 }
 
