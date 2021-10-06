@@ -12,6 +12,8 @@ using OnTapKiemTra1.Model;
 using OnTapKiemTra1.IO;
 using System.IO;
 using Newtonsoft.Json;
+using Microsoft.Office.Interop.Excel;
+using app = Microsoft.Office.Interop.Excel.Application;
 
 namespace OnTapKiemTra1
 {
@@ -136,6 +138,12 @@ namespace OnTapKiemTra1
                 JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(file, sv);
             }
+        }
+        private void WriteToExcel(ListView lv, string path)
+        {
+            app obj = new app();
+            obj.Application.Workbooks.Add(Type.Missing);
+
         }
         #endregion
         private void Form1_Load(object sender, EventArgs e)
@@ -271,6 +279,7 @@ namespace OnTapKiemTra1
                     string path = string.Format(@"{0}", saveFileDlg.FileName);
                     dskq = qlsv.DSTim(selectedNode.Text.Trim(), SoSanhTheoLop);
                     WriteToJson(dskq, path);
+                    MessageBox.Show("Xuất file thành công");
                 }
             }
             else
@@ -279,6 +288,7 @@ namespace OnTapKiemTra1
 
         private void excelToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            List<SinhVien> dskq = new List<SinhVien>();
             TreeNode selectedNode = tvKhoa.SelectedNode;
             if (tvKhoa.SelectedNode != null)
             {
@@ -288,6 +298,12 @@ namespace OnTapKiemTra1
                 saveFileDlg.Filter = "Excel 2012 files(xlsx) (*.xlsx)|*.xlsx";
 
                 DialogResult dlg = saveFileDlg.ShowDialog();
+                if (dlg == DialogResult.OK)
+                {
+                    string path = string.Format(@"{0}", saveFileDlg.FileName);
+                    dskq = qlsv.DSTim(selectedNode.Text.Trim(), SoSanhTheoLop);
+                    
+                }
             }
             else
                 MessageBox.Show("Vui lòng chọn danh sách lớp", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
