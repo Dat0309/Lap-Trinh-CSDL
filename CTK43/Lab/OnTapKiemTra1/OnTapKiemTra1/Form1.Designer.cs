@@ -29,6 +29,7 @@ namespace OnTapKiemTra1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.rbSDT = new System.Windows.Forms.RadioButton();
@@ -44,9 +45,13 @@ namespace OnTapKiemTra1
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cmsListView = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiThem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiXoa = new System.Windows.Forms.ToolStripMenuItem();
             this.tvKhoa = new System.Windows.Forms.TreeView();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.cmsListView.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -133,6 +138,7 @@ namespace OnTapKiemTra1
             this.columnHeader6,
             this.columnHeader7,
             this.columnHeader8});
+            this.lvSV.ContextMenuStrip = this.cmsListView;
             this.lvSV.FullRowSelect = true;
             this.lvSV.GridLines = true;
             this.lvSV.HideSelection = false;
@@ -143,6 +149,7 @@ namespace OnTapKiemTra1
             this.lvSV.TabIndex = 0;
             this.lvSV.UseCompatibleStateImageBehavior = false;
             this.lvSV.View = System.Windows.Forms.View.Details;
+            this.lvSV.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lvSV_MouseDoubleClick);
             // 
             // columnHeader1
             // 
@@ -184,6 +191,28 @@ namespace OnTapKiemTra1
             this.columnHeader8.Text = "Khoa";
             this.columnHeader8.Width = 202;
             // 
+            // cmsListView
+            // 
+            this.cmsListView.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiThem,
+            this.tsmiXoa});
+            this.cmsListView.Name = "cmsListView";
+            this.cmsListView.Size = new System.Drawing.Size(105, 48);
+            // 
+            // tsmiThem
+            // 
+            this.tsmiThem.Name = "tsmiThem";
+            this.tsmiThem.Size = new System.Drawing.Size(104, 22);
+            this.tsmiThem.Text = "Thêm";
+            this.tsmiThem.Click += new System.EventHandler(this.tsmiThem_Click);
+            // 
+            // tsmiXoa
+            // 
+            this.tsmiXoa.Name = "tsmiXoa";
+            this.tsmiXoa.Size = new System.Drawing.Size(104, 22);
+            this.tsmiXoa.Text = "Xóa";
+            this.tsmiXoa.Click += new System.EventHandler(this.tsmiXoa_Click);
+            // 
             // tvKhoa
             // 
             this.tvKhoa.Location = new System.Drawing.Point(18, 126);
@@ -214,10 +243,11 @@ namespace OnTapKiemTra1
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "OnTapKiemTra";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.cmsListView.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,6 +272,9 @@ namespace OnTapKiemTra1
         private System.Windows.Forms.RadioButton rbHoTen;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ContextMenuStrip cmsListView;
+        private System.Windows.Forms.ToolStripMenuItem tsmiThem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiXoa;
     }
 }
 

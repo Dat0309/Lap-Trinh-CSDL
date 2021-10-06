@@ -61,5 +61,22 @@ namespace OnTapKiemTra1
             }
             return dskq;
         }
+
+        public bool Sua(SinhVien svSua, object obj, SoSanh ss)
+        {
+            int i, count;
+            bool kq = false;
+            count = dssv.Count - 1;
+            for (i = 0; i < count; i++)
+            {
+                if (ss(obj, this[i]) == 0)
+                {
+                    this[i] = svSua;
+                    kq = true;
+                    break;
+                }
+            }
+            return kq;
+        }
     }
 }

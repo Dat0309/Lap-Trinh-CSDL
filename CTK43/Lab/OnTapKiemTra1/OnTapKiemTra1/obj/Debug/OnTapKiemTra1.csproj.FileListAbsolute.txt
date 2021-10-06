@@ -9,3 +9,6 @@ D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\OnTapKiemTra1\OnTapKiemTra1\obj\Debug\OnTapKiem
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\OnTapKiemTra1\OnTapKiemTra1\obj\Debug\OnTapKiemTra1.exe
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\OnTapKiemTra1\OnTapKiemTra1\obj\Debug\OnTapKiemTra1.pdb
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\OnTapKiemTra1\OnTapKiemTra1\bin\Debug\Data\data.txt
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\OnTapKiemTra1\OnTapKiemTra1\obj\Debug\OnTapKiemTra1.frmStudentInfo.resources
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\OnTapKiemTra1\OnTapKiemTra1\bin\Debug\Guna.UI.dll
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\OnTapKiemTra1\OnTapKiemTra1\obj\Debug\OnTapKiemTra1.csproj.CopyComplete

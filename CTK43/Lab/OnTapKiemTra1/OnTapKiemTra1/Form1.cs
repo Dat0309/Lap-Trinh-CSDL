@@ -64,6 +64,15 @@ namespace OnTapKiemTra1
             };
         }
 
+        private string GetKhoa(SinhVien sv)
+        {
+            return sv.khoa;
+        }
+        private string GetLop(SinhVien sv)
+        {
+            return sv.lop;
+        }
+
         private int SoSanhTheoKhoa(object obj1, object obj2)
         {
             return (obj2 as SinhVien).khoa.CompareTo(obj1.ToString());
@@ -71,6 +80,16 @@ namespace OnTapKiemTra1
         private int SoSanhTheoLop(object obj1, object obj2)
         {
             return (obj2 as SinhVien).lop.CompareTo(obj1.ToString());
+        }
+        private int SoSanhTheoMa(object obj1, object obj2)
+        {
+            SinhVien sv = obj2 as SinhVien;
+            return sv.mssv.CompareTo(obj1);
+        }
+        private int SoSanhTheoTen(object obj1, object obj2)
+        {
+            SinhVien sv = obj2 as SinhVien;
+            return sv.ten.CompareTo(obj1);
         }
 
         private void SetUpSearchInputText()
@@ -92,7 +111,6 @@ namespace OnTapKiemTra1
                 txtSearch.Text = "";
         }
 
-        #endregion
         private void ShowFeedOnTreeView(List<Khoa> dsKhoa)
         {
             tvKhoa.Nodes.Clear();
@@ -107,6 +125,7 @@ namespace OnTapKiemTra1
             tvKhoa.ExpandAll();
         }
 
+        #endregion
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadSVToListView(qlsv.dssv);
@@ -157,6 +176,69 @@ namespace OnTapKiemTra1
                     if (sv.sdt.ToLower().StartsWith(txtSearch.Text.Trim().ToLower()))
                         dskq.Add(sv);
                 LoadSVToListView(dskq);
+            }
+            if (txtSearch.Text == _placeHolderText)
+                LoadSVToListView(qlsv.dssv);
+        }
+
+        private void tsmiThem_Click(object sender, EventArgs e)
+        {
+            List<SinhVien> dskq = new List<SinhVien>();
+            frmStudentInfo frm = new frmStudentInfo(qlsv, newRepo);
+            int count = lvSV.SelectedItems.Count;
+            if(count >0)
+            {
+                ListViewItem item = lvSV.SelectedItems[0];
+                frm.tenKhoa = GetKhoa(GetSVLV(item));
+                frm.tenLop = GetLop(GetSVLV(item));
+            }
+            else
+            {
+                ListViewItem item = lvSV.Items[0];
+                frm.tenKhoa = GetKhoa(GetSVLV(item));
+                frm.tenLop = GetLop(GetSVLV(item));
+            }
+
+            if(frm.ShowDialog() == DialogResult.OK)
+            {
+                dskq = qlsv.DSTim(frm.tenLop.Trim(), SoSanhTheoLop);
+                LoadSVToListView(dskq);
+            }
+        }
+
+        private void tsmiXoa_Click(object sender, EventArgs e)
+        {
+            int count, i;
+            ListViewItem item;
+            count = lvSV.Items.Count - 1;
+            DialogResult dlg = MessageBox.Show("Bạn có chắc muốn xóa sinh viên khỏi danh sách?!!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if(dlg == DialogResult.Yes)
+            {
+                for (i = count; i > 0; i--)
+                {
+                    item = lvSV.Items[i];
+                    if (item.Selected)
+                        qlsv.Xoa(item.SubItems[0].Text, SoSanhTheoMa);
+                }
+                LoadSVToListView(qlsv.dssv);
+                MessageBox.Show("Đã xóa sinh viên");
+            }
+        }
+
+        private void lvSV_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            List<SinhVien> dskq = new List<SinhVien>();
+            frmStudentInfo frm = new frmStudentInfo(qlsv, newRepo);
+            int count = lvSV.SelectedItems.Count;
+            if (count > 0)
+            {
+                ListViewItem item = lvSV.SelectedItems[0];
+                frm.sv = GetSVLV(item);
+                if (frm.ShowDialog() == DialogResult.Yes)
+                {
+                    dskq = qlsv.DSTim(frm.sv.mssv.Trim(), SoSanhTheoMa);
+                    LoadSVToListView(dskq);
+                }  
             }
         }
     }
