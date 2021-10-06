@@ -50,8 +50,17 @@ namespace OnTapKiemTra1
             this.tsmiXoa = new System.Windows.Forms.ToolStripMenuItem();
             this.tvKhoa = new System.Windows.Forms.TreeView();
             this.label2 = new System.Windows.Forms.Label();
+            this.saveFileDlg = new System.Windows.Forms.SaveFileDialog();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.tsmNhap = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmLuu = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmIn = new System.Windows.Forms.ToolStripMenuItem();
+            this.jsonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.excelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.cmsListView.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -137,7 +146,8 @@ namespace OnTapKiemTra1
             this.columnHeader5,
             this.columnHeader6,
             this.columnHeader7,
-            this.columnHeader8});
+            this.columnHeader8,
+            this.columnHeader9});
             this.lvSV.ContextMenuStrip = this.cmsListView;
             this.lvSV.FullRowSelect = true;
             this.lvSV.GridLines = true;
@@ -232,15 +242,72 @@ namespace OnTapKiemTra1
             this.label2.TabIndex = 2;
             this.label2.Text = "Chọn lớp để hiển thị danh sách sinh viên";
             // 
+            // saveFileDlg
+            // 
+            this.saveFileDlg.Title = "Chọn thư mục cần lưu";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmNhap,
+            this.tsmLuu,
+            this.tsmIn});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1371, 24);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // tsmNhap
+            // 
+            this.tsmNhap.Name = "tsmNhap";
+            this.tsmNhap.Size = new System.Drawing.Size(48, 20);
+            this.tsmNhap.Text = "Nhập";
+            // 
+            // tsmLuu
+            // 
+            this.tsmLuu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.jsonToolStripMenuItem,
+            this.excelToolStripMenuItem});
+            this.tsmLuu.Name = "tsmLuu";
+            this.tsmLuu.Size = new System.Drawing.Size(39, 20);
+            this.tsmLuu.Text = "Lưu";
+            // 
+            // tsmIn
+            // 
+            this.tsmIn.Name = "tsmIn";
+            this.tsmIn.Size = new System.Drawing.Size(29, 20);
+            this.tsmIn.Text = "In";
+            // 
+            // jsonToolStripMenuItem
+            // 
+            this.jsonToolStripMenuItem.Name = "jsonToolStripMenuItem";
+            this.jsonToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.jsonToolStripMenuItem.Text = "Json";
+            this.jsonToolStripMenuItem.Click += new System.EventHandler(this.jsonToolStripMenuItem_Click);
+            // 
+            // excelToolStripMenuItem
+            // 
+            this.excelToolStripMenuItem.Name = "excelToolStripMenuItem";
+            this.excelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.excelToolStripMenuItem.Text = "Excel";
+            this.excelToolStripMenuItem.Click += new System.EventHandler(this.excelToolStripMenuItem_Click);
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Địa chỉ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1371, 892);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tvKhoa);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "OnTapKiemTra";
@@ -248,6 +315,8 @@ namespace OnTapKiemTra1
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.cmsListView.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,6 +344,14 @@ namespace OnTapKiemTra1
         private System.Windows.Forms.ContextMenuStrip cmsListView;
         private System.Windows.Forms.ToolStripMenuItem tsmiThem;
         private System.Windows.Forms.ToolStripMenuItem tsmiXoa;
+        private System.Windows.Forms.SaveFileDialog saveFileDlg;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem tsmNhap;
+        private System.Windows.Forms.ToolStripMenuItem tsmLuu;
+        private System.Windows.Forms.ToolStripMenuItem jsonToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem excelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmIn;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
     }
 }
 

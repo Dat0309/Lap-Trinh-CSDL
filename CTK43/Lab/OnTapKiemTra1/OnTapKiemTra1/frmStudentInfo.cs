@@ -44,14 +44,15 @@ namespace OnTapKiemTra1
         private SinhVien GetSVInControl()
         {
             SinhVien sv = new SinhVien();
-            sv.mssv = mtbMSSV.Text;
-            sv.ho = txtHoten.Text;
-            sv.ten = txtTen.Text;
-            sv.lop = cbbLop.Text;
-            sv.khoa = cbbKhoa.Text;
-            sv.gioiTinh = (rbNam.Checked == true ? true : false);
-            sv.ngaySinh = dtpNgaySinh.Value;
-            sv.sdt = mtbSDT.Text;
+            sv.StudentId = mtbMSSV.Text;
+            sv.FirstName = txtHoten.Text;
+            sv.LastName = txtTen.Text;
+            sv.ClassName = cbbLop.Text;
+            sv.FacultyName = cbbKhoa.Text;
+            sv.Gender = (rbNam.Checked == true ? true : false);
+            sv.DateOfBirth = dtpNgaySinh.Value;
+            sv.PhoneNumber = mtbSDT.Text;
+            sv.Address = txtDiaChi.Text;
 
             return sv;
         }
@@ -65,6 +66,7 @@ namespace OnTapKiemTra1
             else if (string.IsNullOrEmpty(cbbKhoa.Text)) return false;
             else if (rbNam.Checked == false && rbNu.Checked == false) return false;
             else if (string.IsNullOrEmpty(mtbSDT.Text)) return false;
+            else if (string.IsNullOrEmpty(txtDiaChi.Text)) return false;
             return true;
         }
         private void SetSVInControl()
@@ -72,16 +74,32 @@ namespace OnTapKiemTra1
             if(sv != null)
             {
                 mtbMSSV.Enabled = false;
-                mtbMSSV.Text = sv.mssv;
-                txtHoten.Text = sv.ho;
-                txtTen.Text = sv.ten;
-                rbNam.Checked = (sv.gioiTinh == true ? true : false);
-                rbNu.Checked = (sv.gioiTinh == false ? true : false);
+                mtbMSSV.Text = sv.StudentId;
+                txtHoten.Text = sv.FirstName;
+                txtTen.Text = sv.LastName;
+                rbNam.Checked = (sv.Gender == true ? true : false);
+                rbNu.Checked = (sv.Gender == false ? true : false);
                 dtpNgaySinh.Text = DateTime.Now.ToShortDateString();
-                cbbKhoa.Text = sv.khoa;
-                cbbLop.Text = sv.lop;
-                mtbSDT.Text = sv.sdt;
+                cbbKhoa.Text = sv.FacultyName;
+                cbbLop.Text = sv.ClassName;
+                mtbSDT.Text = sv.PhoneNumber;
+                txtDiaChi.Text = sv.Address;
             }
+        }
+
+        private SinhVien UpdateSV(SinhVien sv)
+        {
+            SinhVien svUpdate = GetSVInControl();
+            sv.StudentId = svUpdate.StudentId;
+            sv.FirstName = svUpdate.FirstName;
+            sv.LastName = svUpdate.LastName;
+            sv.DateOfBirth = svUpdate.DateOfBirth;
+            sv.ClassName = svUpdate.ClassName;
+            sv.FacultyName = svUpdate.FacultyName;
+            sv.PhoneNumber = svUpdate.PhoneNumber;
+            sv.Gender = svUpdate.Gender;
+            sv.Address = svUpdate.Address;
+            return sv;
         }
         #endregion
 
@@ -113,9 +131,9 @@ namespace OnTapKiemTra1
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            SinhVien sv = qlsv.Tim(GetSVInControl().mssv, delegate (object obj1, object obj2)
+            SinhVien sv = qlsv.Tim(GetSVInControl().StudentId, delegate (object obj1, object obj2)
             {
-                return (obj2 as SinhVien).mssv.CompareTo(obj1.ToString());
+                return (obj2 as SinhVien).StudentId.CompareTo(obj1.ToString());
             });
 
             if (Validation())
@@ -125,18 +143,9 @@ namespace OnTapKiemTra1
                     DialogResult dlg = MessageBox.Show("Bạn có chắc muốn cập nhật không", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     if (dlg == DialogResult.Yes)
                     {
-                        bool isUpdate = qlsv.Sua(GetSVInControl(), GetSVInControl().mssv, delegate (object obj1, object obj2)
-                        {
-                            return (obj2 as SinhVien).mssv.CompareTo(obj1.ToString());
-                        });
-
-                        if (isUpdate)
-                        {
-                            //MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                            //this.Close();
-                            DialogResult = DialogResult.Yes;
-                            this.Close();
-                        }
+                        UpdateSV(sv);
+                        DialogResult = DialogResult.Yes;
+                        this.Close();
                     }
                 }
                 else

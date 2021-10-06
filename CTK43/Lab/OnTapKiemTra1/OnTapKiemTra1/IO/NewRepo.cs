@@ -41,8 +41,8 @@ namespace OnTapKiemTra1.IO
             List<string> tenKhoa = new List<string>();
             foreach (var item in dssv)
             {
-                if (!tenKhoa.Contains(item.khoa))
-                    tenKhoa.Add(item.khoa);
+                if (!tenKhoa.Contains(item.FacultyName))
+                    tenKhoa.Add(item.FacultyName);
             }
             return tenKhoa;
         }
@@ -50,9 +50,9 @@ namespace OnTapKiemTra1.IO
         {
             List<string> dsLop = new List<string>();
             foreach (var item in qlsv.dssv)
-                if (item.khoa.CompareTo(tenKhoa) == 0)
-                    if(!dsLop.Contains(item.lop))
-                        dsLop.Add(item.lop);
+                if (item.FacultyName.CompareTo(tenKhoa) == 0)
+                    if(!dsLop.Contains(item.ClassName))
+                        dsLop.Add(item.ClassName);
             return dsLop;
         }
 

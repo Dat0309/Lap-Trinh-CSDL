@@ -106,8 +106,6 @@
 1710274	Nguyễn Tiến	Thuận	CTK41	Khoa Công nghệ thông tin
 1812725	Hoàng Ngọc	Anh	CTK42	Khoa Công nghệ thông tin
 1610184	Võ Đức	Phong	CTK40	Khoa Công nghệ thông tin
-1610184	Võ Đức	Phong	CTK40	Khoa Công nghệ thông tin
-1910115	Lưu Nguyễn Vân	Anh	CTK43	Khoa Công nghệ thông tin
 1910011	Phetsomphu 	Viengxai	CTK43	Khoa Công nghệ thông tin
 1911200	Trần Thành	Tài	CTK43	Khoa Công nghệ thông tin
 1911161	Vũ Mạnh	Lam	CTK43	Khoa Công nghệ thông tin

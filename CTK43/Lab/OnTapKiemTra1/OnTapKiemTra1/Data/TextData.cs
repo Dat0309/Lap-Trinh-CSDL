@@ -51,28 +51,30 @@ namespace OnTapKiemTra1.Data
             var parts = line.Split('\t');
             return new SinhVien()
             {
-                mssv = parts[0],
-                ho = parts[1],
-                ten = parts[2],
-                lop = parts[3],
-                khoa = parts[4],
-                gioiTinh = true,
-                ngaySinh = DateTime.MinValue,
-                sdt = ""
+                StudentId = parts[0],
+                FirstName = parts[1],
+                LastName = parts[2],
+                ClassName = parts[3],
+                FacultyName = parts[4],
+                Gender = true,
+                DateOfBirth = DateTime.MinValue,
+                PhoneNumber = "",
+                Address = ""
             };
         }
 
         private string SaveFormat(SinhVien sv)
         {
-            return string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}",
-                sv.mssv,
-                sv.ho,
-                sv.ten,
-                sv.lop,
-                sv.khoa,
-                (sv.gioiTinh == true ? "1" : "0"),
-                sv.ngaySinh,
-                sv.sdt);
+            return string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\t{8}",
+                sv.StudentId,
+                sv.FirstName,
+                sv.LastName,
+                sv.ClassName,
+                sv.FacultyName,
+                (sv.Gender == true ? "1" : "0"),
+                sv.DateOfBirth,
+                sv.PhoneNumber,
+                sv.Address);
         }
     }
 }

@@ -8,29 +8,31 @@ namespace OnTapKiemTra1
 {
     public class SinhVien
     {
-        public string mssv { get; set; }
-        public string ho { get; set; }
-        public string ten { get; set; }
-        public bool gioiTinh { get; set; }
-        public DateTime ngaySinh { get; set; }
-        public string sdt { get; set; }
-        public string lop { get; set; }
-        public string khoa { get; set; }
+        public string StudentId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public bool Gender { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public string PhoneNumber { get; set; }
+        public string ClassName { get; set; }
+        public string FacultyName { get; set; }
+        public string Address { get; set; }
 
         public SinhVien()
         {
         }
 
-        public SinhVien(string mssv, string ho, string ten, bool gioiTinh, DateTime ngaySinh, string sdt, string lop, string khoa)
+        public SinhVien(string mssv, string ho, string ten, bool gioiTinh, DateTime ngaySinh, string sdt, string lop, string khoa, string diaChi)
         {
-            this.mssv = mssv;
-            this.ho = ho;
-            this.ten = ten;
-            this.gioiTinh = gioiTinh;
-            this.ngaySinh = ngaySinh;
-            this.sdt = sdt;
-            this.lop = lop;
-            this.khoa = khoa;
+            this.StudentId = mssv;
+            this.FirstName = ho;
+            this.LastName = ten;
+            this.Gender = gioiTinh;
+            this.DateOfBirth = ngaySinh;
+            this.PhoneNumber = sdt;
+            this.ClassName = lop;
+            this.FacultyName = khoa;
+            this.Address = diaChi;
         }
     }
 }

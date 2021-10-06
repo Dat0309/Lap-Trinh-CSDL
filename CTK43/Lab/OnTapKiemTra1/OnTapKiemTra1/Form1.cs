@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using OnTapKiemTra1.Data;
 using OnTapKiemTra1.Model;
 using OnTapKiemTra1.IO;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace OnTapKiemTra1
 {
@@ -31,14 +33,15 @@ namespace OnTapKiemTra1
         #region Cac ham xu ly 
         private void ThemSV(SinhVien sv)
         {
-            ListViewItem item = new ListViewItem(sv.mssv);
-            item.SubItems.Add(sv.ho);
-            item.SubItems.Add(sv.ten);
-            item.SubItems.Add(sv.gioiTinh == true?"Nam":"Nu");
-            item.SubItems.Add(sv.ngaySinh.ToShortDateString());
-            item.SubItems.Add(sv.sdt);
-            item.SubItems.Add(sv.lop);
-            item.SubItems.Add(sv.khoa);
+            ListViewItem item = new ListViewItem(sv.StudentId);
+            item.SubItems.Add(sv.FirstName);
+            item.SubItems.Add(sv.LastName);
+            item.SubItems.Add(sv.Gender == true?"Nam":"Nu");
+            item.SubItems.Add(sv.DateOfBirth.ToShortDateString());
+            item.SubItems.Add(sv.PhoneNumber);
+            item.SubItems.Add(sv.ClassName);
+            item.SubItems.Add(sv.FacultyName);
+            item.SubItems.Add(sv.Address);
 
             lvSV.Items.Add(item);
         }
@@ -51,45 +54,46 @@ namespace OnTapKiemTra1
         }
 
         private SinhVien GetSVLV(ListViewItem item)
-        {  
-            return new SinhVien() { 
-                mssv = item.SubItems[0].Text,
-                ho = item.SubItems[1].Text,
-                ten = item.SubItems[2].Text,
-                gioiTinh = item.SubItems[3].Text == "Nam" ? true : false,
-                ngaySinh = DateTime.Parse(item.SubItems[4].Text),
-                sdt = item.SubItems[5].Text,
-                lop = item.SubItems[6].Text,
-                khoa = item.SubItems[7].Text
+        {
+            return new SinhVien() {
+                StudentId = item.SubItems[0].Text,
+                FirstName = item.SubItems[1].Text,
+                LastName = item.SubItems[2].Text,
+                Gender = item.SubItems[3].Text == "Nam" ? true : false,
+                DateOfBirth = DateTime.Parse(item.SubItems[4].Text),
+                PhoneNumber = item.SubItems[5].Text,
+                ClassName = item.SubItems[6].Text,
+                FacultyName = item.SubItems[7].Text,
+                Address = item.SubItems[8].Text
             };
         }
 
         private string GetKhoa(SinhVien sv)
         {
-            return sv.khoa;
+            return sv.FacultyName;
         }
         private string GetLop(SinhVien sv)
         {
-            return sv.lop;
+            return sv.ClassName;
         }
 
         private int SoSanhTheoKhoa(object obj1, object obj2)
         {
-            return (obj2 as SinhVien).khoa.CompareTo(obj1.ToString());
+            return (obj2 as SinhVien).FacultyName.CompareTo(obj1.ToString());
         }
         private int SoSanhTheoLop(object obj1, object obj2)
         {
-            return (obj2 as SinhVien).lop.CompareTo(obj1.ToString());
+            return (obj2 as SinhVien).ClassName.CompareTo(obj1.ToString());
         }
         private int SoSanhTheoMa(object obj1, object obj2)
         {
             SinhVien sv = obj2 as SinhVien;
-            return sv.mssv.CompareTo(obj1);
+            return sv.StudentId.CompareTo(obj1);
         }
         private int SoSanhTheoTen(object obj1, object obj2)
         {
             SinhVien sv = obj2 as SinhVien;
-            return sv.ten.CompareTo(obj1);
+            return sv.LastName.CompareTo(obj1);
         }
 
         private void SetUpSearchInputText()
@@ -125,6 +129,14 @@ namespace OnTapKiemTra1
             tvKhoa.ExpandAll();
         }
 
+        private void WriteToJson(List<SinhVien> sv, string fn)
+        {
+            using(StreamWriter file = File.CreateText(fn))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Serialize(file, sv);
+            }
+        }
         #endregion
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -159,21 +171,21 @@ namespace OnTapKiemTra1
             if (rbMSSV.Checked)
             {
                 foreach (var sv in qlsv.dssv)
-                    if (sv.mssv.ToLower().StartsWith(txtSearch.Text.Trim().ToLower()))
+                    if (sv.StudentId.ToLower().StartsWith(txtSearch.Text.Trim().ToLower()))
                         dskq.Add(sv);
                 LoadSVToListView(dskq);
             }
             if (rbHoTen.Checked)
             {
                 foreach (var sv in qlsv.dssv)
-                    if (sv.ten.ToLower().StartsWith(txtSearch.Text.Trim().ToLower()))
+                    if (sv.LastName.ToLower().StartsWith(txtSearch.Text.Trim().ToLower()))
                         dskq.Add(sv);
                 LoadSVToListView(dskq);
             }
             if (rbSDT.Checked)
             {
                 foreach (var sv in qlsv.dssv)
-                    if (sv.sdt.ToLower().StartsWith(txtSearch.Text.Trim().ToLower()))
+                    if (sv.PhoneNumber.ToLower().StartsWith(txtSearch.Text.Trim().ToLower()))
                         dskq.Add(sv);
                 LoadSVToListView(dskq);
             }
@@ -236,10 +248,49 @@ namespace OnTapKiemTra1
                 frm.sv = GetSVLV(item);
                 if (frm.ShowDialog() == DialogResult.Yes)
                 {
-                    dskq = qlsv.DSTim(frm.sv.mssv.Trim(), SoSanhTheoMa);
+                    dskq = qlsv.DSTim(frm.sv.StudentId.Trim(), SoSanhTheoMa);
                     LoadSVToListView(dskq);
                 }  
             }
+        }
+
+        private void jsonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<SinhVien> dskq = new List<SinhVien>();
+            TreeNode selectedNode = tvKhoa.SelectedNode;
+            if (tvKhoa.SelectedNode != null)
+            {
+                saveFileDlg.FileName = selectedNode.Text;
+                saveFileDlg.InitialDirectory = @"D:\";
+                saveFileDlg.DefaultExt = "json";
+                saveFileDlg.Filter = "Json files(json) (*.json)|*.json";
+                DialogResult dlg = saveFileDlg.ShowDialog();
+
+                if(dlg == DialogResult.OK)
+                {
+                    string path = string.Format(@"{0}", saveFileDlg.FileName);
+                    dskq = qlsv.DSTim(selectedNode.Text.Trim(), SoSanhTheoLop);
+                    WriteToJson(dskq, path);
+                }
+            }
+            else
+                MessageBox.Show("Vui lòng chọn danh sách lớp", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void excelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TreeNode selectedNode = tvKhoa.SelectedNode;
+            if (tvKhoa.SelectedNode != null)
+            {
+                saveFileDlg.FileName = selectedNode.Text;
+                saveFileDlg.InitialDirectory = @"D:\";
+                saveFileDlg.DefaultExt = "xlsx";
+                saveFileDlg.Filter = "Excel 2012 files(xlsx) (*.xlsx)|*.xlsx";
+
+                DialogResult dlg = saveFileDlg.ShowDialog();
+            }
+            else
+                MessageBox.Show("Vui lòng chọn danh sách lớp", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
