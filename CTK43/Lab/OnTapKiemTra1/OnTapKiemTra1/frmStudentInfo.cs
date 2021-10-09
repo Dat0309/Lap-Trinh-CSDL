@@ -90,7 +90,6 @@ namespace OnTapKiemTra1
         private SinhVien UpdateSV(SinhVien sv)
         {
             SinhVien svUpdate = GetSVInControl();
-            sv.StudentId = svUpdate.StudentId;
             sv.FirstName = svUpdate.FirstName;
             sv.LastName = svUpdate.LastName;
             sv.DateOfBirth = svUpdate.DateOfBirth;
@@ -150,6 +149,7 @@ namespace OnTapKiemTra1
                 }
                 else
                 {
+                    this.tenLop = GetSVInControl().ClassName;
                     qlsv.Them(GetSVInControl());
                     DialogResult = DialogResult.OK;
                     this.Close();

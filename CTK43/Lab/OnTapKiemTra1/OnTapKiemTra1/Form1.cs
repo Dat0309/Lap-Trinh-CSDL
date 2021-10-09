@@ -274,11 +274,11 @@ namespace OnTapKiemTra1
         {
             int count, i;
             ListViewItem item;
-            count = lvSV.Items.Count - 1;
+            count = lvSV.Items.Count-1;
             DialogResult dlg = MessageBox.Show("Bạn có chắc muốn xóa sinh viên khỏi danh sách?!!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if(dlg == DialogResult.Yes)
             {
-                for (i = count; i > 0; i--)
+                for (i = count; i >= 0; i--)
                 {
                     item = lvSV.Items[i];
                     if (item.Selected)
@@ -291,6 +291,7 @@ namespace OnTapKiemTra1
 
         private void lvSV_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            SinhVien sinhVien = new SinhVien();
             List<SinhVien> dskq = new List<SinhVien>();
             frmStudentInfo frm = new frmStudentInfo(qlsv, newRepo);
             int count = lvSV.SelectedItems.Count;
@@ -300,7 +301,8 @@ namespace OnTapKiemTra1
                 frm.sv = GetSVLV(item);
                 if (frm.ShowDialog() == DialogResult.Yes)
                 {
-                    dskq = qlsv.DSTim(frm.sv.StudentId.Trim(), SoSanhTheoMa);
+                    sinhVien = qlsv.Tim(frm.sv.StudentId.Trim(), SoSanhTheoMa);
+                    dskq.Add(sinhVien);
                     LoadSVToListView(dskq);
                 }  
             }
