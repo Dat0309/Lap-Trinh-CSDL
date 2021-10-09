@@ -58,6 +58,8 @@ namespace OnTapKiemTra1
             this.jsonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.excelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmIn = new System.Windows.Forms.ToolStripMenuItem();
+            this.ReadJsonDatatsmi = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFile = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             this.cmsListView.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -264,6 +266,8 @@ namespace OnTapKiemTra1
             // 
             // tsmNhap
             // 
+            this.tsmNhap.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ReadJsonDatatsmi});
             this.tsmNhap.Name = "tsmNhap";
             this.tsmNhap.Size = new System.Drawing.Size(48, 20);
             this.tsmNhap.Text = "Nhập";
@@ -296,6 +300,17 @@ namespace OnTapKiemTra1
             this.tsmIn.Name = "tsmIn";
             this.tsmIn.Size = new System.Drawing.Size(29, 20);
             this.tsmIn.Text = "In";
+            // 
+            // ReadJsonDatatsmi
+            // 
+            this.ReadJsonDatatsmi.Name = "ReadJsonDatatsmi";
+            this.ReadJsonDatatsmi.Size = new System.Drawing.Size(180, 22);
+            this.ReadJsonDatatsmi.Text = "Json Data";
+            this.ReadJsonDatatsmi.Click += new System.EventHandler(this.ReadJsonDatatsmi_Click);
+            // 
+            // openFile
+            // 
+            this.openFile.FileName = "openFileDialog1";
             // 
             // Form1
             // 
@@ -352,6 +367,8 @@ namespace OnTapKiemTra1
         private System.Windows.Forms.ToolStripMenuItem excelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmIn;
         private System.Windows.Forms.ColumnHeader DiaChi;
+        private System.Windows.Forms.ToolStripMenuItem ReadJsonDatatsmi;
+        private System.Windows.Forms.OpenFileDialog openFile;
     }
 }
 

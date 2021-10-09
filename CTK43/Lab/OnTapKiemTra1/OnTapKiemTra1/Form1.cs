@@ -138,6 +138,24 @@ namespace OnTapKiemTra1
                 serializer.Serialize(file, sv);
             }
         }
+
+        private List<SinhVien> ReadJson(string fn)
+        {
+            if (!File.Exists(fn))
+            {
+                FileStream fs = File.Create(fn);
+                fs.Close();
+            }
+            using(StreamReader sr = new StreamReader(fn))
+            {
+                string json = sr.ReadToEnd();
+                if (string.IsNullOrEmpty(json))
+                    return new List<SinhVien>();
+                List<SinhVien> items = JsonConvert.DeserializeObject<List<SinhVien>>(json);
+                return items;
+            }
+        }
+
         private void WriteToExcel(ListView lv,List<SinhVien> listSV, string path)
         {
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
@@ -391,6 +409,32 @@ namespace OnTapKiemTra1
             }
             else
                 MessageBox.Show("Vui lòng chọn danh sách lớp", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void ReadJsonDatatsmi_Click(object sender, EventArgs e)
+        {
+            TreeNode selectedNode = tvKhoa.SelectedNode;
+            if(tvKhoa.SelectedNode != null)
+            {
+                openFile.InitialDirectory = @"D:\";
+                openFile.DefaultExt = "json";
+                openFile.Filter = "Json files(json) (*.json)|*.json";
+                DialogResult dlg = openFile.ShowDialog();
+
+                if (dlg == DialogResult.OK)
+                {
+                    string path = string.Format(@"{0}", openFile.FileName);
+                    foreach (var item in ReadJson(path))
+                    {
+                        qlsv.Them(item);
+                    }
+                    LoadSVToListView(qlsv.dssv);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn lớp muốn thêm", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
