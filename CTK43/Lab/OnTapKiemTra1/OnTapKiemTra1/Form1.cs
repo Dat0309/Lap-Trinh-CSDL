@@ -314,18 +314,37 @@ namespace OnTapKiemTra1
             TreeNode selectedNode = tvKhoa.SelectedNode;
             if (tvKhoa.SelectedNode != null)
             {
-                saveFileDlg.FileName = selectedNode.Text;
-                saveFileDlg.InitialDirectory = @"D:\";
-                saveFileDlg.DefaultExt = "json";
-                saveFileDlg.Filter = "Json files(json) (*.json)|*.json";
-                DialogResult dlg = saveFileDlg.ShowDialog();
-
-                if(dlg == DialogResult.OK)
+                if (tvKhoa.SelectedNode.Level == 0)
                 {
-                    string path = string.Format(@"{0}", saveFileDlg.FileName);
-                    dskq = qlsv.DSTim(selectedNode.Text.Trim(), SoSanhTheoLop);
-                    WriteToJson(dskq, path);
-                    MessageBox.Show("Xuất file thành công");
+                    saveFileDlg.FileName = selectedNode.Text;
+                    saveFileDlg.InitialDirectory = @"D:\";
+                    saveFileDlg.DefaultExt = "json";
+                    saveFileDlg.Filter = "Json files(json) (*.json)|*.json";
+                    DialogResult dlg = saveFileDlg.ShowDialog();
+
+                    if (dlg == DialogResult.OK)
+                    {
+                        string path = string.Format(@"{0}", saveFileDlg.FileName);
+                        dskq = qlsv.DSTim(selectedNode.Text.Trim(), SoSanhTheoKhoa);
+                        WriteToJson(dskq, path);
+                        MessageBox.Show("Xuất file thành công");
+                    }
+                }
+                else if(tvKhoa.SelectedNode.Level > 0)
+                {
+                    saveFileDlg.FileName = selectedNode.Text;
+                    saveFileDlg.InitialDirectory = @"D:\";
+                    saveFileDlg.DefaultExt = "json";
+                    saveFileDlg.Filter = "Json files(json) (*.json)|*.json";
+                    DialogResult dlg = saveFileDlg.ShowDialog();
+
+                    if (dlg == DialogResult.OK)
+                    {
+                        string path = string.Format(@"{0}", saveFileDlg.FileName);
+                        dskq = qlsv.DSTim(selectedNode.Text.Trim(), SoSanhTheoLop);
+                        WriteToJson(dskq, path);
+                        MessageBox.Show("Xuất file thành công");
+                    }
                 }
             }
             else
@@ -334,22 +353,40 @@ namespace OnTapKiemTra1
 
         private void excelToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if(tvKhoa.SelectedNode != null) { 
             List<SinhVien> dskq = new List<SinhVien>();
             TreeNode selectedNode = tvKhoa.SelectedNode;
-            if (tvKhoa.SelectedNode != null)
-            {
-                saveFileDlg.FileName = selectedNode.Text;
-                saveFileDlg.InitialDirectory = @"D:\";
-                saveFileDlg.DefaultExt = "xlsx";
-                saveFileDlg.Filter = "Excel 2007 files(xlsx) (*.xlsx)|*.xlsx";
-
-                DialogResult dlg = saveFileDlg.ShowDialog();
-                if (dlg == DialogResult.OK)
+                if (tvKhoa.SelectedNode.Level ==0)
                 {
-                    string path = string.Format(@"{0}", saveFileDlg.FileName);
-                    dskq = qlsv.DSTim(selectedNode.Text.Trim(), SoSanhTheoLop);
-                    WriteToExcel(lvSV,dskq, path);
-                    MessageBox.Show("Xuất file thành công");
+                    saveFileDlg.FileName = selectedNode.Text;
+                    saveFileDlg.InitialDirectory = @"D:\";
+                    saveFileDlg.DefaultExt = "xlsx";
+                    saveFileDlg.Filter = "Excel 2007 files(xlsx) (*.xlsx)|*.xlsx";
+
+                    DialogResult dlg = saveFileDlg.ShowDialog();
+                    if (dlg == DialogResult.OK)
+                    {
+                        string path = string.Format(@"{0}", saveFileDlg.FileName);
+                        dskq = qlsv.DSTim(selectedNode.Text.Trim(), SoSanhTheoKhoa);
+                        WriteToExcel(lvSV, dskq, path);
+                        MessageBox.Show("Xuất file thành công");
+                    }
+                }
+                if(tvKhoa.SelectedNode.Level > 0)
+                {
+                    saveFileDlg.FileName = selectedNode.Text;
+                    saveFileDlg.InitialDirectory = @"D:\";
+                    saveFileDlg.DefaultExt = "xlsx";
+                    saveFileDlg.Filter = "Excel 2007 files(xlsx) (*.xlsx)|*.xlsx";
+
+                    DialogResult dlg = saveFileDlg.ShowDialog();
+                    if (dlg == DialogResult.OK)
+                    {
+                        string path = string.Format(@"{0}", saveFileDlg.FileName);
+                        dskq = qlsv.DSTim(selectedNode.Text.Trim(), SoSanhTheoLop);
+                        WriteToExcel(lvSV, dskq, path);
+                        MessageBox.Show("Xuất file thành công");
+                    }
                 }
             }
             else
