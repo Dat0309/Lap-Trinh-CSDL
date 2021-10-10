@@ -1,0 +1,11 @@
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\QuanLyTruongHoc\QuanLyTruongHoc\obj\Debug\QuanLyTruongHoc.csproj.AssemblyReference.cache
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\QuanLyTruongHoc\QuanLyTruongHoc\obj\Debug\QuanLyTruongHoc.Form1.resources
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\QuanLyTruongHoc\QuanLyTruongHoc\obj\Debug\QuanLyTruongHoc.Properties.Resources.resources
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\QuanLyTruongHoc\QuanLyTruongHoc\obj\Debug\QuanLyTruongHoc.csproj.GenerateResource.cache
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\QuanLyTruongHoc\QuanLyTruongHoc\obj\Debug\QuanLyTruongHoc.csproj.CoreCompileInputs.cache
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\QuanLyTruongHoc\QuanLyTruongHoc\bin\Debug\Data\data.txt
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\QuanLyTruongHoc\QuanLyTruongHoc\bin\Debug\QuanLyTruongHoc.exe.config
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\QuanLyTruongHoc\QuanLyTruongHoc\bin\Debug\QuanLyTruongHoc.exe
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\QuanLyTruongHoc\QuanLyTruongHoc\bin\Debug\QuanLyTruongHoc.pdb
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\QuanLyTruongHoc\QuanLyTruongHoc\obj\Debug\QuanLyTruongHoc.exe
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\QuanLyTruongHoc\QuanLyTruongHoc\obj\Debug\QuanLyTruongHoc.pdb
