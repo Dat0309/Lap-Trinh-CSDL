@@ -195,7 +195,7 @@ namespace OnTapKiemTra1
                     ws.Cells[rowIndex, colIndex++].Value = item.StudentId;
                     ws.Cells[rowIndex, colIndex++].Value = item.FirstName;
                     ws.Cells[rowIndex, colIndex++].Value = item.LastName;
-                    ws.Cells[rowIndex, colIndex++].Value = item.Gender;
+                    ws.Cells[rowIndex, colIndex++].Value = (item.Gender == true? "Nam" : "Nu");
                     ws.Cells[rowIndex, colIndex++].Value = item.DateOfBirth.ToShortDateString();
                     ws.Cells[rowIndex, colIndex++].Value = item.PhoneNumber;
                     ws.Cells[rowIndex, colIndex++].Value = item.ClassName;
