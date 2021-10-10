@@ -80,7 +80,7 @@ namespace OnTapKiemTra1
 
         private int SoSanhTheoKhoa(object obj1, object obj2)
         {
-            return (obj2 as SinhVien).FacultyName.CompareTo(obj1.ToString());
+            return (obj2 as SinhVien).FacultyName.CompareTo(obj1.ToString()); 
         }
         private int SoSanhTheoLop(object obj1, object obj2)
         {
@@ -225,7 +225,7 @@ namespace OnTapKiemTra1
                 dskq = qlsv.DSTim(tenKhoa.Trim(), SoSanhTheoKhoa);
                 LoadSVToListView(dskq);
             }
-            else if(e.Node.Level == 1)
+            else if(e.Node.Level > 0)
             {
                 string tenLop = tvKhoa.SelectedNode.Text;
                 dskq = qlsv.DSTim(tenLop.Trim(), SoSanhTheoLop);
