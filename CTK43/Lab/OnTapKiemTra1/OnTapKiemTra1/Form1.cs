@@ -413,9 +413,9 @@ namespace OnTapKiemTra1
 
         private void ReadJsonDatatsmi_Click(object sender, EventArgs e)
         {
-            TreeNode selectedNode = tvKhoa.SelectedNode;
-            if(tvKhoa.SelectedNode != null)
-            {
+            //TreeNode selectedNode = tvKhoa.SelectedNode;
+            //if(tvKhoa.SelectedNode != null)
+            //{
                 openFile.InitialDirectory = @"D:\";
                 openFile.DefaultExt = "json";
                 openFile.Filter = "Json files(json) (*.json)|*.json";
@@ -428,13 +428,14 @@ namespace OnTapKiemTra1
                     {
                         qlsv.Them(item);
                     }
-                    LoadSVToListView(qlsv.dssv);
+                LoadSVToListView(qlsv.dssv);
+                ShowFeedOnTreeView(newRepo.GetKhoa());
                 }
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng chọn lớp muốn thêm", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Vui lòng chọn lớp muốn thêm", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
     }
 }
