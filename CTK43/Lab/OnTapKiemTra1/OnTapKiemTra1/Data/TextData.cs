@@ -34,17 +34,15 @@ namespace OnTapKiemTra1.Data
             return listSV;
         }
 
-        public void Save(List<SinhVien> sv)
-        {
-            using(var writer = new StreamWriter(new FileStream(fileName, FileMode.Create, FileAccess.ReadWrite)))
-            {
-                foreach (var item in sv)
-                {
-                    var line = SaveFormat(item);
-                    writer.WriteLine(line);
-                }
-            }
-        }
+        //public void Save(List<SinhVien> sv)
+        //{
+        //    using(var writer = new StreamWriter(new FileStream(fileName, FileMode.Create, FileAccess.ReadWrite)))
+        //    {
+        //        foreach (var item in sv)
+        //        {
+        //        }
+        //    }
+        //}
 
         private SinhVien ParseSV(string line)
         {
@@ -63,18 +61,5 @@ namespace OnTapKiemTra1.Data
             };
         }
 
-        private string SaveFormat(SinhVien sv)
-        {
-            return string.Format("{0}\t{1}\t{2}\t{3}\t{4}\t{5}\t{6}\t{7}\t{8}",
-                sv.StudentId,
-                sv.FirstName,
-                sv.LastName,
-                sv.ClassName,
-                sv.FacultyName,
-                (sv.Gender == true ? "1" : "0"),
-                sv.DateOfBirth,
-                sv.PhoneNumber,
-                sv.Address);
-        }
     }
 }

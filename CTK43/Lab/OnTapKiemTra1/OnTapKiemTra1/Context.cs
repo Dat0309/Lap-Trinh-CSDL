@@ -32,10 +32,5 @@ namespace OnTapKiemTra1
             return listSV;
         }
 
-
-        public void SaveSV()
-        {
-            dataSource.Save(listSV);
-        }
     }
 }

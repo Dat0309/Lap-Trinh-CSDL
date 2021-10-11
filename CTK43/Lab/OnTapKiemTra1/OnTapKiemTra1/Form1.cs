@@ -332,7 +332,7 @@ namespace OnTapKiemTra1
             TreeNode selectedNode = tvKhoa.SelectedNode;
             if (tvKhoa.SelectedNode != null)
             {
-                if (tvKhoa.SelectedNode.Level == 0)
+                if (tvKhoa.SelectedNode.Level == 0) // Xuất danh sách Khoa
                 {
                     saveFileDlg.FileName = selectedNode.Text;
                     saveFileDlg.InitialDirectory = @"D:\";
@@ -348,7 +348,7 @@ namespace OnTapKiemTra1
                         MessageBox.Show("Xuất file thành công");
                     }
                 }
-                else if(tvKhoa.SelectedNode.Level > 0)
+                else if(tvKhoa.SelectedNode.Level > 0) // Xuất danh sách lớp
                 {
                     saveFileDlg.FileName = selectedNode.Text;
                     saveFileDlg.InitialDirectory = @"D:\";
@@ -374,7 +374,7 @@ namespace OnTapKiemTra1
             if(tvKhoa.SelectedNode != null) { 
             List<SinhVien> dskq = new List<SinhVien>();
             TreeNode selectedNode = tvKhoa.SelectedNode;
-                if (tvKhoa.SelectedNode.Level ==0)
+                if (tvKhoa.SelectedNode.Level ==0) // Xuất danh sách khoa
                 {
                     saveFileDlg.FileName = selectedNode.Text;
                     saveFileDlg.InitialDirectory = @"D:\";
@@ -390,7 +390,7 @@ namespace OnTapKiemTra1
                         MessageBox.Show("Xuất file thành công");
                     }
                 }
-                if(tvKhoa.SelectedNode.Level > 0)
+                if(tvKhoa.SelectedNode.Level > 0) // Xuất danh sách lớp
                 {
                     saveFileDlg.FileName = selectedNode.Text;
                     saveFileDlg.InitialDirectory = @"D:\";

@@ -9,6 +9,5 @@ namespace OnTapKiemTra1.Data
     public interface IDataSource
     {
         List<SinhVien> GetSV();
-        void Save(List<SinhVien> sv);
     }
 }
