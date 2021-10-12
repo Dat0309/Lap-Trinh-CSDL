@@ -259,6 +259,19 @@ namespace OnTapKiemTra1
                         dskq.Add(sv);
                 LoadSVToListView(dskq);
             }
+            if(!rbMSSV.Checked && !rbHoTen.Checked && !rbSDT.Checked)// Neu khong check
+            {
+                foreach (var sv in qlsv.dssv)
+                {
+                    if (sv.StudentId.ToLower().StartsWith(txtSearch.Text.Trim().ToLower()))
+                        dskq.Add(sv);
+                    else if (sv.PhoneNumber.ToLower().StartsWith(txtSearch.Text.Trim().ToLower()))
+                        dskq.Add(sv);
+                    else if (sv.LastName.ToLower().StartsWith(txtSearch.Text.Trim().ToLower()))
+                        dskq.Add(sv);
+                }
+                LoadSVToListView(dskq);
+            }
             if (txtSearch.Text == _placeHolderText)
                 LoadSVToListView(qlsv.dssv);
         }

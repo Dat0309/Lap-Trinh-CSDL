@@ -54,11 +54,11 @@ namespace OnTapKiemTra1
             this.saveFileDlg = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsmNhap = new System.Windows.Forms.ToolStripMenuItem();
+            this.ReadJsonDatatsmi = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmLuu = new System.Windows.Forms.ToolStripMenuItem();
             this.jsonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.excelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmIn = new System.Windows.Forms.ToolStripMenuItem();
-            this.ReadJsonDatatsmi = new System.Windows.Forms.ToolStripMenuItem();
             this.openFile = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             this.cmsListView.SuspendLayout();
@@ -74,7 +74,7 @@ namespace OnTapKiemTra1
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lvSV);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(358, 17);
+            this.groupBox1.Location = new System.Drawing.Point(356, 28);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -231,7 +231,7 @@ namespace OnTapKiemTra1
             // 
             // tvKhoa
             // 
-            this.tvKhoa.Location = new System.Drawing.Point(18, 126);
+            this.tvKhoa.Location = new System.Drawing.Point(18, 138);
             this.tvKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.tvKhoa.Name = "tvKhoa";
             this.tvKhoa.Size = new System.Drawing.Size(330, 748);
@@ -272,6 +272,13 @@ namespace OnTapKiemTra1
             this.tsmNhap.Size = new System.Drawing.Size(48, 20);
             this.tsmNhap.Text = "Nhập";
             // 
+            // ReadJsonDatatsmi
+            // 
+            this.ReadJsonDatatsmi.Name = "ReadJsonDatatsmi";
+            this.ReadJsonDatatsmi.Size = new System.Drawing.Size(124, 22);
+            this.ReadJsonDatatsmi.Text = "Json Data";
+            this.ReadJsonDatatsmi.Click += new System.EventHandler(this.ReadJsonDatatsmi_Click);
+            // 
             // tsmLuu
             // 
             this.tsmLuu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -300,13 +307,6 @@ namespace OnTapKiemTra1
             this.tsmIn.Name = "tsmIn";
             this.tsmIn.Size = new System.Drawing.Size(29, 20);
             this.tsmIn.Text = "In";
-            // 
-            // ReadJsonDatatsmi
-            // 
-            this.ReadJsonDatatsmi.Name = "ReadJsonDatatsmi";
-            this.ReadJsonDatatsmi.Size = new System.Drawing.Size(180, 22);
-            this.ReadJsonDatatsmi.Text = "Json Data";
-            this.ReadJsonDatatsmi.Click += new System.EventHandler(this.ReadJsonDatatsmi_Click);
             // 
             // openFile
             // 
