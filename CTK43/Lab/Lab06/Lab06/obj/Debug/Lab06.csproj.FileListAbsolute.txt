@@ -1,0 +1,11 @@
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\bin\Debug\Lab06.exe.config
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\bin\Debug\Lab06.exe
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\bin\Debug\Lab06.pdb
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.csproj.AssemblyReference.cache
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.Form1.resources
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.Properties.Resources.resources
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.csproj.GenerateResource.cache
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.csproj.CoreCompileInputs.cache
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.exe
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.pdb
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.frmFood.resources
