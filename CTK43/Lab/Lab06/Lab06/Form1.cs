@@ -16,6 +16,10 @@ namespace Lab06
         public Form1()
         {
             InitializeComponent();
+            dtpkFromTime.Format = DateTimePickerFormat.Custom;
+            dtpkFromTime.CustomFormat = "dd-MM-yyyy";
+            dtpkToTime.Format = DateTimePickerFormat.Custom;
+            dtpkToTime.CustomFormat = "dd-MM-yyyy";
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
@@ -166,6 +170,23 @@ namespace Lab06
                 frm.Show(this);
                 frm.LoadFood(Convert.ToInt32(txtID.Text));
             }
+        }
+
+        private void btnHoaDon_Click(object sender, EventArgs e)
+        {
+            if(dtpkFromTime.Value.ToShortDateString() != null || dtpkToTime.Value.ToShortDateString()!= null)
+            {
+                BillForm frm = new BillForm();
+                frm.Show(this);
+                frm.LoadBills(dtpkFromTime.Value.ToString(), dtpkToTime.Value.ToString());
+            }
+        }
+
+        private void btnAccount_Click(object sender, EventArgs e)
+        {
+            AccountManager frm = new AccountManager();
+            frm.Show(this);
+            frm.LoadAcc();
         }
     }
 }

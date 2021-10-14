@@ -35,6 +35,9 @@ namespace Lab06
             this.chID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmViewFood = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,16 +47,19 @@ namespace Lab06
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tsmDelete = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmViewFood = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnHoaDon = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dtpkFromTime = new System.Windows.Forms.DateTimePicker();
+            this.dtpkToTime = new System.Windows.Forms.DateTimePicker();
+            this.btnAccount = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnLoad
             // 
             this.btnLoad.Location = new System.Drawing.Point(18, 134);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(4);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(160, 32);
             this.btnLoad.TabIndex = 0;
@@ -72,7 +78,7 @@ namespace Lab06
             this.lvCategory.GridLines = true;
             this.lvCategory.HideSelection = false;
             this.lvCategory.Location = new System.Drawing.Point(18, 174);
-            this.lvCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lvCategory.Margin = new System.Windows.Forms.Padding(4);
             this.lvCategory.MultiSelect = false;
             this.lvCategory.Name = "lvCategory";
             this.lvCategory.Size = new System.Drawing.Size(891, 430);
@@ -89,12 +95,34 @@ namespace Lab06
             // chName
             // 
             this.chName.Text = "Tên món ăn";
-            this.chName.Width = 419;
+            this.chName.Width = 362;
             // 
             // chType
             // 
             this.chType.Text = "Loại";
-            this.chType.Width = 193;
+            this.chType.Width = 330;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmDelete,
+            this.tsmViewFood});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(200, 48);
+            // 
+            // tsmDelete
+            // 
+            this.tsmDelete.Name = "tsmDelete";
+            this.tsmDelete.Size = new System.Drawing.Size(199, 22);
+            this.tsmDelete.Text = "Xóa nhóm sản phẩm";
+            this.tsmDelete.Click += new System.EventHandler(this.tsmDelete_Click);
+            // 
+            // tsmViewFood
+            // 
+            this.tsmViewFood.Name = "tsmViewFood";
+            this.tsmViewFood.Size = new System.Drawing.Size(199, 22);
+            this.tsmViewFood.Text = "Xem danh sách món ăn";
+            this.tsmViewFood.Click += new System.EventHandler(this.tsmViewFood_Click);
             // 
             // label1
             // 
@@ -134,26 +162,26 @@ namespace Lab06
             this.txtID.Location = new System.Drawing.Point(204, 21);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(322, 24);
+            this.txtID.Size = new System.Drawing.Size(343, 24);
             this.txtID.TabIndex = 5;
             // 
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(204, 59);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(322, 24);
+            this.txtName.Size = new System.Drawing.Size(343, 24);
             this.txtName.TabIndex = 6;
             // 
             // txtType
             // 
             this.txtType.Location = new System.Drawing.Point(204, 97);
             this.txtType.Name = "txtType";
-            this.txtType.Size = new System.Drawing.Size(322, 24);
+            this.txtType.Size = new System.Drawing.Size(343, 24);
             this.txtType.TabIndex = 7;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(566, 134);
+            this.btnAdd.Location = new System.Drawing.Point(204, 134);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(109, 32);
@@ -165,7 +193,7 @@ namespace Lab06
             // btnUpdate
             // 
             this.btnUpdate.Enabled = false;
-            this.btnUpdate.Location = new System.Drawing.Point(683, 134);
+            this.btnUpdate.Location = new System.Drawing.Point(321, 134);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(109, 32);
@@ -177,7 +205,7 @@ namespace Lab06
             // btnDelete
             // 
             this.btnDelete.Enabled = false;
-            this.btnDelete.Location = new System.Drawing.Point(800, 134);
+            this.btnDelete.Location = new System.Drawing.Point(438, 134);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(109, 32);
@@ -186,33 +214,77 @@ namespace Lab06
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // contextMenuStrip1
+            // btnHoaDon
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmDelete,
-            this.tsmViewFood});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(200, 48);
+            this.btnHoaDon.Location = new System.Drawing.Point(564, 17);
+            this.btnHoaDon.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHoaDon.Name = "btnHoaDon";
+            this.btnHoaDon.Size = new System.Drawing.Size(109, 32);
+            this.btnHoaDon.TabIndex = 11;
+            this.btnHoaDon.Text = "Hóa đơn";
+            this.btnHoaDon.UseVisualStyleBackColor = true;
+            this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
             // 
-            // tsmDelete
+            // label4
             // 
-            this.tsmDelete.Name = "tsmDelete";
-            this.tsmDelete.Size = new System.Drawing.Size(199, 22);
-            this.tsmDelete.Text = "Xóa nhóm sản phẩm";
-            this.tsmDelete.Click += new System.EventHandler(this.tsmDelete_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(699, 24);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 18);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Từ ngày:";
             // 
-            // tsmViewFood
+            // label5
             // 
-            this.tsmViewFood.Name = "tsmViewFood";
-            this.tsmViewFood.Size = new System.Drawing.Size(199, 22);
-            this.tsmViewFood.Text = "Xem danh sách món ăn";
-            this.tsmViewFood.Click += new System.EventHandler(this.tsmViewFood_Click);
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(699, 59);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 18);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Đến ngày";
+            // 
+            // dtpkFromTime
+            // 
+            this.dtpkFromTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpkFromTime.Location = new System.Drawing.Point(791, 21);
+            this.dtpkFromTime.Name = "dtpkFromTime";
+            this.dtpkFromTime.Size = new System.Drawing.Size(118, 24);
+            this.dtpkFromTime.TabIndex = 16;
+            // 
+            // dtpkToTime
+            // 
+            this.dtpkToTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpkToTime.Location = new System.Drawing.Point(791, 55);
+            this.dtpkToTime.Name = "dtpkToTime";
+            this.dtpkToTime.Size = new System.Drawing.Size(118, 24);
+            this.dtpkToTime.TabIndex = 17;
+            // 
+            // btnAccount
+            // 
+            this.btnAccount.Location = new System.Drawing.Point(800, 134);
+            this.btnAccount.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAccount.Name = "btnAccount";
+            this.btnAccount.Size = new System.Drawing.Size(109, 32);
+            this.btnAccount.TabIndex = 18;
+            this.btnAccount.Text = "Tài khoản";
+            this.btnAccount.UseVisualStyleBackColor = true;
+            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 623);
+            this.Controls.Add(this.btnAccount);
+            this.Controls.Add(this.dtpkToTime);
+            this.Controls.Add(this.dtpkFromTime);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnHoaDon);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
@@ -225,7 +297,7 @@ namespace Lab06
             this.Controls.Add(this.lvCategory);
             this.Controls.Add(this.btnLoad);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.contextMenuStrip1.ResumeLayout(false);
@@ -253,6 +325,12 @@ namespace Lab06
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tsmDelete;
         private System.Windows.Forms.ToolStripMenuItem tsmViewFood;
+        private System.Windows.Forms.Button btnHoaDon;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dtpkFromTime;
+        private System.Windows.Forms.DateTimePicker dtpkToTime;
+        private System.Windows.Forms.Button btnAccount;
     }
 }
 

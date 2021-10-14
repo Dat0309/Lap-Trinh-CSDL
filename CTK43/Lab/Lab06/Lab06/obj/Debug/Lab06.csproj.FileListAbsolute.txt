@@ -9,3 +9,9 @@ D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.csproj.CoreCompileI
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.exe
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.pdb
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.frmFood.resources
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\bin\Debug\Guna.UI.dll
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.BillForm.resources
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.csproj.CopyComplete
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.BillDetailForm.resources
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.AccountManager.resources
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.RoleAcc.resources
