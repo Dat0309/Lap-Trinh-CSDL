@@ -188,5 +188,12 @@ namespace Lab06
             frm.Show(this);
             frm.LoadAcc();
         }
+
+        private void btnTableShow_Click(object sender, EventArgs e)
+        {
+            TableForm frm = new TableForm();
+            frm.Show(this);
+            frm.LoadTable();
+        }
     }
 }

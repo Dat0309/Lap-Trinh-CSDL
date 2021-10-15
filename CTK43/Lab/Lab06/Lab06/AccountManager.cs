@@ -161,28 +161,35 @@ namespace Lab06
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
-            SqlConnection sqlConn = new SqlConnection(connectionString);
-            SqlCommand sqlComd = sqlConn.CreateCommand();
-
-            sqlComd.CommandText = string.Format("UPDATE Account SET AccountName = '{0}', Password = '{1}', FullName = N'{2}', Email = '{3}', Tell = '{4}', DateCreated = '{5}' WHERE AccountName = '{0}' ",
-                txtAccount.Text,txtPass.Text, txtName.Text, txtEmail.Text, txtTell.Text, DateTime.Now);
-
-            sqlConn.Open();
-
-            int numOfRows = sqlComd.ExecuteNonQuery();
-
-            if (numOfRows == 1)
+            if (Validation())
             {
-                LoadAcc();
-                ResetForm();
-                MessageBox.Show("Cap nhat nhom mon an thanh cong");
+                string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
+                SqlConnection sqlConn = new SqlConnection(connectionString);
+                SqlCommand sqlComd = sqlConn.CreateCommand();
+
+                sqlComd.CommandText = string.Format("UPDATE Account SET AccountName = '{0}', Password = '{1}', FullName = N'{2}', Email = '{3}', Tell = '{4}', DateCreated = '{5}' WHERE AccountName = '{0}' ",
+                    txtAccount.Text, txtPass.Text, txtName.Text, txtEmail.Text, txtTell.Text, DateTime.Now);
+
+                sqlConn.Open();
+
+                int numOfRows = sqlComd.ExecuteNonQuery();
+
+                if (numOfRows == 1)
+                {
+                    LoadAcc();
+                    ResetForm();
+                    MessageBox.Show("Cap nhat nhom mon an thanh cong");
+                }
+                else
+                {
+                    MessageBox.Show("Loi", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                }
+                sqlConn.Close();
             }
             else
             {
-                MessageBox.Show("Loi", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                MessageBox.Show("Vui long nhap day du thong tin", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
             }
-            sqlConn.Close();
         }
         private void ResetForm()
         {

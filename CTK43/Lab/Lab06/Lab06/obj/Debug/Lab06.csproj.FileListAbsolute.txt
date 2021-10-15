@@ -15,3 +15,4 @@ D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.csproj.CopyComplete
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.BillDetailForm.resources
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.AccountManager.resources
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.RoleAcc.resources
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.TableForm.resources

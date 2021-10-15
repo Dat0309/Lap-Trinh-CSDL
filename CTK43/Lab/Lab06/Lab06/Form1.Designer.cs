@@ -53,6 +53,7 @@ namespace Lab06
             this.dtpkFromTime = new System.Windows.Forms.DateTimePicker();
             this.dtpkToTime = new System.Windows.Forms.DateTimePicker();
             this.btnAccount = new System.Windows.Forms.Button();
+            this.btnTableShow = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -274,11 +275,23 @@ namespace Lab06
             this.btnAccount.UseVisualStyleBackColor = true;
             this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
             // 
+            // btnTableShow
+            // 
+            this.btnTableShow.Location = new System.Drawing.Point(660, 134);
+            this.btnTableShow.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTableShow.Name = "btnTableShow";
+            this.btnTableShow.Size = new System.Drawing.Size(132, 32);
+            this.btnTableShow.TabIndex = 19;
+            this.btnTableShow.Text = "Danh sách bàn";
+            this.btnTableShow.UseVisualStyleBackColor = true;
+            this.btnTableShow.Click += new System.EventHandler(this.btnTableShow_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 623);
+            this.Controls.Add(this.btnTableShow);
             this.Controls.Add(this.btnAccount);
             this.Controls.Add(this.dtpkToTime);
             this.Controls.Add(this.dtpkFromTime);
@@ -331,6 +344,7 @@ namespace Lab06
         private System.Windows.Forms.DateTimePicker dtpkFromTime;
         private System.Windows.Forms.DateTimePicker dtpkToTime;
         private System.Windows.Forms.Button btnAccount;
+        private System.Windows.Forms.Button btnTableShow;
     }
 }
 
