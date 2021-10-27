@@ -188,12 +188,20 @@ namespace Lab06
 
         private void tsmShowBills_Click(object sender, EventArgs e)
         {
+            if (dgvTable.SelectedRows.Count == 0) return;
+            var rowSelect = dgvTable.SelectedRows[0];
+            string id = dgvTable.SelectedRows[0].Cells[0].Value.ToString();
 
+            FrmTableBills frm = new FrmTableBills();
+            frm.Show(this);
+            frm.LoadBills(id);
         }
 
         private void showBillsMemory_Click(object sender, EventArgs e)
         {
-
+            FrmBoughtMemory frm = new FrmBoughtMemory();
+            frm.Show(this);
+            frm.LoadMemory();
         }
     }
 }

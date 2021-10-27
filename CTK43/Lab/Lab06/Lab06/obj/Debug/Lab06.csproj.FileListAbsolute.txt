@@ -16,3 +16,5 @@ D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.BillDetailForm.reso
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.AccountManager.resources
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.RoleAcc.resources
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.TableForm.resources
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.FrmTableBills.resources
+D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab06\Lab06\obj\Debug\Lab06.FrmBoughtMemory.resources
