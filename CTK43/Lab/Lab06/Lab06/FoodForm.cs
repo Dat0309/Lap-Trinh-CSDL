@@ -101,9 +101,12 @@ namespace Lab06
             SqlCommand sqlComd = sqlConn.CreateCommand();
 
             string query = "DELETE FROM Food WHERE ID = " + foodID;
-            sqlComd.CommandText = query;
-            sqlConn.Open();
 
+            sqlConn.Open();
+            sqlComd.CommandText = "DELETE FROM BillDetails WHERE FoodID = " + foodID;
+            sqlComd.ExecuteNonQuery();
+               
+            sqlComd.CommandText = query;
             int numOfRowsEffected = sqlComd.ExecuteNonQuery();
             if(numOfRowsEffected == 1)
             {

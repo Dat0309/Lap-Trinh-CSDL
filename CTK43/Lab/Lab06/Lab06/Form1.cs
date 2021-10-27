@@ -50,29 +50,43 @@ namespace Lab06
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
-            SqlConnection sqlConn = new SqlConnection(connectionString);
-            SqlCommand sqlComd = sqlConn.CreateCommand();
-
-            sqlComd.CommandText = "INSERT INTO Category(Name, [Type])" +"VALUES (N'" + txtName.Text + "', " + txtType.Text + ")";
-
-            sqlConn.Open();
-
-            int numOfRowsEffected = sqlComd.ExecuteNonQuery();
-
-            sqlConn.Close();
-
-            if(numOfRowsEffected == 1)
+            if (Validation())
             {
-                MessageBox.Show("Them mon an thanh cong");
-                btnLoad.PerformClick();
-                txtName.Text = "";
-                txtType.Text = "";            
+                string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
+                SqlConnection sqlConn = new SqlConnection(connectionString);
+                SqlCommand sqlComd = sqlConn.CreateCommand();
+
+                sqlComd.CommandText = "INSERT INTO Category(Name, [Type])" + "VALUES (N'" + txtName.Text + "', " + txtType.Text + ")";
+
+                sqlConn.Open();
+
+                int numOfRowsEffected = sqlComd.ExecuteNonQuery();
+
+                sqlConn.Close();
+
+                if (numOfRowsEffected == 1)
+                {
+                    MessageBox.Show("Them mon an thanh cong");
+                    btnLoad.PerformClick();
+                    txtName.Text = "";
+                    txtType.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Da co loi xay ra, vui long thu lai");
+                }
             }
             else
             {
-                MessageBox.Show("Da co loi xay ra, vui long thu lai");
+                MessageBox.Show("Vui long dien day du thong tin");
             }
+        }
+
+        private bool Validation()
+        {
+            if (txtName.Text.Equals("")) return false;
+            else if (txtType.Text.Equals("")) return false;
+            return true;
         }
 
         private void lvCategory_Click(object sender, EventArgs e)
