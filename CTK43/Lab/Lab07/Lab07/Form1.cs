@@ -161,5 +161,11 @@ namespace Lab07
             OrderForm frm = new OrderForm();
             frm.ShowDialog(this);
         }
+
+        private void btnAccount_Click(object sender, EventArgs e)
+        {
+            AccountForrm frm = new AccountForrm();
+            frm.ShowDialog(this);
+        }
     }
 }

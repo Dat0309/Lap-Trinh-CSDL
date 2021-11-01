@@ -44,6 +44,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtSearchByName = new System.Windows.Forms.TextBox();
             this.bntBills = new System.Windows.Forms.Button();
+            this.btnAccount = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFoodList)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -182,12 +183,23 @@
             this.bntBills.UseVisualStyleBackColor = true;
             this.bntBills.Click += new System.EventHandler(this.bntBills_Click);
             // 
+            // btnAccount
+            // 
+            this.btnAccount.Location = new System.Drawing.Point(682, 534);
+            this.btnAccount.Name = "btnAccount";
+            this.btnAccount.Size = new System.Drawing.Size(94, 29);
+            this.btnAccount.TabIndex = 10;
+            this.btnAccount.Text = "Tài khoản";
+            this.btnAccount.UseVisualStyleBackColor = true;
+            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(939, 567);
+            this.Controls.Add(this.btnAccount);
             this.Controls.Add(this.bntBills);
             this.Controls.Add(this.txtSearchByName);
             this.Controls.Add(this.label4);
@@ -225,5 +237,6 @@
         private Label label4;
         private TextBox txtSearchByName;
         private Button bntBills;
+        private Button btnAccount;
     }
 }
