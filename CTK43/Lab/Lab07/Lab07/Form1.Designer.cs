@@ -43,6 +43,7 @@
             this.lblCatName = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtSearchByName = new System.Windows.Forms.TextBox();
+            this.bntBills = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFoodList)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -171,11 +172,23 @@
             this.txtSearchByName.TabIndex = 8;
             this.txtSearchByName.TextChanged += new System.EventHandler(this.txtSearchByName_TextChanged);
             // 
+            // bntBills
+            // 
+            this.bntBills.Location = new System.Drawing.Point(792, 534);
+            this.bntBills.Name = "bntBills";
+            this.bntBills.Size = new System.Drawing.Size(135, 29);
+            this.bntBills.TabIndex = 9;
+            this.bntBills.Text = "Xuất hoá đơn";
+            this.bntBills.UseVisualStyleBackColor = true;
+            this.bntBills.Click += new System.EventHandler(this.bntBills_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(939, 567);
+            this.Controls.Add(this.bntBills);
             this.Controls.Add(this.txtSearchByName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblCatName);
@@ -211,5 +224,6 @@
         private ToolStripMenuItem tsmUpdateFood;
         private Label label4;
         private TextBox txtSearchByName;
+        private Button bntBills;
     }
 }

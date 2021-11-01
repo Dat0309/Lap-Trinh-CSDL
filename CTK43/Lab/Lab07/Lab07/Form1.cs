@@ -155,5 +155,11 @@ namespace Lab07
 
             dgvFoodList.DataSource = foodView;
         }
+
+        private void bntBills_Click(object sender, EventArgs e)
+        {
+            OrderForm frm = new OrderForm();
+            frm.ShowDialog(this);
+        }
     }
 }

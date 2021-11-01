@@ -181,5 +181,20 @@ namespace Lab07
         {
             this.Close();
         }
+
+        private void btnAddNew_Click(object sender, EventArgs e)
+        {
+            AddCateForm frm = new AddCateForm();
+            frm.FormClosed += new FormClosedEventHandler(frmCloed);
+            frm.Show(this);
+        }
+
+        private void frmCloed(object? sender, FormClosedEventArgs e)
+        {
+            int index = cbbCatName.SelectedIndex;
+            cbbCatName.SelectedIndex = -1;
+            cbbCatName.SelectedIndex = index;
+            InitValues();
+        }
     }
 }

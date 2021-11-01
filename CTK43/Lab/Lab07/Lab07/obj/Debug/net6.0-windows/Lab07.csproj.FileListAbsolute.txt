@@ -25,3 +25,6 @@ E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab07\Lab07\obj\Debug\net6.0-windows\Lab07.pdb
 E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab07\Lab07\obj\Debug\net6.0-windows\Lab07.genruntimeconfig.cache
 E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab07\Lab07\obj\Debug\net6.0-windows\Lab07.FoodinfoForrm.resources
 E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab07\Lab07\obj\Debug\net6.0-windows\Lab07.Properties.Resources.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab07\Lab07\obj\Debug\net6.0-windows\Lab07.AddCateForm.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab07\Lab07\obj\Debug\net6.0-windows\Lab07.OrderForm.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab07\Lab07\obj\Debug\net6.0-windows\Lab07.OrderDetailsForm.resources
