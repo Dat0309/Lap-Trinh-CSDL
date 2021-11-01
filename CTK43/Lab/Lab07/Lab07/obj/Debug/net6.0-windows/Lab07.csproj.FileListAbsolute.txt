@@ -29,3 +29,4 @@ E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab07\Lab07\obj\Debug\net6.0-windows\Lab07.AddC
 E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab07\Lab07\obj\Debug\net6.0-windows\Lab07.OrderForm.resources
 E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab07\Lab07\obj\Debug\net6.0-windows\Lab07.OrderDetailsForm.resources
 E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab07\Lab07\obj\Debug\net6.0-windows\Lab07.AccountForrm.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab07\Lab07\obj\Debug\net6.0-windows\Lab07.RoleForm.resources

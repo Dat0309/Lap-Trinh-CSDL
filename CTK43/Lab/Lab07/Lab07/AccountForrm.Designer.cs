@@ -59,6 +59,7 @@
             this.dgvAccount.Size = new System.Drawing.Size(830, 360);
             this.dgvAccount.TabIndex = 0;
             this.dgvAccount.Click += new System.EventHandler(this.dgvAccount_Click);
+            this.dgvAccount.DoubleClick += new System.EventHandler(this.dgvAccount_DoubleClick);
             // 
             // label2
             // 

@@ -160,5 +160,13 @@ namespace Lab07
             mtbSDT.Text = "";
             btnUpdate.Enabled = false;
         }
+
+        private void dgvAccount_DoubleClick(object sender, EventArgs e)
+        {
+            var name = dgvAccount.SelectedRows[0].Cells[0].Value.ToString();
+            RoleForm frm = new RoleForm();
+            frm.LoadRole(name);
+            frm.ShowDialog(this);
+        }
     }
 }

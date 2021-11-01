@@ -19,5 +19,8 @@
     <Compile Update="OrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="RoleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
