@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "40da934b-39f4-4052-b4f4-333aad95288a": {
+      "ProjectGuid": "40da934b-39f4-4052-b4f4-333aad95288a",
+      "DisplayName": "ABC Restaurant",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

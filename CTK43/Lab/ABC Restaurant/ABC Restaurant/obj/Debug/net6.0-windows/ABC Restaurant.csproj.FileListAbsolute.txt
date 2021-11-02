@@ -1,0 +1,19 @@
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\bin\Debug\net6.0-windows\ABC Restaurant.exe
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\bin\Debug\net6.0-windows\ABC Restaurant.deps.json
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\bin\Debug\net6.0-windows\ABC Restaurant.runtimeconfig.json
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\bin\Debug\net6.0-windows\ABC Restaurant.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\bin\Debug\net6.0-windows\ref\ABC Restaurant.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\bin\Debug\net6.0-windows\ABC Restaurant.pdb
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ABC Restaurant.GlobalUsings.g.cs
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ABC Restaurant.csproj.AssemblyReference.cache
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ABC_Restaurant.Form1.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ABC Restaurant.csproj.GenerateResource.cache
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ABC Restaurant.GeneratedMSBuildEditorConfig.editorconfig
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ABC Restaurant.AssemblyInfoInputs.cache
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ABC Restaurant.AssemblyInfo.cs
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ABC Restaurant.csproj.CoreCompileInputs.cache
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ABC Restaurant.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ref\ABC Restaurant.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ABC Restaurant.pdb
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ABC Restaurant.genruntimeconfig.cache
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ABC_Restaurant.Properties.Resources.resources

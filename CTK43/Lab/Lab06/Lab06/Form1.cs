@@ -139,35 +139,43 @@ namespace Lab06
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
-            SqlConnection sqlConn = new SqlConnection(connectionString);
-            SqlCommand sqlComd = sqlConn.CreateCommand();
-
-            sqlComd.CommandText = "DELETE FROM Category " + "WHERE ID = " + txtID.Text;
-
-            sqlConn.Open();
-            int numOfRowsEffected = sqlComd.ExecuteNonQuery();
-            sqlConn.Close();
-
-            if(numOfRowsEffected == 1)
+            try
             {
-                ListViewItem item = lvCategory.SelectedItems[0];
-                lvCategory.Items.Remove(item);
+                string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
+                SqlConnection sqlConn = new SqlConnection(connectionString);
+                SqlCommand sqlComd = sqlConn.CreateCommand();
 
-                txtID.Text = "";
-                txtName.Text = "";
-                txtType.Text = "";
+                sqlComd.CommandText = "DELETE FROM Category " + "WHERE ID = " + txtID.Text;
 
-                btnDelete.Enabled = false;
-                btnUpdate.Enabled = false;
+                sqlConn.Open();
+                int numOfRowsEffected = sqlComd.ExecuteNonQuery();
+                sqlConn.Close();
 
-                MessageBox.Show("Xoa nhom mon an thanh cong");
+                if (numOfRowsEffected == 1)
+                {
+                    ListViewItem item = lvCategory.SelectedItems[0];
+                    lvCategory.Items.Remove(item);
 
+                    txtID.Text = "";
+                    txtName.Text = "";
+                    txtType.Text = "";
+
+                    btnDelete.Enabled = false;
+                    btnUpdate.Enabled = false;
+
+                    MessageBox.Show("Xoa nhom mon an thanh cong");
+
+                }
+                else
+                {
+                    MessageBox.Show("Da co loi xay ra. Vui long thu lai");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Da co loi xay ra. Vui long thu lai");
+                MessageBox.Show(ex.Message, "SQL Error");
             }
+            
         }
 
         private void tsmDelete_Click(object sender, EventArgs e)
