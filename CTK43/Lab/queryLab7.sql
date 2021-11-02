@@ -1,4 +1,4 @@
-stinCREATE PROCEDURE InsertFood
+CREATE PROCEDURE InsertFood
 @ID int output,
 @Name nvarchar(3000), 
 @Unit nvarchar(3000), 

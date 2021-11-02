@@ -36,10 +36,10 @@
             this.tsmAddCustomers = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmListCustomer = new System.Windows.Forms.ToolStripMenuItem();
             this.suppliersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addNewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listSuppliersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmAddSuppliers = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmListSuppliers = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.productsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmProduct = new System.Windows.Forms.ToolStripMenuItem();
             this.employeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.listEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -154,50 +154,52 @@
             // tsmAddCustomers
             // 
             this.tsmAddCustomers.Name = "tsmAddCustomers";
-            this.tsmAddCustomers.Size = new System.Drawing.Size(224, 26);
+            this.tsmAddCustomers.Size = new System.Drawing.Size(183, 26);
             this.tsmAddCustomers.Text = "Add News";
             this.tsmAddCustomers.Click += new System.EventHandler(this.tsmAddCustomers_Click);
             // 
             // tsmListCustomer
             // 
             this.tsmListCustomer.Name = "tsmListCustomer";
-            this.tsmListCustomer.Size = new System.Drawing.Size(224, 26);
+            this.tsmListCustomer.Size = new System.Drawing.Size(183, 26);
             this.tsmListCustomer.Text = "ListCustomers";
             this.tsmListCustomer.Click += new System.EventHandler(this.tsmListCustomer_Click);
             // 
             // suppliersToolStripMenuItem
             // 
             this.suppliersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addNewToolStripMenuItem,
-            this.listSuppliersToolStripMenuItem,
+            this.tsmAddSuppliers,
+            this.tsmListSuppliers,
             this.toolStripSeparator4,
-            this.productsToolStripMenuItem1});
+            this.tsmProduct});
             this.suppliersToolStripMenuItem.Name = "suppliersToolStripMenuItem";
             this.suppliersToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
             this.suppliersToolStripMenuItem.Text = "Suppliers";
             // 
-            // addNewToolStripMenuItem
+            // tsmAddSuppliers
             // 
-            this.addNewToolStripMenuItem.Name = "addNewToolStripMenuItem";
-            this.addNewToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
-            this.addNewToolStripMenuItem.Text = "Add new";
+            this.tsmAddSuppliers.Name = "tsmAddSuppliers";
+            this.tsmAddSuppliers.Size = new System.Drawing.Size(224, 26);
+            this.tsmAddSuppliers.Text = "Add new";
+            this.tsmAddSuppliers.Click += new System.EventHandler(this.tsmAddSuppliers_Click);
             // 
-            // listSuppliersToolStripMenuItem
+            // tsmListSuppliers
             // 
-            this.listSuppliersToolStripMenuItem.Name = "listSuppliersToolStripMenuItem";
-            this.listSuppliersToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
-            this.listSuppliersToolStripMenuItem.Text = "List Suppliers";
+            this.tsmListSuppliers.Name = "tsmListSuppliers";
+            this.tsmListSuppliers.Size = new System.Drawing.Size(224, 26);
+            this.tsmListSuppliers.Text = "List Suppliers";
+            this.tsmListSuppliers.Click += new System.EventHandler(this.tsmListSuppliers_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(176, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(221, 6);
             // 
-            // productsToolStripMenuItem1
+            // tsmProduct
             // 
-            this.productsToolStripMenuItem1.Name = "productsToolStripMenuItem1";
-            this.productsToolStripMenuItem1.Size = new System.Drawing.Size(179, 26);
-            this.productsToolStripMenuItem1.Text = "Products";
+            this.tsmProduct.Name = "tsmProduct";
+            this.tsmProduct.Size = new System.Drawing.Size(224, 26);
+            this.tsmProduct.Text = "Products";
             // 
             // employeesToolStripMenuItem
             // 
@@ -702,10 +704,10 @@
         private ToolStripButton tsbColor;
         private ToolStripMenuItem tsmAddCustomers;
         private ToolStripMenuItem tsmListCustomer;
-        private ToolStripMenuItem addNewToolStripMenuItem;
-        private ToolStripMenuItem listSuppliersToolStripMenuItem;
+        private ToolStripMenuItem tsmAddSuppliers;
+        private ToolStripMenuItem tsmListSuppliers;
         private ToolStripSeparator toolStripSeparator4;
-        private ToolStripMenuItem productsToolStripMenuItem1;
+        private ToolStripMenuItem tsmProduct;
         private ToolStripMenuItem addNewToolStripMenuItem1;
         private ToolStripMenuItem listEmployeesToolStripMenuItem;
         private ToolStripMenuItem findToolStripMenuItem;

@@ -27,3 +27,5 @@ E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-
 E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ABC Restaurant.csproj.CopyComplete
 E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ABC_Restaurant.Customer.NewCustomerForm.resources
 E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ABC_Restaurant.Customer.OrderForm.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ABC_Restaurant.Supplier.ProductForrm.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ABC_Restaurant.Supplier.SuppliersForm.resources

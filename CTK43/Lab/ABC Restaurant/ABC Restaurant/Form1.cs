@@ -1,5 +1,6 @@
 ﻿using System.Data.SqlClient;
 using ABC_Restaurant.Customer;
+using ABC_Restaurant.Supplier;
 
 namespace ABC_Restaurant
 {
@@ -18,7 +19,6 @@ namespace ABC_Restaurant
 
         private void tsmAddCustomers_Click(object sender, EventArgs e)
         {
-
             count++;
             NewCustomerForm frm = new NewCustomerForm();
             frm.MdiParent = this;
@@ -47,5 +47,32 @@ namespace ABC_Restaurant
             count--;
             tsStatus.Text = "Số cửa sổ đang mở: " + count.ToString();
         }
+
+        private void tsmAddSuppliers_Click(object sender, EventArgs e)
+        {
+            count++;
+            NewCustomerForm frm = new NewCustomerForm();
+            frm.MdiParent = this;
+            frm.Show();
+#pragma warning disable CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
+            frm.FormClosed += new FormClosedEventHandler(formClosed);
+#pragma warning restore CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
+            tsStatus.Text = "Số cửa sổ đang mở: " + count.ToString();
+        }
+
+        private void tsmListSuppliers_Click(object sender, EventArgs e)
+        {
+            SuppliersForm frm = new SuppliersForm();
+            frm.MdiParent = this;
+            count++;
+            frm.initUI();
+            frm.Size = new System.Drawing.Size(1100, 500);
+            frm.Show();
+#pragma warning disable CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
+            frm.FormClosed += new FormClosedEventHandler(formClosed);
+#pragma warning restore CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
+            tsStatus.Text = "Số cửa sổ đang mở: " + count.ToString();
+        }
+
     }
 }
