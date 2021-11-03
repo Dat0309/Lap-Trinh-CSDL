@@ -58,6 +58,8 @@ namespace ABC_Restaurant.Customer
                 {
                     MessageBox.Show("Successfully adding new Customer", "Message");
                     this.ResetText();
+                    DialogResult = DialogResult.OK;
+                    this.Close();
                 }
                 else
                 {

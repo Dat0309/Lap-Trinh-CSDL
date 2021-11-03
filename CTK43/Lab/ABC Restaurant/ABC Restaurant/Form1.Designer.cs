@@ -41,13 +41,8 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmProduct = new System.Windows.Forms.ToolStripMenuItem();
             this.employeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addNewToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.listEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.findToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.byNameToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.byAddressToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.byPhoneNumberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trackOperationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmAddEmployees = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmListEmployeers = new System.Windows.Forms.ToolStripMenuItem();
             this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -179,84 +174,50 @@
             // tsmAddSuppliers
             // 
             this.tsmAddSuppliers.Name = "tsmAddSuppliers";
-            this.tsmAddSuppliers.Size = new System.Drawing.Size(224, 26);
+            this.tsmAddSuppliers.Size = new System.Drawing.Size(179, 26);
             this.tsmAddSuppliers.Text = "Add new";
             this.tsmAddSuppliers.Click += new System.EventHandler(this.tsmAddSuppliers_Click);
             // 
             // tsmListSuppliers
             // 
             this.tsmListSuppliers.Name = "tsmListSuppliers";
-            this.tsmListSuppliers.Size = new System.Drawing.Size(224, 26);
+            this.tsmListSuppliers.Size = new System.Drawing.Size(179, 26);
             this.tsmListSuppliers.Text = "List Suppliers";
             this.tsmListSuppliers.Click += new System.EventHandler(this.tsmListSuppliers_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(176, 6);
             // 
             // tsmProduct
             // 
             this.tsmProduct.Name = "tsmProduct";
-            this.tsmProduct.Size = new System.Drawing.Size(224, 26);
+            this.tsmProduct.Size = new System.Drawing.Size(179, 26);
             this.tsmProduct.Text = "Products";
             // 
             // employeesToolStripMenuItem
             // 
             this.employeesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addNewToolStripMenuItem1,
-            this.listEmployeesToolStripMenuItem,
-            this.findToolStripMenuItem,
-            this.trackOperationToolStripMenuItem});
+            this.tsmAddEmployees,
+            this.tsmListEmployeers});
             this.employeesToolStripMenuItem.Name = "employeesToolStripMenuItem";
             this.employeesToolStripMenuItem.Size = new System.Drawing.Size(95, 24);
             this.employeesToolStripMenuItem.Text = "Employees";
             // 
-            // addNewToolStripMenuItem1
+            // tsmAddEmployees
             // 
-            this.addNewToolStripMenuItem1.Name = "addNewToolStripMenuItem1";
-            this.addNewToolStripMenuItem1.Size = new System.Drawing.Size(197, 26);
-            this.addNewToolStripMenuItem1.Text = "Add new";
+            this.tsmAddEmployees.Name = "tsmAddEmployees";
+            this.tsmAddEmployees.Size = new System.Drawing.Size(224, 26);
+            this.tsmAddEmployees.Text = "Add new";
+            this.tsmAddEmployees.Click += new System.EventHandler(this.tsmAddEmployees_Click);
             // 
-            // listEmployeesToolStripMenuItem
+            // tsmListEmployeers
             // 
-            this.listEmployeesToolStripMenuItem.Name = "listEmployeesToolStripMenuItem";
-            this.listEmployeesToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
-            this.listEmployeesToolStripMenuItem.Text = "List Employees";
-            // 
-            // findToolStripMenuItem
-            // 
-            this.findToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.byNameToolStripMenuItem1,
-            this.byAddressToolStripMenuItem1,
-            this.byPhoneNumberToolStripMenuItem});
-            this.findToolStripMenuItem.Name = "findToolStripMenuItem";
-            this.findToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
-            this.findToolStripMenuItem.Text = "Find";
-            // 
-            // byNameToolStripMenuItem1
-            // 
-            this.byNameToolStripMenuItem1.Name = "byNameToolStripMenuItem1";
-            this.byNameToolStripMenuItem1.Size = new System.Drawing.Size(208, 26);
-            this.byNameToolStripMenuItem1.Text = "By Name";
-            // 
-            // byAddressToolStripMenuItem1
-            // 
-            this.byAddressToolStripMenuItem1.Name = "byAddressToolStripMenuItem1";
-            this.byAddressToolStripMenuItem1.Size = new System.Drawing.Size(208, 26);
-            this.byAddressToolStripMenuItem1.Text = "By Address";
-            // 
-            // byPhoneNumberToolStripMenuItem
-            // 
-            this.byPhoneNumberToolStripMenuItem.Name = "byPhoneNumberToolStripMenuItem";
-            this.byPhoneNumberToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
-            this.byPhoneNumberToolStripMenuItem.Text = "By Phone number";
-            // 
-            // trackOperationToolStripMenuItem
-            // 
-            this.trackOperationToolStripMenuItem.Name = "trackOperationToolStripMenuItem";
-            this.trackOperationToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
-            this.trackOperationToolStripMenuItem.Text = "Track Operation";
+            this.tsmListEmployeers.Name = "tsmListEmployeers";
+            this.tsmListEmployeers.Size = new System.Drawing.Size(224, 26);
+            this.tsmListEmployeers.Text = "List Employees";
+            this.tsmListEmployeers.Click += new System.EventHandler(this.tsmListEmployeers_Click);
             // 
             // productsToolStripMenuItem
             // 
@@ -708,13 +669,8 @@
         private ToolStripMenuItem tsmListSuppliers;
         private ToolStripSeparator toolStripSeparator4;
         private ToolStripMenuItem tsmProduct;
-        private ToolStripMenuItem addNewToolStripMenuItem1;
-        private ToolStripMenuItem listEmployeesToolStripMenuItem;
-        private ToolStripMenuItem findToolStripMenuItem;
-        private ToolStripMenuItem byNameToolStripMenuItem1;
-        private ToolStripMenuItem byAddressToolStripMenuItem1;
-        private ToolStripMenuItem byPhoneNumberToolStripMenuItem;
-        private ToolStripMenuItem trackOperationToolStripMenuItem;
+        private ToolStripMenuItem tsmAddEmployees;
+        private ToolStripMenuItem tsmListEmployeers;
         private ToolStripMenuItem newProductToolStripMenuItem;
         private ToolStripMenuItem listProductsToolStripMenuItem;
         private ToolStripMenuItem allToolStripMenuItem;

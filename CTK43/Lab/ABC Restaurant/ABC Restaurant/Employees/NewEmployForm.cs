@@ -9,13 +9,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ABC_Restaurant.Supplier
+namespace ABC_Restaurant.Employees
 {
-    public partial class NewSuppliers : Form
+    public partial class NewEmployForm : Form
     {
-        public NewSuppliers()
+        public NewEmployForm()
         {
             InitializeComponent();
+        }
+
+        private void NewEmployForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -26,29 +36,34 @@ namespace ABC_Restaurant.Supplier
                 SqlConnection conn = new SqlConnection(connString);
 
                 SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = "EXECUTE InsertSupplier @companyName,@contactName,@address,@city,@region,@postalCode,@country,@phone,@fax,@homePage";
+                cmd.CommandText = "EXECUTE InsertEmployee @lastName,@firstName,@title,@birthDay,@address,@city,@region,@postalCode,@country,@phone,@photo,@note";
 
-                cmd.Parameters.Add("@companyName", SqlDbType.NVarChar, 250);
-                cmd.Parameters.Add("@contactName", SqlDbType.NVarChar, 250);
+                cmd.Parameters.Add("@lastName", SqlDbType.NVarChar, 50);
+                cmd.Parameters.Add("@firstName", SqlDbType.NVarChar, 100);
+                cmd.Parameters.Add("@title", SqlDbType.NVarChar, 250);
+                cmd.Parameters.Add("@birthDay", SqlDbType.SmallDateTime);
                 cmd.Parameters.Add("@address", SqlDbType.NVarChar, 250);
                 cmd.Parameters.Add("@city", SqlDbType.NVarChar, 250);
                 cmd.Parameters.Add("@region", SqlDbType.NVarChar, 250);
                 cmd.Parameters.Add("@postalCode", SqlDbType.NVarChar, 250);
                 cmd.Parameters.Add("@country", SqlDbType.NVarChar, 250);
                 cmd.Parameters.Add("@phone", SqlDbType.NVarChar, 250);
-                cmd.Parameters.Add("@fax", SqlDbType.NVarChar, 250);
-                cmd.Parameters.Add("@homePage", SqlDbType.NVarChar, 250);
+                cmd.Parameters.Add("@photo", SqlDbType.NVarChar, 250);
+                cmd.Parameters.Add("@note", SqlDbType.NVarChar, 250);
 
-                cmd.Parameters["@companyName"].Value = txtCompanyName.Text;
-                cmd.Parameters["@contactName"].Value = txtContactName.Text;
+                cmd.Parameters["@lastName"].Value = txtLastName.Text;
+                cmd.Parameters["@firstName"].Value = txtFirstName.Text;
+                cmd.Parameters["@title"].Value = txtTitle.Text;
+                cmd.Parameters["@birthDay"].Value = dttpDate.Value.ToShortDateString();
                 cmd.Parameters["@address"].Value = txtAddress.Text;
                 cmd.Parameters["@city"].Value = txtCity.Text;
                 cmd.Parameters["@region"].Value = txtRegion.Text;
                 cmd.Parameters["@postalCode"].Value = txtPostalCode.Text;
                 cmd.Parameters["@country"].Value = txtContry.Text;
                 cmd.Parameters["@phone"].Value = mtbPhone.Text;
-                cmd.Parameters["@fax"].Value = mtbFax.Text;
-                cmd.Parameters["@homePage"].Value = txtHomePage.Text;
+                cmd.Parameters["@photo"].Value = txtPhoto.Text;
+                cmd.Parameters["@note"].Value = rtbNote.Text;
+                
 
                 conn.Open();
 
@@ -56,9 +71,9 @@ namespace ABC_Restaurant.Supplier
 
                 if (numRow > 0)
                 {
-                    MessageBox.Show("Successfully adding new Supplier", "Message");
-                    this.ResetText();
+                    MessageBox.Show("Successfully adding new Customer", "Message");
                     DialogResult = DialogResult.OK;
+                    this.ResetText();
                     this.Close();
                 }
                 else
@@ -74,9 +89,16 @@ namespace ABC_Restaurant.Supplier
             }
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnAddPhoto_Click(object sender, EventArgs e)
         {
-            this.Close();
+            openFileDialog1.InitialDirectory = $"D:";
+            DialogResult dlg = openFileDialog1.ShowDialog();
+            if(dlg == DialogResult.OK)
+            {
+                var fileName = openFileDialog1.FileName;
+                txtPhoto.Text = fileName;
+                pbImg.Load(fileName);
+            }
         }
     }
 }
