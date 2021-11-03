@@ -154,3 +154,54 @@ AS
 	INSERT INTO Customers(CompanyName,ContactName,ContactTitle,Address,City,Region,PostalCode,Country,Phone, Fax)
 	VALUES ( @companyName,@contactName,@contactTitle,@address,@city,@region,@postalCode,@country,@phone,@fax)
 go
+
+CREATE PROCEDURE InsertSupplier
+@companyName nvarchar(250),
+@contactName nvarchar(250),
+@address nvarchar(250),
+@city nvarchar(250),
+@region nvarchar(250),
+@postalCode nvarchar(250),
+@country nvarchar(250),
+@phone nvarchar(250),
+@fax nvarchar(250),
+@homePage nvarchar(250)
+AS
+	INSERT INTO Suppliers(CompanyName,ContactName,Address,City,Region,PostalCode,Country,Phone, Fax, HomePage)
+	VALUES ( @companyName,@contactName,@address,@city,@region,@postalCode,@country,@phone,@fax, @homePage)
+go
+
+CREATE PROCEDURE InsertEmployee
+@lastName nvarchar(50),
+@firstName nvarchar(100),
+@title nvarchar(250),
+@birthDay smalldatetime,
+@address nvarchar(250),
+@city nvarchar(250),
+@region nvarchar(250),
+@postalCode nvarchar(250),
+@country nvarchar(250),
+@phone nvarchar(250),
+@photo nvarchar(250),
+@note nvarchar(250)
+AS
+	INSERT INTO Employees(LastName, FirstName, Title, BirthDay,Address,City,Region,PostalCode,Country,Phone,Photo, Notes)
+	VALUES (@lastName,@firstName,@title,@birthDay,@address,@city,@region,@postalCode,@country,@phone,@phone,@note)
+go
+
+CREATE PROCEDURE InsertPrroduct
+@name nvarchar(250),
+@suppID int,
+@catID int,
+@quantity int,
+@price nvarchar(250),
+@stock nvarchar(250),
+@order nvarchar(250),
+@lever int,
+@discontribute bit
+AS
+	INSERT INTO Products(ProductName, SupplierID,CategoryID, QuantityPerUnit, UnitPrice,UnitsInStock, UnitsOnOrder, ReorderLevel,Discontinued)
+	VALUES (@name,@suppID,@catID,@quantity,@price,@stock,@order,@lever,@discontribute)
+go
+
+
