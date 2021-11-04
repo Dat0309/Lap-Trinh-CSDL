@@ -22,13 +22,13 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Orders\OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Products\NewProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Products\ProductForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Products\StatisticsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Supplier\NewSuppliers.cs">

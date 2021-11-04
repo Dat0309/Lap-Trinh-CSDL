@@ -9,6 +9,10 @@ namespace ABC_Restaurant
     public partial class Form1 : Form
     {
         private ProductForm? frmProduct;
+        private CustomerForm? customerfrm;
+        private SuppliersForm? supplierFrm;
+        private ListEmployFrm? employFrm;
+
         int count = 0;
         public Form1()
         {
@@ -27,7 +31,7 @@ namespace ABC_Restaurant
             DialogResult dlg = frm.ShowDialog(this);
             if (dlg == DialogResult.OK)
             {
-                tsmListCustomer_Click(sender, e);
+                customerfrm.initUI();
             }
 #pragma warning disable CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
             frm.FormClosed += new FormClosedEventHandler(formClosed);
@@ -37,14 +41,14 @@ namespace ABC_Restaurant
 
         private void tsmListCustomer_Click(object sender, EventArgs e)
         {
-            CustomerForm frm = new CustomerForm();
-            frm.MdiParent = this;
+            customerfrm = new CustomerForm();
+            customerfrm.MdiParent = this;
             count++;
-            frm.initUI();
-            frm.Size = new System.Drawing.Size(1100, 500);
-            frm.Show();
+            customerfrm.initUI();
+            customerfrm.Size = new System.Drawing.Size(1100, 500);
+            customerfrm.Show();
 #pragma warning disable CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
-            frm.FormClosed += new FormClosedEventHandler(formClosed);
+            customerfrm.FormClosed += new FormClosedEventHandler(formClosed);
 #pragma warning restore CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
             tsStatus.Text = "Số cửa sổ đang mở: " + count.ToString();
         }
@@ -62,7 +66,7 @@ namespace ABC_Restaurant
             DialogResult dlg = frm.ShowDialog(this);
             if (dlg == DialogResult.OK)
             {
-                tsmListSuppliers_Click(sender, e);
+                supplierFrm.initUI();
             }
 #pragma warning disable CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
             frm.FormClosed += new FormClosedEventHandler(formClosed);
@@ -72,14 +76,14 @@ namespace ABC_Restaurant
 
         private void tsmListSuppliers_Click(object sender, EventArgs e)
         {
-            SuppliersForm frm = new SuppliersForm();
-            frm.MdiParent = this;
+            supplierFrm = new SuppliersForm();
+            supplierFrm.MdiParent = this;
             count++;
-            frm.initUI();
-            frm.Size = new System.Drawing.Size(1100, 500);
-            frm.Show();
+            supplierFrm.initUI();
+            supplierFrm.Size = new System.Drawing.Size(1100, 500);
+            supplierFrm.Show();
 #pragma warning disable CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
-            frm.FormClosed += new FormClosedEventHandler(formClosed);
+            supplierFrm.FormClosed += new FormClosedEventHandler(formClosed);
 #pragma warning restore CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
             tsStatus.Text = "Số cửa sổ đang mở: " + count.ToString();
         }
@@ -91,7 +95,7 @@ namespace ABC_Restaurant
             DialogResult dlg = frm.ShowDialog(this);
             if (dlg == DialogResult.OK)
             {
-                tsmListEmployeers_Click(sender, e);
+                employFrm.initUI();
             }
 #pragma warning disable CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
             frm.FormClosed += new FormClosedEventHandler(formClosed);
@@ -101,14 +105,14 @@ namespace ABC_Restaurant
 
         private void tsmListEmployeers_Click(object sender, EventArgs e)
         {
-            ListEmployFrm frm = new ListEmployFrm();
-            frm.MdiParent = this;
+            employFrm = new ListEmployFrm();
+            employFrm.MdiParent = this;
             count++;
-            frm.initUI();
-            frm.Size = new System.Drawing.Size(1100, 500);
-            frm.Show();
+            employFrm.initUI();
+            employFrm.Size = new System.Drawing.Size(1100, 500);
+            employFrm.Show();
 #pragma warning disable CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
-            frm.FormClosed += new FormClosedEventHandler(formClosed);
+            employFrm.FormClosed += new FormClosedEventHandler(formClosed);
 #pragma warning restore CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
             tsStatus.Text = "Số cửa sổ đang mở: " + count.ToString();
         }
@@ -173,5 +177,9 @@ namespace ABC_Restaurant
             tsStatus.Text = "Số cửa sổ đang mở: " + count.ToString();
         }
 
+        private void listOrdersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

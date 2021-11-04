@@ -50,7 +50,7 @@
             this.tsmCategory = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmSupp = new System.Windows.Forms.ToolStripMenuItem();
             this.statisticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ordersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmListOrder = new System.Windows.Forms.ToolStripMenuItem();
             this.newOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
@@ -107,7 +107,7 @@
             this.suppliersToolStripMenuItem,
             this.employeesToolStripMenuItem,
             this.productsToolStripMenuItem,
-            this.ordersToolStripMenuItem,
+            this.tsmListOrder,
             this.systemToolStripMenuItem,
             this.toolToolStripMenuItem,
             this.windowsToolStripMenuItem,
@@ -231,7 +231,7 @@
             // tsmNewProduct
             // 
             this.tsmNewProduct.Name = "tsmNewProduct";
-            this.tsmNewProduct.Size = new System.Drawing.Size(224, 26);
+            this.tsmNewProduct.Size = new System.Drawing.Size(177, 26);
             this.tsmNewProduct.Text = "New Product";
             this.tsmNewProduct.Click += new System.EventHandler(this.tsmNewProduct_Click);
             // 
@@ -242,7 +242,7 @@
             this.tsmCategory,
             this.tsmSupp});
             this.listProductsToolStripMenuItem.Name = "listProductsToolStripMenuItem";
-            this.listProductsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.listProductsToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.listProductsToolStripMenuItem.Text = "List Products";
             // 
             // tsmAll
@@ -269,12 +269,12 @@
             // statisticsToolStripMenuItem
             // 
             this.statisticsToolStripMenuItem.Name = "statisticsToolStripMenuItem";
-            this.statisticsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.statisticsToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
             this.statisticsToolStripMenuItem.Text = "Statistics";
             // 
-            // ordersToolStripMenuItem
+            // tsmListOrder
             // 
-            this.ordersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmListOrder.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newOrderToolStripMenuItem,
             this.listOrdersToolStripMenuItem,
             this.toolStripSeparator5,
@@ -283,9 +283,9 @@
             this.notShippedOrdersToolStripMenuItem,
             this.toolStripSeparator6,
             this.statisticsToolStripMenuItem1});
-            this.ordersToolStripMenuItem.Name = "ordersToolStripMenuItem";
-            this.ordersToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
-            this.ordersToolStripMenuItem.Text = "Orders";
+            this.tsmListOrder.Name = "tsmListOrder";
+            this.tsmListOrder.Size = new System.Drawing.Size(67, 24);
+            this.tsmListOrder.Text = "Orders";
             // 
             // newOrderToolStripMenuItem
             // 
@@ -298,6 +298,7 @@
             this.listOrdersToolStripMenuItem.Name = "listOrdersToolStripMenuItem";
             this.listOrdersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.listOrdersToolStripMenuItem.Text = "List Orders";
+            this.listOrdersToolStripMenuItem.Click += new System.EventHandler(this.listOrdersToolStripMenuItem_Click);
             // 
             // toolStripSeparator5
             // 
@@ -348,30 +349,30 @@
             // systemLogToolStripMenuItem
             // 
             this.systemLogToolStripMenuItem.Name = "systemLogToolStripMenuItem";
-            this.systemLogToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
+            this.systemLogToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.systemLogToolStripMenuItem.Text = "System Log";
             // 
             // configurationToolStripMenuItem
             // 
             this.configurationToolStripMenuItem.Name = "configurationToolStripMenuItem";
-            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
+            this.configurationToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.configurationToolStripMenuItem.Text = "Configuration";
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(180, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(221, 6);
             // 
             // backupToolStripMenuItem
             // 
             this.backupToolStripMenuItem.Name = "backupToolStripMenuItem";
-            this.backupToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
+            this.backupToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.backupToolStripMenuItem.Text = "Backup";
             // 
             // restoreToolStripMenuItem
             // 
             this.restoreToolStripMenuItem.Name = "restoreToolStripMenuItem";
-            this.restoreToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
+            this.restoreToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.restoreToolStripMenuItem.Text = "Restore";
             // 
             // toolToolStripMenuItem
@@ -632,7 +633,7 @@
         private ToolStripMenuItem suppliersToolStripMenuItem;
         private ToolStripMenuItem employeesToolStripMenuItem;
         private ToolStripMenuItem productsToolStripMenuItem;
-        private ToolStripMenuItem ordersToolStripMenuItem;
+        private ToolStripMenuItem tsmListOrder;
         private ToolStripMenuItem systemToolStripMenuItem;
         private ToolStripMenuItem toolToolStripMenuItem;
         private ToolStripMenuItem windowsToolStripMenuItem;

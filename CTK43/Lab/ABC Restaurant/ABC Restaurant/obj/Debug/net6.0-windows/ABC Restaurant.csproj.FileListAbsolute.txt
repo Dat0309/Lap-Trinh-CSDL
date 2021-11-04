@@ -34,11 +34,8 @@ E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-
 E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ref\ABC Restaurant.dll
 E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ABC Restaurant.pdb
 E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ABC Restaurant.genruntimeconfig.cache
-E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\bin\Debug\net6.0-windows\LiveCharts.dll
-E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\bin\Debug\net6.0-windows\LiveCharts.WinForms.dll
-E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\bin\Debug\net6.0-windows\LiveCharts.Wpf.dll
-E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ABC_Restaurant.Products.StatisticsForm.resources
 E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\bin\Debug\net6.0-windows\System.Web.DataVisualization.Design.dll
 E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\bin\Debug\net6.0-windows\System.Web.DataVisualization.dll
 E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\bin\Debug\net6.0-windows\System.Windows.Forms.DataVisualization.Design.dll
 E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\bin\Debug\net6.0-windows\System.Windows.Forms.DataVisualization.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ABC Restaurant.csproj.AssemblyReference.cache
