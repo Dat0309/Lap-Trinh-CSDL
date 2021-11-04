@@ -8,7 +8,7 @@ namespace ABC_Restaurant
 {
     public partial class Form1 : Form
     {
-        ProductForm frmProduct;
+        private ProductForm? frmProduct;
         int count = 0;
         public Form1()
         {
@@ -172,5 +172,6 @@ namespace ABC_Restaurant
 #pragma warning restore CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
             tsStatus.Text = "Số cửa sổ đang mở: " + count.ToString();
         }
+
     }
 }

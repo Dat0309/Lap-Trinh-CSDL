@@ -14,10 +14,9 @@ namespace ABC_Restaurant.Products
     public partial class ProductForm : Form
     {
         private static ProductForm? singleObject;
-        //private static volatile int _instanceCount = 0;
-        //private bool _alreadyDisposed = false;
         private DataTable? table, dtcbb;
         private bool isSelect = true;
+
         public ProductForm()
         {
             InitializeComponent();
@@ -28,32 +27,10 @@ namespace ABC_Restaurant.Products
             if (singleObject == null)
             {
                 singleObject = new ProductForm();
-                //_instanceCount++;
             }
             return singleObject;
         }
 
-        //protected virtual void Dispose(bool disposing)
-        //{
-        //    if (_alreadyDisposed) return;
-
-        //    if (disposing)
-        //    {
-        //        singleObject = null; // Allow GC to dispose of this instance.
-        //                          // Free any other managed objects here.
-        //    }
-
-        //    // Free any unmanaged objects here.
-        //    _alreadyDisposed = true;
-        //}
-        //public new void Dispose()
-        //{
-        //    if (--_instanceCount == 0) // No more references to this object.
-        //    {
-        //        Dispose(true);
-        //        GC.SuppressFinalize(this);
-        //    }
-        //}
 
         public void initUI()
         {
@@ -162,6 +139,19 @@ namespace ABC_Restaurant.Products
             cbbGroup.DataSource = dtcbb;
             cbbGroup.DisplayMember = "CompanyName";
             cbbGroup.ValueMember = "SupplierID";
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (table == null) return;
+
+            string filterExpression = String.Format("ProductName like '%{0}%'", txtSearch.Text);
+            string sortExpression = "ProductName";
+            DataViewRowState dataViewRowState = DataViewRowState.OriginalRows;
+
+            DataView foodView = new DataView(table, filterExpression, sortExpression, dataViewRowState);
+
+            dgvProduct.DataSource = foodView;
         }
 
         private void cbbGroup_SelectedIndexChanged(object sender, EventArgs e)

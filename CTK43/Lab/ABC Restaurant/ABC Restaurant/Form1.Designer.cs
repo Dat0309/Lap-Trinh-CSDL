@@ -49,7 +49,6 @@
             this.tsmAll = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmCategory = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmSupp = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.statisticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -224,7 +223,6 @@
             this.productsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmNewProduct,
             this.listProductsToolStripMenuItem,
-            this.searchToolStripMenuItem1,
             this.statisticsToolStripMenuItem});
             this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
             this.productsToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
@@ -250,29 +248,23 @@
             // tsmAll
             // 
             this.tsmAll.Name = "tsmAll";
-            this.tsmAll.Size = new System.Drawing.Size(224, 26);
+            this.tsmAll.Size = new System.Drawing.Size(172, 26);
             this.tsmAll.Text = "All";
             this.tsmAll.Click += new System.EventHandler(this.tsmAll_Click);
             // 
             // tsmCategory
             // 
             this.tsmCategory.Name = "tsmCategory";
-            this.tsmCategory.Size = new System.Drawing.Size(224, 26);
+            this.tsmCategory.Size = new System.Drawing.Size(172, 26);
             this.tsmCategory.Text = "By Category";
             this.tsmCategory.Click += new System.EventHandler(this.tsmCategory_Click);
             // 
             // tsmSupp
             // 
             this.tsmSupp.Name = "tsmSupp";
-            this.tsmSupp.Size = new System.Drawing.Size(224, 26);
+            this.tsmSupp.Size = new System.Drawing.Size(172, 26);
             this.tsmSupp.Text = "By Supplier";
             this.tsmSupp.Click += new System.EventHandler(this.tsmSupp_Click);
-            // 
-            // searchToolStripMenuItem1
-            // 
-            this.searchToolStripMenuItem1.Name = "searchToolStripMenuItem1";
-            this.searchToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
-            this.searchToolStripMenuItem1.Text = "Search";
             // 
             // statisticsToolStripMenuItem
             // 
@@ -680,7 +672,6 @@
         private ToolStripMenuItem tsmAll;
         private ToolStripMenuItem tsmCategory;
         private ToolStripMenuItem tsmSupp;
-        private ToolStripMenuItem searchToolStripMenuItem1;
         private ToolStripMenuItem statisticsToolStripMenuItem;
         private ToolStripMenuItem newOrderToolStripMenuItem;
         private ToolStripMenuItem listOrdersToolStripMenuItem;
