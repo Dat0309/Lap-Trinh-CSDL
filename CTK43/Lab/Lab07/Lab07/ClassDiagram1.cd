@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Lab07.AccountForrm">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAABSAkABAQAACABAACAAIEAJAAYAAAAAIAABA=</HashCode>
+      <FileName>AccountForrm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab07.AddCateForm">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAICAAABEAAACAAEACCAAAgAAAAAAAAAAACAY=</HashCode>
+      <FileName>AddCateForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab07.FoodinfoForrm">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QkACAAAAKiACABEAAACAAEGDCAAAABQAAAAAAAAAACw=</HashCode>
+      <FileName>FoodinfoForrm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab07.Form1">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAABQQCAAARAgEAKBIMMGAAAIAAABgAQQQACAAAA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab07.OrderDetailsForm">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACABAAAAAAKAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OrderDetailsForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab07.OrderForm">
+    <Position X="2.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAgCAAABAAAACgAAICAAEAAAACAAAAAAAAABA=</HashCode>
+      <FileName>OrderForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab07.RoleForm">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACEAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RoleForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

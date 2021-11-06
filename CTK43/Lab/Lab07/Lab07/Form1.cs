@@ -119,6 +119,7 @@ namespace Lab07
         private void tsmAddFood_Click(object sender, EventArgs e)
         {
             FoodinfoForrm frmFood = new FoodinfoForrm();
+            frmFood.loadAdd();
             frmFood.FormClosed += new FormClosedEventHandler(frmFood_FormClosed);
             frmFood.Show(this);
         }
@@ -137,6 +138,7 @@ namespace Lab07
                 DataGridViewRow selectedRow = dgvFoodList.SelectedRows[0];
                 var rowView = selectedRow.DataBoundItem as DataRowView;
                 FoodinfoForrm frmFood = new FoodinfoForrm();
+                frmFood.loadUpdate();
                 frmFood.FormClosed += new FormClosedEventHandler(frmFood_FormClosed);
                 frmFood.Show(this);
                 frmFood.DisplayFoodInfo(rowView);

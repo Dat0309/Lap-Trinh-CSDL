@@ -34,7 +34,6 @@
             this.dgvFoodList = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmCalculateQuantuty = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmSeperator = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAddFood = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmUpdateFood = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
@@ -87,11 +86,10 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmCalculateQuantuty,
-            this.tsmSeperator,
             this.tsmAddFood,
             this.tsmUpdateFood});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(219, 100);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(219, 76);
             // 
             // tsmCalculateQuantuty
             // 
@@ -99,12 +97,6 @@
             this.tsmCalculateQuantuty.Size = new System.Drawing.Size(218, 24);
             this.tsmCalculateQuantuty.Text = "Tính số lượng đã bán";
             this.tsmCalculateQuantuty.Click += new System.EventHandler(this.tsmCalculateQuantuty_Click);
-            // 
-            // tsmSeperator
-            // 
-            this.tsmSeperator.Name = "tsmSeperator";
-            this.tsmSeperator.Size = new System.Drawing.Size(218, 24);
-            this.tsmSeperator.Text = "Seperator";
             // 
             // tsmAddFood
             // 
@@ -231,7 +223,6 @@
         private Label lblCatName;
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem tsmCalculateQuantuty;
-        private ToolStripMenuItem tsmSeperator;
         private ToolStripMenuItem tsmAddFood;
         private ToolStripMenuItem tsmUpdateFood;
         private Label label4;

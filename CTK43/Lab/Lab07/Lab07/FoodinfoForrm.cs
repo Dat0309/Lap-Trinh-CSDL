@@ -22,6 +22,16 @@ namespace Lab07
         {
             this.InitValues();
         }
+        public void loadAdd()
+        {
+            btnAddFood.Enabled = true;
+            btnUpdateFood.Enabled = false;
+        }
+        public void loadUpdate()
+        {
+            btnAddFood.Enabled = false;
+            btnUpdateFood.Enabled = true;
+        }
         private void InitValues()
         {
             string connString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
