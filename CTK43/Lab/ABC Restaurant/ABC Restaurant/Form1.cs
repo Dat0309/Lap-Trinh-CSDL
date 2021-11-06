@@ -3,15 +3,17 @@ using ABC_Restaurant.Customer;
 using ABC_Restaurant.Supplier;
 using ABC_Restaurant.Employees;
 using ABC_Restaurant.Products;
+using ABC_Restaurant.Orders;
 
 namespace ABC_Restaurant
 {
     public partial class Form1 : Form
     {
-        private ProductForm? frmProduct;
-        private CustomerForm? customerfrm;
-        private SuppliersForm? supplierFrm;
-        private ListEmployFrm? employFrm;
+        private ProductForm frmProduct;
+        private CustomerForm customerfrm;
+        private SuppliersForm supplierFrm;
+        private ListEmployFrm employFrm;
+        private Orders.OrderForm orderForm;
 
         int count = 0;
         public Form1()
@@ -177,7 +179,26 @@ namespace ABC_Restaurant
             tsStatus.Text = "Số cửa sổ đang mở: " + count.ToString();
         }
 
-        private void listOrdersToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsmStatitics_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsmListOrders_Click(object sender, EventArgs e)
+        {
+            orderForm = new Orders.OrderForm();
+            orderForm.MdiParent = this;
+            count++;
+            orderForm.initUI();
+            orderForm.Size = new System.Drawing.Size(1100, 500);
+            orderForm.Show();
+#pragma warning disable CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
+            orderForm.FormClosed += new FormClosedEventHandler(formClosed);
+#pragma warning restore CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
+            tsStatus.Text = "Số cửa sổ đang mở: " + count.ToString();
+        }
+
+        private void tsmNewOrder_Click(object sender, EventArgs e)
         {
 
         }

@@ -34,6 +34,17 @@ namespace ABC_Restaurant.Supplier
             adapter.Fill(dt);
             dgvSupplier.DataSource = dt;
             dgvSupplier.Columns[0].ReadOnly = true;
+            dgvSupplier.Columns[0].HeaderText = "Mã đối tác";
+            dgvSupplier.Columns[1].HeaderText = "Công ty";
+            dgvSupplier.Columns[2].HeaderText = "Liên lạc";
+            dgvSupplier.Columns[3].HeaderText = "Địa chỉ";
+            dgvSupplier.Columns[4].HeaderText = "Thành phố";
+            dgvSupplier.Columns[5].HeaderText = "Khu vực";
+            dgvSupplier.Columns[6].HeaderText = "Mã bưu điện";
+            dgvSupplier.Columns[7].HeaderText = "Quốc gia";
+            dgvSupplier.Columns[8].HeaderText = "Điện thoại";
+            dgvSupplier.Columns[9].HeaderText = "Fax";
+            dgvSupplier.Columns[10].HeaderText = "Trang web";
 
             conn.Close();
         }

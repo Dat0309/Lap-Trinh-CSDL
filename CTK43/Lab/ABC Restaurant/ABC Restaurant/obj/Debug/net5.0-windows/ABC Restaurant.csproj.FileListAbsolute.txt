@@ -1,0 +1,21 @@
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net5.0-windows\ABC Restaurant.GlobalUsings.g.cs
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net5.0-windows\ABC Restaurant.csproj.AssemblyReference.cache
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net5.0-windows\ABC_Restaurant.Customer.CustomerForm.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net5.0-windows\ABC_Restaurant.Customer.NewCustomerForm.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net5.0-windows\ABC_Restaurant.Customer.OrderForm.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net5.0-windows\ABC_Restaurant.Employees.ListEmployFrm.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net5.0-windows\ABC_Restaurant.Employees.NewEmployForm.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net5.0-windows\ABC_Restaurant.Employees.TrackOperation.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net5.0-windows\ABC_Restaurant.Form1.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net5.0-windows\ABC_Restaurant.Orders.OrderForm.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net5.0-windows\ABC_Restaurant.Products.NewProductForm.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net5.0-windows\ABC_Restaurant.Products.ProductForm.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net5.0-windows\ABC_Restaurant.Properties.Resources.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net5.0-windows\ABC_Restaurant.Supplier.NewSuppliers.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net5.0-windows\ABC_Restaurant.Supplier.ProductForrm.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net5.0-windows\ABC_Restaurant.Supplier.SuppliersForm.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net5.0-windows\ABC Restaurant.csproj.GenerateResource.cache
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net5.0-windows\ABC Restaurant.GeneratedMSBuildEditorConfig.editorconfig
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net5.0-windows\ABC Restaurant.AssemblyInfoInputs.cache
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net5.0-windows\ABC Restaurant.AssemblyInfo.cs
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net5.0-windows\ABC Restaurant.csproj.CoreCompileInputs.cache

@@ -4,9 +4,10 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
     <RootNamespace>ABC_Restaurant</RootNamespace>
-    <Nullable>enable</Nullable>
+	<Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <StartupObject>ABC_Restaurant.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

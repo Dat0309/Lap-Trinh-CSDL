@@ -35,6 +35,21 @@ namespace ABC_Restaurant.Employees
             dgvTrack.DataSource = dt;
             dgvTrack.Columns[0].ReadOnly = true;
 
+            dgvTrack.Columns[0].HeaderText = "Mã Hoá đơn";
+            dgvTrack.Columns[1].HeaderText = "Mã khách hàng";
+            dgvTrack.Columns[2].HeaderText = "Mã Nhân viên";
+            dgvTrack.Columns[3].HeaderText = "Ngày nhập đơn";
+            dgvTrack.Columns[4].HeaderText = "Ngày yêu cầu";
+            dgvTrack.Columns[5].HeaderText = "Ngày giao hàng";
+            dgvTrack.Columns[6].HeaderText = "Vận chuyển";
+            dgvTrack.Columns[7].HeaderText = "Freight";
+            dgvTrack.Columns[8].HeaderText = "Tên người vận chuyển";
+            dgvTrack.Columns[9].HeaderText = "Địa chỉ";
+            dgvTrack.Columns[10].HeaderText = "Thành phố";
+            dgvTrack.Columns[11].HeaderText = "Khu vực";
+            dgvTrack.Columns[12].HeaderText = "Mã bưu điện";
+            dgvTrack.Columns[13].HeaderText = "Quốc gia";
+
             conn.Close();
         }
     }

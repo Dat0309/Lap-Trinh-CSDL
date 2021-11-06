@@ -38,5 +38,5 @@ E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\bin\Debug\net6.0-
 E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\bin\Debug\net6.0-windows\System.Web.DataVisualization.dll
 E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\bin\Debug\net6.0-windows\System.Windows.Forms.DataVisualization.Design.dll
 E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\bin\Debug\net6.0-windows\System.Windows.Forms.DataVisualization.dll
-E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ABC Restaurant.csproj.AssemblyReference.cache
 E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ABC_Restaurant.Orders.OrderForm.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\ABC Restaurant\ABC Restaurant\obj\Debug\net6.0-windows\ABC Restaurant.csproj.AssemblyReference.cache

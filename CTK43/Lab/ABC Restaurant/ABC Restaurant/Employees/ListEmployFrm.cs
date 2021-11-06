@@ -35,6 +35,20 @@ namespace ABC_Restaurant.Employees
             dgvEmploy.DataSource = table;
             dgvEmploy.Columns[0].ReadOnly = true;
 
+            dgvEmploy.Columns[0].HeaderText = "Mã nhân viên";
+            dgvEmploy.Columns[1].HeaderText = "Tên";
+            dgvEmploy.Columns[2].HeaderText = "Họ";
+            dgvEmploy.Columns[3].HeaderText = "Chức vụ";
+            dgvEmploy.Columns[4].HeaderText = "Ngày sinh";
+            dgvEmploy.Columns[5].HeaderText = "Địa chỉ";
+            dgvEmploy.Columns[6].HeaderText = "Thành phố";
+            dgvEmploy.Columns[7].HeaderText = "Khu vực";
+            dgvEmploy.Columns[8].HeaderText = "Mã bưu điện";
+            dgvEmploy.Columns[9].HeaderText = "Quốc gia";
+            dgvEmploy.Columns[10].HeaderText = "Điện thoại";
+            dgvEmploy.Columns[11].HeaderText = "Hình ảnh";
+            dgvEmploy.Columns[12].HeaderText = "Ghi chú";
+
             conn.Close();
         }
 

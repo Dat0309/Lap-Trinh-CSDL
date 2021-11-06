@@ -33,6 +33,16 @@ namespace ABC_Restaurant.Supplier
             adapter.Fill(dt);
             dgvProduct.DataSource = dt;
             dgvProduct.Columns[0].ReadOnly = true;
+            dgvProduct.Columns[0].HeaderText = "Mã sản phẩm";
+            dgvProduct.Columns[1].HeaderText = "Tên sản phẩm";
+            dgvProduct.Columns[2].HeaderText = "Nhà cung cấp";
+            dgvProduct.Columns[3].HeaderText = "Danh mục";
+            dgvProduct.Columns[4].HeaderText = "Số lượng mỗi đơn vị";
+            dgvProduct.Columns[5].HeaderText = "Đơn vị giá";
+            dgvProduct.Columns[6].HeaderText = "Đơn vị tồn kho";
+            dgvProduct.Columns[7].HeaderText = "Đơn vị mỗi đơn hàng";
+            dgvProduct.Columns[8].HeaderText = "Cấp độ đặt hàng";
+            dgvProduct.Columns[9].HeaderText = "Tình trạng";
 
             conn.Close();
         }
