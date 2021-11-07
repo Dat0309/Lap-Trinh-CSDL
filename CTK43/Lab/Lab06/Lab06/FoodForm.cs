@@ -21,7 +21,7 @@ namespace Lab06
         public void LoadFood(int categoryID)
         {
             this.categoryID = categoryID;
-            string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
+            string connectionString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
             SqlConnection sqlConn = new SqlConnection(connectionString);
             SqlCommand sqlComd = sqlConn.CreateCommand();
 
@@ -47,7 +47,7 @@ namespace Lab06
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
+            string connectionString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
             SqlConnection sqlConn = new SqlConnection(connectionString);
             SqlCommand sqlComd = sqlConn.CreateCommand();
 
@@ -96,7 +96,7 @@ namespace Lab06
             var rowSelect = dgvFood.SelectedRows[0];
             string foodID = rowSelect.Cells[0].Value.ToString();
 
-            string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
+            string connectionString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
             SqlConnection sqlConn = new SqlConnection(connectionString);
             SqlCommand sqlComd = sqlConn.CreateCommand();
 

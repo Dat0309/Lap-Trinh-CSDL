@@ -23,7 +23,7 @@ namespace Lab06
         {
             this.ID = id;
 
-            string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
+            string connectionString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
             SqlConnection connection = new SqlConnection(connectionString);
             SqlCommand command = connection.CreateCommand();
 
@@ -44,6 +44,11 @@ namespace Lab06
 
             dgvBillDetails.DataSource = dt;
             dgvBillDetails.Columns[0].ReadOnly = true;
+            dgvBillDetails.Columns[0].HeaderText = "Tên món ăn";
+            dgvBillDetails.Columns[1].HeaderText = "Đơn vị";
+            dgvBillDetails.Columns[2].HeaderText = "Giá";
+            dgvBillDetails.Columns[3].HeaderText = "Số lượng";
+            dgvBillDetails.Columns[4].HeaderText = "Tổng";
 
             connection.Dispose();
             adapter.Dispose();

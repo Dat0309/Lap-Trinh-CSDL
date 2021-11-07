@@ -19,7 +19,7 @@ namespace Lab06
         }
         public void LoadRole(string name)
         {
-            string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
+            string connectionString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
             SqlConnection connection = new SqlConnection(connectionString);
             SqlCommand command = connection.CreateCommand();
 
@@ -40,7 +40,8 @@ namespace Lab06
 
             // Prevent user to edit ID
             dgvRole.Columns[0].ReadOnly = true;
-
+            dgvRole.Columns[0].HeaderText = "Tài khoản";
+            dgvRole.Columns[1].HeaderText = "Quyền";
             connection.Close();
         }
     }

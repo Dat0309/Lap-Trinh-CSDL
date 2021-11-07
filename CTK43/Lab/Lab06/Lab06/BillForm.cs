@@ -20,7 +20,7 @@ namespace Lab06
 
         public void LoadBills(string fromTime, string toTime)
         {
-            string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
+            string connectionString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
             SqlConnection connection = new SqlConnection(connectionString);
             SqlCommand command = connection.CreateCommand();
 
@@ -35,6 +35,16 @@ namespace Lab06
             dgvBill.DataSource = dt;
 
             dgvBill.Columns[0].ReadOnly = true;
+
+            dgvBill.Columns[0].HeaderText = "Mã đơn hàng";
+            dgvBill.Columns[1].HeaderText = "Tên đơn hàng";
+            dgvBill.Columns[2].HeaderText = "Mã bàn";
+            dgvBill.Columns[3].HeaderText = "Tổng tiền";
+            dgvBill.Columns[4].HeaderText = "Giảm giá";
+            dgvBill.Columns[5].HeaderText = "Thuế";
+            dgvBill.Columns[6].HeaderText = "Tình trạng thanh toán";
+            dgvBill.Columns[7].HeaderText = "Ngày nhập";
+            dgvBill.Columns[8].HeaderText = "Nhân viên";
 
             connection.Close();
             connection.Dispose();

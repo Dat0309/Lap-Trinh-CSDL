@@ -19,7 +19,7 @@ namespace Lab06
         }
         public void LoadTable()
         {
-            string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
+            string connectionString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             SqlCommand sqlCommand = sqlConnection.CreateCommand();
 
@@ -35,6 +35,10 @@ namespace Lab06
 
             dgvTable.DataSource = dt;
             dgvTable.Columns[0].ReadOnly = true;
+            dgvTable.Columns[0].HeaderText = "Mã bàn";
+            dgvTable.Columns[1].HeaderText = "Tên bàn";
+            dgvTable.Columns[2].HeaderText = "Tình trạng";
+            dgvTable.Columns[3].HeaderText = "Số chỗ";
 
             sqlConnection.Close();
             adapter.Dispose();
@@ -52,7 +56,7 @@ namespace Lab06
         {
             if (Validation())
             {
-                string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
+                string connectionString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
                 SqlConnection connection = new SqlConnection(connectionString);
                 SqlCommand command = connection.CreateCommand();
 
@@ -100,7 +104,7 @@ namespace Lab06
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (Validation()) {
-                string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
+                string connectionString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
                 SqlConnection sqlConn = new SqlConnection(connectionString);
                 SqlCommand sqlComd = sqlConn.CreateCommand();
                 string id = dgvTable.SelectedRows[0].Cells[0].Value.ToString();
@@ -142,30 +146,38 @@ namespace Lab06
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (dgvTable.SelectedRows.Count == 0) return;
-            var rowSelect = dgvTable.SelectedRows[0];
-            string id = dgvTable.SelectedRows[0].Cells[0].Value.ToString();
+            try
+            {
+                if (dgvTable.SelectedRows.Count == 0) return;
+                var rowSelect = dgvTable.SelectedRows[0];
+                string id = dgvTable.SelectedRows[0].Cells[0].Value.ToString();
 
-            string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
-            SqlConnection sqlConn = new SqlConnection(connectionString);
-            SqlCommand sqlComd = sqlConn.CreateCommand();
+                string connectionString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
+                SqlConnection sqlConn = new SqlConnection(connectionString);
+                SqlCommand sqlComd = sqlConn.CreateCommand();
 
-            string query = string.Format("Delete from Bills Where TableID = {0}", id);
-            sqlComd.CommandText = query;
+                string query = string.Format("Delete from Bills Where TableID = {0}", id);
+                sqlComd.CommandText = query;
 
-            sqlConn.Open();
+                sqlConn.Open();
 
-            sqlComd.ExecuteNonQuery();
+                sqlComd.ExecuteNonQuery();
 
-            sqlComd.CommandText = "Delete from [Table] WHERE ID = " + id;
-            sqlComd.ExecuteNonQuery();
+                sqlComd.CommandText = "Delete from [Table] WHERE ID = " + id;
+                sqlComd.ExecuteNonQuery();
 
-            dgvTable.Rows.Remove(rowSelect);
-            LoadTable();
-            ResetForm();
-            MessageBox.Show("Da xoa thanh cong");
+                dgvTable.Rows.Remove(rowSelect);
+                LoadTable();
+                ResetForm();
+                MessageBox.Show("Da xoa thanh cong");
 
-            sqlConn.Close();
+                sqlConn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Sql Error");
+            }
+            
         }
 
         private void dgvTable_Click(object sender, EventArgs e)

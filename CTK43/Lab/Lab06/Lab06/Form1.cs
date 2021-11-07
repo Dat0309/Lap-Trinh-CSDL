@@ -24,7 +24,7 @@ namespace Lab06
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
+            string connectionString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
             SqlConnection sqlConnection = new SqlConnection(connectionString);
             SqlCommand sqlCommand = sqlConnection.CreateCommand();
             string query = "SELECT ID, Name, Type FROM Category";
@@ -52,7 +52,7 @@ namespace Lab06
         {
             if (Validation())
             {
-                string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
+                string connectionString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
                 SqlConnection sqlConn = new SqlConnection(connectionString);
                 SqlCommand sqlComd = sqlConn.CreateCommand();
 
@@ -103,7 +103,7 @@ namespace Lab06
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
+            string connectionString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
             SqlConnection sqlConn = new SqlConnection(connectionString);
             SqlCommand sqlComd = sqlConn.CreateCommand();
 
@@ -141,7 +141,7 @@ namespace Lab06
         {
             try
             {
-                string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
+                string connectionString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
                 SqlConnection sqlConn = new SqlConnection(connectionString);
                 SqlCommand sqlComd = sqlConn.CreateCommand();
 

@@ -20,7 +20,7 @@ namespace Lab06
 
         public void LoadAcc()
         {
-            string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
+            string connectionString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
             SqlConnection connection = new SqlConnection(connectionString);
             SqlCommand command = connection.CreateCommand();
 
@@ -46,7 +46,7 @@ namespace Lab06
 
         private void cbbSapXep_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
+            string connectionString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
             SqlConnection connection = new SqlConnection(connectionString);
             SqlCommand command = connection.CreateCommand();
 
@@ -102,7 +102,7 @@ namespace Lab06
         {
             if (Validation())
             {
-                string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
+                string connectionString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
                 SqlConnection connection = new SqlConnection(connectionString);
                 SqlCommand command = connection.CreateCommand();
 
@@ -163,7 +163,7 @@ namespace Lab06
         {
             if (Validation())
             {
-                string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
+                string connectionString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
                 SqlConnection sqlConn = new SqlConnection(connectionString);
                 SqlCommand sqlComd = sqlConn.CreateCommand();
 
@@ -204,45 +204,59 @@ namespace Lab06
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string defaultPass = "123456";
-            string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
-            SqlConnection sqlConn = new SqlConnection(connectionString);
-            SqlCommand sqlComd = sqlConn.CreateCommand();
+            try
+            {
+                string defaultPass = "123456";
+                string connectionString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
+                SqlConnection sqlConn = new SqlConnection(connectionString);
+                SqlCommand sqlComd = sqlConn.CreateCommand();
 
-            sqlComd.CommandText = string.Format("UPDATE Account SET Password = '{1}' WHERE AccountName = '{0}' ",
-                txtAccount.Text, defaultPass);
+                sqlComd.CommandText = string.Format("UPDATE Account SET Password = '{1}' WHERE AccountName = '{0}' ",
+                    txtAccount.Text, defaultPass);
 
-            sqlConn.Open();
+                sqlConn.Open();
 
-            sqlComd.ExecuteNonQuery();
-            MessageBox.Show("Cap nhat thanh cong");
-            LoadAcc();
-            ResetForm();
-            sqlConn.Close();
+                sqlComd.ExecuteNonQuery();
+                MessageBox.Show("Cap nhat thanh cong");
+                LoadAcc();
+                ResetForm();
+                sqlConn.Close();
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Sql Error");
+            }
+            
         }
 
         private void ttsmDeleteAcc_Click(object sender, EventArgs e)
         {
-            if (dgvAccount.SelectedRows.Count == 0) return;
-            var rowSelect = dgvAccount.SelectedRows[0];
-            string account = rowSelect.Cells[0].Value.ToString();
-
-            string connectionString = "server=.; database = RestaurantManagement; Integrated Security = true; ";
-            SqlConnection sqlConn = new SqlConnection(connectionString);
-            SqlCommand sqlComd = sqlConn.CreateCommand();
-
-            string query = string.Format("UPDATE RoleAccount SET Actived = '0' WHERE AccountName = '{0}'",account);
-            sqlComd.CommandText = query;
-            sqlConn.Open();
-
-            int numOfRowsEffected = sqlComd.ExecuteNonQuery();
-            if (numOfRowsEffected == 1)
+            try
             {
-                dgvAccount.Rows.Remove(rowSelect);
-                MessageBox.Show("Da xoa thanh cong");
-            }
+                if (dgvAccount.SelectedRows.Count == 0) return;
+                var rowSelect = dgvAccount.SelectedRows[0];
+                string account = rowSelect.Cells[0].Value.ToString();
 
-            sqlConn.Close();
+                string connectionString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
+                SqlConnection sqlConn = new SqlConnection(connectionString);
+                SqlCommand sqlComd = sqlConn.CreateCommand();
+
+                string query = string.Format("UPDATE RoleAccount SET Actived = '0' WHERE AccountName = '{0}'", account);
+                sqlComd.CommandText = query;
+                sqlConn.Open();
+
+                int numOfRowsEffected = sqlComd.ExecuteNonQuery();
+                if (numOfRowsEffected == 1)
+                {
+                    dgvAccount.Rows.Remove(rowSelect);
+                    MessageBox.Show("Da xoa thanh cong");
+                }
+
+                sqlConn.Close();
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Sql Error");
+            }
+            
         }
 
         private void tsmDeleteRole_Click(object sender, EventArgs e)
