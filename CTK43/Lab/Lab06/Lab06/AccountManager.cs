@@ -46,56 +46,37 @@ namespace Lab06
 
         private void cbbSapXep_SelectedIndexChanged(object sender, EventArgs e)
         {
+            rbActive.Checked = false;
+            rbNonActive.Checked = false;
             string connectionString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
             SqlConnection connection = new SqlConnection(connectionString);
             SqlCommand command = connection.CreateCommand();
+            string role = "";
+            if (cbbSapXep.SelectedItem == "Admin") role = "and RoleID = 1";
+            else if (cbbSapXep.SelectedItem == "Kế toán") role = "and RoleID = 2";
+            else if (cbbSapXep.SelectedItem == "Nhân viên thanh toán") role = "and RoleID = 3";
+            else if (cbbSapXep.SelectedItem == "Nhân viên phục vụ") role = "and RoleID = 4";
+            else role = "";
+            this.dgvAccount.DataSource = null;
+            command.CommandText = "SELECT RoleID, Account.AccountName, Password, FullName, Email, Tell, DateCreated FROM Account, RoleAccount " +
+                $" WHERE Account.AccountName = RoleAccount.AccountName {role}" +
+                " ORDER BY RoleAccount.RoleID";
 
-            if (cbbSapXep.SelectedItem == "Nhóm")
-            {
-                this.dgvAccount.DataSource = null;
-                command.CommandText = "SELECT RoleID, Account.AccountName, Password, FullName, Email, Tell, DateCreated FROM Account, RoleAccount " +
-                    " WHERE Account.AccountName = RoleAccount.AccountName" +
-                    " ORDER BY RoleAccount.RoleID";
+            connection.Open();
 
-                connection.Open();
+            this.Text = "Danh sách toàn bộ tài khoản";
 
-                this.Text = "Danh sách toàn bộ tài khoản";
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
 
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable("Food");
+            adapter.Fill(table);
 
-                DataTable table = new DataTable("Food");
-                adapter.Fill(table);
+            dgvAccount.DataSource = table;
 
-                dgvAccount.DataSource = table;
+            // Prevent user to edit ID
+            dgvAccount.Columns[0].ReadOnly = true;
 
-                // Prevent user to edit ID
-                dgvAccount.Columns[0].ReadOnly = true;
-
-                connection.Close();
-            }
-            else
-            {
-                this.dgvAccount.DataSource = null;
-                command.CommandText = "SELECT Actived, Account.AccountName, Password, FullName, Email, Tell, DateCreated FROM Account, RoleAccount " +
-                    " WHERE Account.AccountName = RoleAccount.AccountName" +
-                    " ORDER BY RoleAccount.Actived";
-
-                connection.Open();
-
-                this.Text = "Danh sách toàn bộ tài khoản";
-
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-
-                DataTable table = new DataTable("Food");
-                adapter.Fill(table);
-
-                dgvAccount.DataSource = table;
-
-                // Prevent user to edit ID
-                dgvAccount.Columns[0].ReadOnly = true;
-
-                connection.Close();
-            }
+            connection.Close();
         }
 
         private void btnAddAccount_Click(object sender, EventArgs e)
@@ -108,7 +89,7 @@ namespace Lab06
 
                 connection.Open();
 
-                command.CommandText = "SELECT * FROM Account WHERE Account.AccountName = '" + txtAccount.Text+"'";
+                command.CommandText = "SELECT * FROM Account WHERE Account.AccountName = '" + txtAccount.Text + "'";
                 var check = command.ExecuteScalar();
 
                 if (check == null)
@@ -134,7 +115,7 @@ namespace Lab06
                 connection.Close();
             }
             else
-                MessageBox.Show("Vui long nhap day du thong tin", "Error",MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                MessageBox.Show("Vui long nhap day du thong tin", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
         }
 
         private bool Validation()
@@ -147,7 +128,7 @@ namespace Lab06
 
         private void dgvAccount_Click(object sender, EventArgs e)
         {
-            int index =  dgvAccount.CurrentRow.Index;
+            int index = dgvAccount.CurrentRow.Index;
 
             txtAccount.Text = dgvAccount.Rows[index].Cells["AccountName"].Value.ToString();
             txtPass.Text = dgvAccount.Rows[index].Cells["Password"].Value.ToString();
@@ -221,11 +202,12 @@ namespace Lab06
                 LoadAcc();
                 ResetForm();
                 sqlConn.Close();
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Sql Error");
             }
-            
+
         }
 
         private void ttsmDeleteAcc_Click(object sender, EventArgs e)
@@ -252,11 +234,12 @@ namespace Lab06
                 }
 
                 sqlConn.Close();
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Sql Error");
             }
-            
+
         }
 
         private void tsmDeleteRole_Click(object sender, EventArgs e)
@@ -268,6 +251,26 @@ namespace Lab06
             RoleAcc frm = new RoleAcc();
             frm.Show(this);
             frm.LoadRole(account);
+        }
+
+        private void rbActive_CheckedChanged(object sender, EventArgs e)
+        {
+            string isCheck = rbActive.Checked == true ? "WHERE Actived=1" : "";
+            string connectionString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
+            SqlConnection sqlConn = new SqlConnection(connectionString);
+            SqlCommand sqlComd = sqlConn.CreateCommand();
+
+            string query = "SELECT * FROM RoleAccount " + isCheck;
+            sqlComd.CommandText = query;
+
+            sqlConn.Open();
+
+            SqlDataAdapter da = new SqlDataAdapter(sqlComd);
+            DataTable dt = new DataTable("RoleAccount");
+            da.Fill(dt);
+            dgvAccount.DataSource = dt;
+            sqlConn.Close();
+            da.Dispose();
         }
     }
 }

@@ -31,6 +31,9 @@ namespace Lab06
         {
             this.components = new System.ComponentModel.Container();
             this.dgvAccount = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ttsmDeleteAcc = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmDeleteRole = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.cbbSapXep = new Guna.UI.WinForms.GunaComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,9 +49,8 @@ namespace Lab06
             this.btnAddAccount = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.ttsmDeleteAcc = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmDeleteRole = new System.Windows.Forms.ToolStripMenuItem();
+            this.rbActive = new System.Windows.Forms.RadioButton();
+            this.rbNonActive = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -63,10 +65,34 @@ namespace Lab06
             this.dgvAccount.Location = new System.Drawing.Point(16, 191);
             this.dgvAccount.Margin = new System.Windows.Forms.Padding(4);
             this.dgvAccount.Name = "dgvAccount";
+            this.dgvAccount.RowHeadersWidth = 51;
             this.dgvAccount.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAccount.Size = new System.Drawing.Size(1035, 348);
             this.dgvAccount.TabIndex = 0;
             this.dgvAccount.Click += new System.EventHandler(this.dgvAccount_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ttsmDeleteAcc,
+            this.tsmDeleteRole});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(227, 52);
+            // 
+            // ttsmDeleteAcc
+            // 
+            this.ttsmDeleteAcc.Name = "ttsmDeleteAcc";
+            this.ttsmDeleteAcc.Size = new System.Drawing.Size(226, 24);
+            this.ttsmDeleteAcc.Text = "Xóa tài khoản";
+            this.ttsmDeleteAcc.Click += new System.EventHandler(this.ttsmDeleteAcc_Click);
+            // 
+            // tsmDeleteRole
+            // 
+            this.tsmDeleteRole.Name = "tsmDeleteRole";
+            this.tsmDeleteRole.Size = new System.Drawing.Size(226, 24);
+            this.tsmDeleteRole.Text = "Xem Danh sách vai trò";
+            this.tsmDeleteRole.Click += new System.EventHandler(this.tsmDeleteRole_Click);
             // 
             // label1
             // 
@@ -74,7 +100,7 @@ namespace Lab06
             this.label1.Location = new System.Drawing.Point(16, 23);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 16);
+            this.label1.Size = new System.Drawing.Size(116, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Sắp xếp theo :";
             // 
@@ -91,14 +117,17 @@ namespace Lab06
             this.cbbSapXep.ForeColor = System.Drawing.Color.Black;
             this.cbbSapXep.FormattingEnabled = true;
             this.cbbSapXep.Items.AddRange(new object[] {
-            "Nhóm",
-            "Trạng thái"});
-            this.cbbSapXep.Location = new System.Drawing.Point(127, 19);
+            "Tất cả",
+            "Admin",
+            "Kế toán",
+            "Nhân viên thanh toán",
+            "Nhân viên phục vụ"});
+            this.cbbSapXep.Location = new System.Drawing.Point(127, 13);
             this.cbbSapXep.Margin = new System.Windows.Forms.Padding(4);
             this.cbbSapXep.Name = "cbbSapXep";
             this.cbbSapXep.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.cbbSapXep.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.cbbSapXep.Size = new System.Drawing.Size(219, 26);
+            this.cbbSapXep.Size = new System.Drawing.Size(219, 31);
             this.cbbSapXep.TabIndex = 2;
             this.cbbSapXep.SelectedIndexChanged += new System.EventHandler(this.cbbSapXep_SelectedIndexChanged);
             // 
@@ -108,7 +137,7 @@ namespace Lab06
             this.label2.Location = new System.Drawing.Point(16, 68);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 16);
+            this.label2.Size = new System.Drawing.Size(124, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Account Name:";
             // 
@@ -118,7 +147,7 @@ namespace Lab06
             this.label3.Location = new System.Drawing.Point(16, 113);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 16);
+            this.label3.Size = new System.Drawing.Size(88, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Password:";
             // 
@@ -128,7 +157,7 @@ namespace Lab06
             this.label4.Location = new System.Drawing.Point(16, 158);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 16);
+            this.label4.Size = new System.Drawing.Size(87, 20);
             this.label4.TabIndex = 5;
             this.label4.Text = "Full name:";
             // 
@@ -138,7 +167,7 @@ namespace Lab06
             this.label5.Location = new System.Drawing.Point(353, 68);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 16);
+            this.label5.Size = new System.Drawing.Size(56, 20);
             this.label5.TabIndex = 6;
             this.label5.Text = "Email:";
             // 
@@ -147,7 +176,7 @@ namespace Lab06
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(353, 113);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 16);
+            this.label6.Size = new System.Drawing.Size(41, 20);
             this.label6.TabIndex = 7;
             this.label6.Text = "Tell:";
             // 
@@ -155,35 +184,35 @@ namespace Lab06
             // 
             this.txtAccount.Location = new System.Drawing.Point(127, 65);
             this.txtAccount.Name = "txtAccount";
-            this.txtAccount.Size = new System.Drawing.Size(219, 22);
+            this.txtAccount.Size = new System.Drawing.Size(219, 26);
             this.txtAccount.TabIndex = 8;
             // 
             // txtPass
             // 
             this.txtPass.Location = new System.Drawing.Point(127, 113);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(219, 22);
+            this.txtPass.Size = new System.Drawing.Size(219, 26);
             this.txtPass.TabIndex = 9;
             // 
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(127, 155);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(219, 22);
+            this.txtName.Size = new System.Drawing.Size(219, 26);
             this.txtName.TabIndex = 10;
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(405, 65);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(219, 22);
+            this.txtEmail.Size = new System.Drawing.Size(219, 26);
             this.txtEmail.TabIndex = 11;
             // 
             // txtTell
             // 
             this.txtTell.Location = new System.Drawing.Point(405, 107);
             this.txtTell.Name = "txtTell";
-            this.txtTell.Size = new System.Drawing.Size(219, 22);
+            this.txtTell.Size = new System.Drawing.Size(219, 26);
             this.txtTell.TabIndex = 12;
             // 
             // btnAddAccount
@@ -218,33 +247,36 @@ namespace Lab06
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // contextMenuStrip1
+            // rbActive
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ttsmDeleteAcc,
-            this.tsmDeleteRole});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(193, 48);
+            this.rbActive.AutoSize = true;
+            this.rbActive.Location = new System.Drawing.Point(405, 13);
+            this.rbActive.Name = "rbActive";
+            this.rbActive.Size = new System.Drawing.Size(76, 24);
+            this.rbActive.TabIndex = 16;
+            this.rbActive.TabStop = true;
+            this.rbActive.Text = "Active";
+            this.rbActive.UseVisualStyleBackColor = true;
+            this.rbActive.CheckedChanged += new System.EventHandler(this.rbActive_CheckedChanged);
             // 
-            // ttsmDeleteAcc
+            // rbNonActive
             // 
-            this.ttsmDeleteAcc.Name = "ttsmDeleteAcc";
-            this.ttsmDeleteAcc.Size = new System.Drawing.Size(192, 22);
-            this.ttsmDeleteAcc.Text = "Xóa tài khoản";
-            this.ttsmDeleteAcc.Click += new System.EventHandler(this.ttsmDeleteAcc_Click);
-            // 
-            // tsmDeleteRole
-            // 
-            this.tsmDeleteRole.Name = "tsmDeleteRole";
-            this.tsmDeleteRole.Size = new System.Drawing.Size(192, 22);
-            this.tsmDeleteRole.Text = "Xem Danh sách vai trò";
-            this.tsmDeleteRole.Click += new System.EventHandler(this.tsmDeleteRole_Click);
+            this.rbNonActive.AutoSize = true;
+            this.rbNonActive.Location = new System.Drawing.Point(499, 13);
+            this.rbNonActive.Name = "rbNonActive";
+            this.rbNonActive.Size = new System.Drawing.Size(106, 24);
+            this.rbNonActive.TabIndex = 17;
+            this.rbNonActive.TabStop = true;
+            this.rbNonActive.Text = "NonActive";
+            this.rbNonActive.UseVisualStyleBackColor = true;
             // 
             // AccountManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.rbNonActive);
+            this.Controls.Add(this.rbActive);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAddAccount);
@@ -293,5 +325,7 @@ namespace Lab06
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ttsmDeleteAcc;
         private System.Windows.Forms.ToolStripMenuItem tsmDeleteRole;
+        private System.Windows.Forms.RadioButton rbActive;
+        private System.Windows.Forms.RadioButton rbNonActive;
     }
 }
