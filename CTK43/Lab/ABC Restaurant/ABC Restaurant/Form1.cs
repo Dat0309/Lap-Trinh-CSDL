@@ -23,7 +23,10 @@ namespace ABC_Restaurant
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            foreach (FontFamily font in FontFamily.Families)
+            {
+                tsccbFont.Items.Add(font.Name.ToString());
+            }
         }
 
         private void tsmAddCustomers_Click(object sender, EventArgs e)
@@ -201,6 +204,36 @@ namespace ABC_Restaurant
         private void tsmNewOrder_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tsccbFont_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Font = new Font(tsccbFont.Text, this.Font.Size);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "error");
+            }
+        }
+
+        private void tsccbSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Font = new Font(this.Font.FontFamily, float.Parse(tsccbSize.SelectedItem.ToString()));
+            }
+            catch { }
+        }
+
+        private void tsbColor_Click(object sender, EventArgs e)
+        {
+            DialogResult dlg = this.colorDialog1.ShowDialog();
+            if (dlg == DialogResult.OK)
+            {
+                this.ForeColor = colorDialog1.Color;
+            }
         }
     }
 }

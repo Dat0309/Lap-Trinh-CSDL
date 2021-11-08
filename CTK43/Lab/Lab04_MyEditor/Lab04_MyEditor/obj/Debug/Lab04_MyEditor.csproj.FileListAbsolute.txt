@@ -9,3 +9,15 @@ D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\obj\Debug\Lab04_M
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\obj\Debug\Lab04_MyEditor.exe
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\obj\Debug\Lab04_MyEditor.pdb
 D:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\obj\Debug\Lab04_MyEditor.frmEditor.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\bin\Debug\Lab04_MyEditor.exe.config
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\bin\Debug\Lab04_MyEditor.exe
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\bin\Debug\Lab04_MyEditor.pdb
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\obj\Debug\Lab04_MyEditor.csproj.AssemblyReference.cache
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\obj\Debug\Lab04_MyEditor.csproj.SuggestedBindingRedirects.cache
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\obj\Debug\Lab04_MyEditor.frmEditor.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\obj\Debug\Lab04_MyEditor.Form1.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\obj\Debug\Lab04_MyEditor.Properties.Resources.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\obj\Debug\Lab04_MyEditor.csproj.GenerateResource.cache
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\obj\Debug\Lab04_MyEditor.csproj.CoreCompileInputs.cache
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\obj\Debug\Lab04_MyEditor.exe
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab04_MyEditor\Lab04_MyEditor\obj\Debug\Lab04_MyEditor.pdb
