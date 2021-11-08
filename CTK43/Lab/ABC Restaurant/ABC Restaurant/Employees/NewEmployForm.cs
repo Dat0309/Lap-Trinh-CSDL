@@ -30,63 +30,71 @@ namespace ABC_Restaurant.Employees
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            try
+            if(Validation())
             {
-                string connString = "server=WINDOWS-11\\SQLEXPRESS; database = NorthwindCompany; Integrated Security = true; ";
-                SqlConnection conn = new SqlConnection(connString);
-
-                SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = "EXECUTE InsertEmployee @lastName,@firstName,@title,@birthDay,@address,@city,@region,@postalCode,@country,@phone,@photo,@note";
-
-                cmd.Parameters.Add("@lastName", SqlDbType.NVarChar, 50);
-                cmd.Parameters.Add("@firstName", SqlDbType.NVarChar, 100);
-                cmd.Parameters.Add("@title", SqlDbType.NVarChar, 250);
-                cmd.Parameters.Add("@birthDay", SqlDbType.SmallDateTime);
-                cmd.Parameters.Add("@address", SqlDbType.NVarChar, 250);
-                cmd.Parameters.Add("@city", SqlDbType.NVarChar, 250);
-                cmd.Parameters.Add("@region", SqlDbType.NVarChar, 250);
-                cmd.Parameters.Add("@postalCode", SqlDbType.NVarChar, 250);
-                cmd.Parameters.Add("@country", SqlDbType.NVarChar, 250);
-                cmd.Parameters.Add("@phone", SqlDbType.NVarChar, 250);
-                cmd.Parameters.Add("@photo", SqlDbType.NVarChar, 250);
-                cmd.Parameters.Add("@note", SqlDbType.NVarChar, 250);
-
-                cmd.Parameters["@lastName"].Value = txtLastName.Text;
-                cmd.Parameters["@firstName"].Value = txtFirstName.Text;
-                cmd.Parameters["@title"].Value = txtTitle.Text;
-                cmd.Parameters["@birthDay"].Value = dttpDate.Value.ToShortDateString();
-                cmd.Parameters["@address"].Value = txtAddress.Text;
-                cmd.Parameters["@city"].Value = txtCity.Text;
-                cmd.Parameters["@region"].Value = txtRegion.Text;
-                cmd.Parameters["@postalCode"].Value = txtPostalCode.Text;
-                cmd.Parameters["@country"].Value = txtContry.Text;
-                cmd.Parameters["@phone"].Value = mtbPhone.Text;
-                cmd.Parameters["@photo"].Value = txtPhoto.Text;
-                cmd.Parameters["@note"].Value = rtbNote.Text;
-                
-
-                conn.Open();
-
-                int numRow = cmd.ExecuteNonQuery();
-
-                if (numRow > 0)
+                try
                 {
-                    MessageBox.Show("Successfully adding new Customer", "Message");
-                    DialogResult = DialogResult.OK;
-                    this.ResetText();
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Adding customer failed");
-                }
+                    string connString = "server=WINDOWS-11\\SQLEXPRESS; database = NorthwindCompany; Integrated Security = true; ";
+                    SqlConnection conn = new SqlConnection(connString);
 
-                conn.Close();
+                    SqlCommand cmd = conn.CreateCommand();
+                    cmd.CommandText = "EXECUTE InsertEmployee @lastName,@firstName,@title,@birthDay,@address,@city,@region,@postalCode,@country,@phone,@photo,@note";
+
+                    cmd.Parameters.Add("@lastName", SqlDbType.NVarChar, 50);
+                    cmd.Parameters.Add("@firstName", SqlDbType.NVarChar, 100);
+                    cmd.Parameters.Add("@title", SqlDbType.NVarChar, 250);
+                    cmd.Parameters.Add("@birthDay", SqlDbType.SmallDateTime);
+                    cmd.Parameters.Add("@address", SqlDbType.NVarChar, 250);
+                    cmd.Parameters.Add("@city", SqlDbType.NVarChar, 250);
+                    cmd.Parameters.Add("@region", SqlDbType.NVarChar, 250);
+                    cmd.Parameters.Add("@postalCode", SqlDbType.NVarChar, 250);
+                    cmd.Parameters.Add("@country", SqlDbType.NVarChar, 250);
+                    cmd.Parameters.Add("@phone", SqlDbType.NVarChar, 250);
+                    cmd.Parameters.Add("@photo", SqlDbType.NVarChar, 250);
+                    cmd.Parameters.Add("@note", SqlDbType.NVarChar, 250);
+
+                    cmd.Parameters["@lastName"].Value = txtLastName.Text;
+                    cmd.Parameters["@firstName"].Value = txtFirstName.Text;
+                    cmd.Parameters["@title"].Value = txtTitle.Text;
+                    cmd.Parameters["@birthDay"].Value = dttpDate.Value.ToShortDateString();
+                    cmd.Parameters["@address"].Value = txtAddress.Text;
+                    cmd.Parameters["@city"].Value = txtCity.Text;
+                    cmd.Parameters["@region"].Value = txtRegion.Text;
+                    cmd.Parameters["@postalCode"].Value = txtPostalCode.Text;
+                    cmd.Parameters["@country"].Value = txtContry.Text;
+                    cmd.Parameters["@phone"].Value = mtbPhone.Text;
+                    cmd.Parameters["@photo"].Value = txtPhoto.Text;
+                    cmd.Parameters["@note"].Value = rtbNote.Text;
+
+
+                    conn.Open();
+
+                    int numRow = cmd.ExecuteNonQuery();
+
+                    if (numRow > 0)
+                    {
+                        MessageBox.Show("Successfully adding new Customer", "Message");
+                        DialogResult = DialogResult.OK;
+                        this.ResetText();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Adding customer failed");
+                    }
+
+                    conn.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "SQL Error");
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "SQL Error");
+                MessageBox.Show("Chưa nhập đủ trường cần thiết", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
 
         private void btnAddPhoto_Click(object sender, EventArgs e)
@@ -99,6 +107,16 @@ namespace ABC_Restaurant.Employees
                 txtPhoto.Text = fileName;
                 pbImg.Load(fileName);
             }
+        }
+
+        private bool Validation()
+        {
+            if (string.IsNullOrEmpty(txtFirstName.Text)) return false;
+            else if (string.IsNullOrEmpty(txtLastName.Text)) return false;
+            else if(string.IsNullOrEmpty(txtAddress.Text)) return false;
+            else if(string.IsNullOrEmpty(txtCity.Text)) return false;
+            else if(string.IsNullOrEmpty(txtContry.Text)) return false;
+            else return true;
         }
     }
 }

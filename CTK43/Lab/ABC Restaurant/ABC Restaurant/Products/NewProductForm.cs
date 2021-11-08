@@ -25,55 +25,62 @@ namespace ABC_Restaurant.Products
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            try
+            if (Validation())
             {
-                string connString = "server=WINDOWS-11\\SQLEXPRESS; database = NorthwindCompany; Integrated Security = true; ";
-                SqlConnection conn = new SqlConnection(connString);
-
-                SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = "EXECUTE InsertPrroduct @name,@suppid,@catid,@quantity,@price,@stock,@order,@lever,@active";
-
-                cmd.Parameters.Add("@name", SqlDbType.NVarChar, 250);
-                cmd.Parameters.Add("@suppid", SqlDbType.Int);
-                cmd.Parameters.Add("@catid", SqlDbType.Int);
-                cmd.Parameters.Add("@quantity", SqlDbType.Int);
-                cmd.Parameters.Add("@price", SqlDbType.NVarChar, 250);
-                cmd.Parameters.Add("@stock", SqlDbType.NVarChar, 250);
-                cmd.Parameters.Add("@order", SqlDbType.NVarChar, 250);
-                cmd.Parameters.Add("@lever", SqlDbType.Int);
-                cmd.Parameters.Add("@active", SqlDbType.Bit);
-
-                cmd.Parameters["@name"].Value = txtName.Text;
-                cmd.Parameters["@suppid"].Value = cbbSupp.SelectedValue;
-                cmd.Parameters["@catid"].Value = cbbCat.SelectedValue;
-                cmd.Parameters["@quantity"].Value = txtQuantity.Text;
-                cmd.Parameters["@price"].Value = txtPrice.Text;
-                cmd.Parameters["@stock"].Value = txtStock.Text;
-                cmd.Parameters["@order"].Value = txtOrder.Text;
-                cmd.Parameters["@lever"].Value = txtRenderLv.Text;
-                cmd.Parameters["@active"].Value = rbActive.Checked == true ? true : false;
-
-                conn.Open();
-
-                int numRow = cmd.ExecuteNonQuery();
-
-                if (numRow > 0)
+                try
                 {
-                    MessageBox.Show("Successfully adding new Product", "Message");
-                    DialogResult = DialogResult.OK;
-                    this.ResetText();
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Adding customer failed");
-                }
+                    string connString = "server=WINDOWS-11\\SQLEXPRESS; database = NorthwindCompany; Integrated Security = true; ";
+                    SqlConnection conn = new SqlConnection(connString);
 
-                conn.Close();
+                    SqlCommand cmd = conn.CreateCommand();
+                    cmd.CommandText = "EXECUTE InsertPrroduct @name,@suppid,@catid,@quantity,@price,@stock,@order,@lever,@active";
+
+                    cmd.Parameters.Add("@name", SqlDbType.NVarChar, 250);
+                    cmd.Parameters.Add("@suppid", SqlDbType.Int);
+                    cmd.Parameters.Add("@catid", SqlDbType.Int);
+                    cmd.Parameters.Add("@quantity", SqlDbType.Int);
+                    cmd.Parameters.Add("@price", SqlDbType.NVarChar, 250);
+                    cmd.Parameters.Add("@stock", SqlDbType.NVarChar, 250);
+                    cmd.Parameters.Add("@order", SqlDbType.NVarChar, 250);
+                    cmd.Parameters.Add("@lever", SqlDbType.Int);
+                    cmd.Parameters.Add("@active", SqlDbType.Bit);
+
+                    cmd.Parameters["@name"].Value = txtName.Text;
+                    cmd.Parameters["@suppid"].Value = cbbSupp.SelectedValue;
+                    cmd.Parameters["@catid"].Value = cbbCat.SelectedValue;
+                    cmd.Parameters["@quantity"].Value = txtQuantity.Text;
+                    cmd.Parameters["@price"].Value = txtPrice.Text;
+                    cmd.Parameters["@stock"].Value = txtStock.Text;
+                    cmd.Parameters["@order"].Value = txtOrder.Text;
+                    cmd.Parameters["@lever"].Value = txtRenderLv.Text;
+                    cmd.Parameters["@active"].Value = rbActive.Checked == true ? true : false;
+
+                    conn.Open();
+
+                    int numRow = cmd.ExecuteNonQuery();
+
+                    if (numRow > 0)
+                    {
+                        MessageBox.Show("Successfully adding new Product", "Message");
+                        DialogResult = DialogResult.OK;
+                        this.ResetText();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Adding customer failed");
+                    }
+
+                    conn.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "SQL Error");
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "SQL Error");
+                MessageBox.Show("Chưa nhập đủ trường", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -122,6 +129,15 @@ namespace ABC_Restaurant.Products
             cbbSupp.DataSource = dt;
             cbbSupp.DisplayMember = "CompanyName";
             cbbSupp.ValueMember = "SupplierID";
+        }
+        private bool Validation()
+        {
+            if (string.IsNullOrEmpty(txtName.Text)) return false;
+            else if (string.IsNullOrEmpty(txtPrice.Text)) return false;
+            else if (string.IsNullOrEmpty(cbbCat.Text)) return false;
+            else if (string.IsNullOrEmpty(cbbSupp.Text)) return false;
+            else if (rbActive.Checked == false && rbUnActive.Checked == false) return false;
+            else return true;
         }
     }
 }
