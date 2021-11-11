@@ -72,7 +72,7 @@ namespace Lab07
                 SqlConnection conn = new SqlConnection(connString);
 
                 SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = "EXECUTE InsertFood @id output, @name, @unit, @foodCategoryID, @price, @notes";
+                cmd.CommandText = "EXECUTE InsertFood @id output, @name, @unit, @foodCategoryID, @price, @notes, @pic";
 
                 cmd.Parameters.Add("@id", SqlDbType.Int);
                 cmd.Parameters.Add("@name", SqlDbType.NVarChar, 3000);
@@ -80,6 +80,7 @@ namespace Lab07
                 cmd.Parameters.Add("@foodCategoryID", SqlDbType.Int);
                 cmd.Parameters.Add("@price", SqlDbType.Int);
                 cmd.Parameters.Add("@notes", SqlDbType.NVarChar, 3000);
+                cmd.Parameters.Add("@pic", SqlDbType.NVarChar, 3000);
 
                 cmd.Parameters["@id"].Direction = ParameterDirection.Output;
 
@@ -88,6 +89,7 @@ namespace Lab07
                 cmd.Parameters["@foodCategoryID"].Value = cbbCatName.SelectedValue;
                 cmd.Parameters["@price"].Value = nudPrice.Text;
                 cmd.Parameters["@notes"].Value = txtNotes.Text;
+                cmd.Parameters["@pic"].Value = "E:\\NAM3\\Restaurant - Managerment - Winform - C -\\QuanLyDangKyHocPhan\\QuanLyDangKyHocPhan\\Resources\\food.png";
 
                 conn.Open();
 

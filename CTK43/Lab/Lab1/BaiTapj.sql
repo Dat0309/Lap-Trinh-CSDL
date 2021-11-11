@@ -522,3 +522,9 @@ begin
 end
 
 exec dbo._MonKhachKhongDat
+
+
+UPDATE dbo.Bills SET Amount = (	SELECT SUM(Food.Price*BillDetails.Quantity) 
+								FROM dbo.BillDetails, dbo.Food 
+								WHERE BillDetails.InvoiceID=Bills.ID and Food.ID = BillDetails.FoodID)
+where Bills.ID = 20
