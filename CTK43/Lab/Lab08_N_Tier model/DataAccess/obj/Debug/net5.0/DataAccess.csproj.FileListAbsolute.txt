@@ -1,0 +1,12 @@
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\DataAccess\bin\Debug\net5.0\DataAccess.deps.json
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\DataAccess\bin\Debug\net5.0\DataAccess.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\DataAccess\bin\Debug\net5.0\ref\DataAccess.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\DataAccess\bin\Debug\net5.0\DataAccess.pdb
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\DataAccess\obj\Debug\net5.0\DataAccess.csproj.AssemblyReference.cache
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\DataAccess\obj\Debug\net5.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfoInputs.cache
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfo.cs
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CoreCompileInputs.cache
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\DataAccess\obj\Debug\net5.0\DataAccess.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\DataAccess\obj\Debug\net5.0\DataAccess.pdb

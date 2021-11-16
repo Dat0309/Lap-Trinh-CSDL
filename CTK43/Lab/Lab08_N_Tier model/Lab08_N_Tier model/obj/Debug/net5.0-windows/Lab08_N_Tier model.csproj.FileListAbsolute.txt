@@ -1,0 +1,43 @@
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\obj\Debug\net5.0-windows\Lab08_N_Tier model.csproj.AssemblyReference.cache
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\obj\Debug\net5.0-windows\Lab08_N_Tier_model.Form1.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\obj\Debug\net5.0-windows\Lab08_N_Tier model.csproj.GenerateResource.cache
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\obj\Debug\net5.0-windows\Lab08_N_Tier model.GeneratedMSBuildEditorConfig.editorconfig
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\obj\Debug\net5.0-windows\Lab08_N_Tier model.AssemblyInfoInputs.cache
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\obj\Debug\net5.0-windows\Lab08_N_Tier model.AssemblyInfo.cs
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\obj\Debug\net5.0-windows\Lab08_N_Tier model.csproj.CoreCompileInputs.cache
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\Lab08_N_Tier model.exe
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\Lab08_N_Tier model.dll.config
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\Lab08_N_Tier model.deps.json
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\Lab08_N_Tier model.runtimeconfig.json
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\Lab08_N_Tier model.runtimeconfig.dev.json
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\Lab08_N_Tier model.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\ref\Lab08_N_Tier model.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\Lab08_N_Tier model.pdb
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\Microsoft.Win32.SystemEvents.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\System.Configuration.ConfigurationManager.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\System.Drawing.Common.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\System.Security.AccessControl.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\System.Security.Cryptography.ProtectedData.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\System.Security.Permissions.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\System.Windows.Extensions.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\System.Drawing.Common.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\System.Drawing.Common.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Security.AccessControl.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\System.Windows.Extensions.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\BusinessLogic.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\DataAccess.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\BusinessLogic.pdb
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\bin\Debug\net5.0-windows\DataAccess.pdb
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\obj\Debug\net5.0-windows\Lab08_N_Tier model.csproj.CopyComplete
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\obj\Debug\net5.0-windows\Lab08_N_Tier model.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\obj\Debug\net5.0-windows\ref\Lab08_N_Tier model.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\obj\Debug\net5.0-windows\Lab08_N_Tier model.pdb
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\Lab08_N_Tier model\obj\Debug\net5.0-windows\Lab08_N_Tier model.genruntimeconfig.cache

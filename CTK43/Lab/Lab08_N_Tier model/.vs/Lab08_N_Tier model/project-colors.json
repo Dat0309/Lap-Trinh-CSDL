@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a0ec3bd2-932a-497b-8d62-4368ece10570": {
+      "ProjectGuid": "a0ec3bd2-932a-497b-8d62-4368ece10570",
+      "DisplayName": "Lab08_N_Tier model",
+      "ColorIndex": 0
+    },
+    "cd3323d3-7a76-469c-9d44-bcd0f77f796a": {
+      "ProjectGuid": "cd3323d3-7a76-469c-9d44-bcd0f77f796a",
+      "DisplayName": "BusinessLogic",
+      "ColorIndex": 1
+    },
+    "170497cf-42d2-42b8-a354-768adb57bfed": {
+      "ProjectGuid": "170497cf-42d2-42b8-a354-768adb57bfed",
+      "DisplayName": "DataAccess",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

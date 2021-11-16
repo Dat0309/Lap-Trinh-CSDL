@@ -1,0 +1,15 @@
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\BusinessLogic\bin\Debug\net5.0\BusinessLogic.deps.json
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\BusinessLogic\bin\Debug\net5.0\BusinessLogic.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\BusinessLogic\bin\Debug\net5.0\ref\BusinessLogic.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\BusinessLogic\bin\Debug\net5.0\BusinessLogic.pdb
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\BusinessLogic\bin\Debug\net5.0\DataAccess.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\BusinessLogic\bin\Debug\net5.0\DataAccess.pdb
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\BusinessLogic\obj\Debug\net5.0\BusinessLogic.csproj.AssemblyReference.cache
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\BusinessLogic\obj\Debug\net5.0\BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\BusinessLogic\obj\Debug\net5.0\BusinessLogic.AssemblyInfoInputs.cache
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\BusinessLogic\obj\Debug\net5.0\BusinessLogic.AssemblyInfo.cs
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\BusinessLogic\obj\Debug\net5.0\BusinessLogic.csproj.CoreCompileInputs.cache
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\BusinessLogic\obj\Debug\net5.0\BusinessLogic.csproj.CopyComplete
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\BusinessLogic\obj\Debug\net5.0\BusinessLogic.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\BusinessLogic\obj\Debug\net5.0\ref\BusinessLogic.dll
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab08_N_Tier model\BusinessLogic\obj\Debug\net5.0\BusinessLogic.pdb
