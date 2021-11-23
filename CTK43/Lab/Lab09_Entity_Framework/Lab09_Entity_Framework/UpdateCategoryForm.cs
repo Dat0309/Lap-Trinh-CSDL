@@ -25,11 +25,19 @@ namespace Lab09_Entity_Framework
 
         #region Cac ham xu ly
 
+        /// <summary>
+        /// Hàm xuất nhóm món ăn theo id
+        /// </summary>
+        /// <param name="categoryId"></param>
+        /// <returns></returns>
         private Category? GetCategoryById(int categoryId)
         {
             return categoryId > 0 ? _dbContext.Categories.Find(categoryId) : null;
         }
 
+        /// <summary>
+        /// Hàm xuất nhóm món ăn
+        /// </summary>
         private void ShowCategory()
         {
             var category = GetCategoryById(_categoryId);
@@ -41,6 +49,10 @@ namespace Lab09_Entity_Framework
             cbbCategoryType.SelectedIndex = (int)category.Type;
         }
 
+        /// <summary>
+        /// Hàm lấy thông tin update nhóm món ăn treen controller
+        /// </summary>
+        /// <returns></returns>
         private Category GetUpdateCategory()
         {
             var category = new Category()
@@ -54,6 +66,10 @@ namespace Lab09_Entity_Framework
             return category;
         }
 
+        /// <summary>
+        /// Hàm kiểm tra thông tin người dùng nhập vào
+        /// </summary>
+        /// <returns></returns>
         private bool ValidateUserInput()
         {
             if (string.IsNullOrWhiteSpace(txtCategoryName.Text))
@@ -76,6 +92,11 @@ namespace Lab09_Entity_Framework
             ShowCategory();
         }
 
+        /// <summary>
+        /// Sự kiện nút lưu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (ValidateUserInput())

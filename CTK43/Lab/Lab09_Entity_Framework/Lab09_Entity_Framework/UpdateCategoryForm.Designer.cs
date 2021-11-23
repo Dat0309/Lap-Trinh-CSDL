@@ -40,6 +40,7 @@
             // 
             // txtCategoryId
             // 
+            this.txtCategoryId.Enabled = false;
             this.txtCategoryId.Location = new System.Drawing.Point(181, 24);
             this.txtCategoryId.Name = "txtCategoryId";
             this.txtCategoryId.ReadOnly = true;

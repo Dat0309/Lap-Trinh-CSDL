@@ -79,6 +79,7 @@
             this.btnAddCategory.Size = new System.Drawing.Size(39, 37);
             this.btnAddCategory.TabIndex = 1;
             this.btnAddCategory.UseVisualStyleBackColor = true;
+            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
             // tvwCategory
             // 
@@ -89,6 +90,7 @@
             this.tvwCategory.Size = new System.Drawing.Size(328, 493);
             this.tvwCategory.TabIndex = 0;
             this.tvwCategory.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvwCategory_AfterSelect);
+            this.tvwCategory.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvwCategory_NodeMouseDoubleClick);
             // 
             // groupBox2
             // 
@@ -111,6 +113,7 @@
             this.btnReloadFood.Size = new System.Drawing.Size(42, 37);
             this.btnReloadFood.TabIndex = 5;
             this.btnReloadFood.UseVisualStyleBackColor = true;
+            this.btnReloadFood.Click += new System.EventHandler(this.btnReloadFood_Click);
             // 
             // btnDelete
             // 
@@ -120,6 +123,7 @@
             this.btnDelete.Size = new System.Drawing.Size(42, 37);
             this.btnDelete.TabIndex = 4;
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAddFood
             // 
@@ -129,6 +133,7 @@
             this.btnAddFood.Size = new System.Drawing.Size(39, 37);
             this.btnAddFood.TabIndex = 3;
             this.btnAddFood.UseVisualStyleBackColor = true;
+            this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
             // 
             // lvwFood
             // 
@@ -152,6 +157,7 @@
             this.lvwFood.TabIndex = 0;
             this.lvwFood.UseCompatibleStateImageBehavior = false;
             this.lvwFood.View = System.Windows.Forms.View.Details;
+            this.lvwFood.DoubleClick += new System.EventHandler(this.lvwFood_DoubleClick);
             // 
             // columnHeader1
             // 

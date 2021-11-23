@@ -164,14 +164,111 @@ namespace Lab09_Entity_Framework
             ShowCategories();
         }
 
+        /// <summary>
+        /// Sự kiện nút reload danh sách nhóm món ăn
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnReloadCategory_Click(object sender, EventArgs e)
         {
             ShowCategories();
         }
 
+        /// <summary>
+        /// Sự kiện chọn nhóm món ăn
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tvwCategory_AfterSelect(object sender, TreeViewEventArgs e)
         {
             ShowFoodsForNode(e.Node);
+        }
+
+        /// <summary>
+        /// Sự kiện nút thêm nhóm món ăn
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnAddCategory_Click(object sender, EventArgs e)
+        {
+            var dialog = new UpdateCategoryForm();
+            if(dialog.ShowDialog(this) == DialogResult.OK)
+                ShowCategories();
+        }
+
+        /// <summary>
+        /// Sự kiện double click vào danh sách nhóm món ăn
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tvwCategory_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            if (e.Node == null || e.Node.Level < 2 || e.Node.Tag == null) return;
+
+            var category = e.Node.Tag as Category;
+            var dialog = new UpdateCategoryForm(category?.Id);
+            if (dialog.ShowDialog(this) == DialogResult.OK)
+                ShowCategories();
+        }
+
+        /// <summary>
+        /// Sự kiện nút tải lại danh sách món ăn
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnReloadFood_Click(object sender, EventArgs e)
+        {
+            ShowFoodsForNode(tvwCategory.SelectedNode);
+        }
+
+        /// <summary>
+        /// Sự kiến nút xoá món ăn
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if(lvwFood.SelectedItems.Count == 0) return;
+            var dbContext = new RestaurantContext();
+            var selectFoodId = int.Parse(lvwFood.SelectedItems[0].Text);
+
+            var selectdFood = dbContext.Foods.Find(selectFoodId);
+
+            if(selectdFood != null)
+            {
+                dbContext.Foods.Remove(selectdFood);
+                dbContext.SaveChanges();
+
+                lvwFood.Items.Remove(lvwFood.SelectedItems[0]);
+            }
+        }
+
+        /// <summary>
+        /// Sự kiện nhấn nút thêm món ăn, xuất form thêm món ăn
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnAddFood_Click(object sender, EventArgs e)
+        {
+            var dialog = new UpdateFoodForm();
+            if (dialog.ShowDialog(this) == DialogResult.OK)
+                ShowFoodsForNode(tvwCategory.SelectedNode);
+        }
+        /// <summary>
+        /// Sự kiện click đôi trên listview food
+        /// Xuất form cập nhật thông tin món ăn
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void lvwFood_DoubleClick(object sender, EventArgs e)
+        {
+            if (lvwFood.SelectedItems.Count == 0) return;
+
+            var foodId = int.Parse(lvwFood.SelectedItems[0].Text);
+            var dialog = new UpdateFoodForm(foodId);
+            if (dialog.ShowDialog(this) == DialogResult.OK)
+                ShowFoodsForNode(tvwCategory.SelectedNode);
         }
     }
 }

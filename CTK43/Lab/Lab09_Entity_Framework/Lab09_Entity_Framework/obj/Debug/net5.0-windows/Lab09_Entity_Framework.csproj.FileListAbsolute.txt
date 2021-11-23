@@ -27,3 +27,5 @@ E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab09_Entity_Framework\Lab09_Entity_Framework\o
 E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab09_Entity_Framework\Lab09_Entity_Framework\obj\Debug\net5.0-windows\ref\Lab09_Entity_Framework.dll
 E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab09_Entity_Framework\Lab09_Entity_Framework\obj\Debug\net5.0-windows\Lab09_Entity_Framework.pdb
 E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab09_Entity_Framework\Lab09_Entity_Framework\obj\Debug\net5.0-windows\Lab09_Entity_Framework.genruntimeconfig.cache
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab09_Entity_Framework\Lab09_Entity_Framework\obj\Debug\net5.0-windows\Lab09_Entity_Framework.UpdateCategoryForm.resources
+E:\NAM3\Lap-Trinh-CSDL\CTK43\Lab\Lab09_Entity_Framework\Lab09_Entity_Framework\obj\Debug\net5.0-windows\Lab09_Entity_Framework.UpdateFoodForm.resources
