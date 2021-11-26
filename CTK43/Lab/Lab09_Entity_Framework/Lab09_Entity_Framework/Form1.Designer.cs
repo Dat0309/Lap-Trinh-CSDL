@@ -45,8 +45,15 @@
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.roleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.activityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -54,9 +61,9 @@
             this.groupBox1.Controls.Add(this.btnReloadCategory);
             this.groupBox1.Controls.Add(this.btnAddCategory);
             this.groupBox1.Controls.Add(this.tvwCategory);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 37);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(340, 567);
+            this.groupBox1.Size = new System.Drawing.Size(340, 542);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh mục";
@@ -87,7 +94,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.tvwCategory.Location = new System.Drawing.Point(6, 68);
             this.tvwCategory.Name = "tvwCategory";
-            this.tvwCategory.Size = new System.Drawing.Size(328, 493);
+            this.tvwCategory.Size = new System.Drawing.Size(328, 468);
             this.tvwCategory.TabIndex = 0;
             this.tvwCategory.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvwCategory_AfterSelect);
             this.tvwCategory.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvwCategory_NodeMouseDoubleClick);
@@ -98,9 +105,9 @@
             this.groupBox2.Controls.Add(this.btnDelete);
             this.groupBox2.Controls.Add(this.btnAddFood);
             this.groupBox2.Controls.Add(this.lvwFood);
-            this.groupBox2.Location = new System.Drawing.Point(375, 12);
+            this.groupBox2.Location = new System.Drawing.Point(375, 37);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(802, 567);
+            this.groupBox2.Size = new System.Drawing.Size(802, 542);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thực đơn";
@@ -153,7 +160,7 @@
             this.lvwFood.Location = new System.Drawing.Point(6, 68);
             this.lvwFood.MultiSelect = false;
             this.lvwFood.Name = "lvwFood";
-            this.lvwFood.Size = new System.Drawing.Size(790, 493);
+            this.lvwFood.Size = new System.Drawing.Size(790, 468);
             this.lvwFood.TabIndex = 0;
             this.lvwFood.UseCompatibleStateImageBehavior = false;
             this.lvwFood.View = System.Windows.Forms.View.Details;
@@ -183,6 +190,51 @@
             // 
             this.columnHeader6.Text = "Ghi chú";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.roleToolStripMenuItem,
+            this.accountToolStripMenuItem,
+            this.tableToolStripMenuItem,
+            this.menuToolStripMenuItem,
+            this.activityToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1189, 28);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // roleToolStripMenuItem
+            // 
+            this.roleToolStripMenuItem.Name = "roleToolStripMenuItem";
+            this.roleToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.roleToolStripMenuItem.Text = "Role";
+            // 
+            // accountToolStripMenuItem
+            // 
+            this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
+            this.accountToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
+            this.accountToolStripMenuItem.Text = "Account";
+            // 
+            // tableToolStripMenuItem
+            // 
+            this.tableToolStripMenuItem.Name = "tableToolStripMenuItem";
+            this.tableToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
+            this.tableToolStripMenuItem.Text = "Table";
+            // 
+            // menuToolStripMenuItem
+            // 
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
+            this.menuToolStripMenuItem.Text = "Menu";
+            // 
+            // activityToolStripMenuItem
+            // 
+            this.activityToolStripMenuItem.Name = "activityToolStripMenuItem";
+            this.activityToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
+            this.activityToolStripMenuItem.Text = "Activity";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -190,13 +242,18 @@
             this.ClientSize = new System.Drawing.Size(1189, 591);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý nhà hàng";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -218,5 +275,11 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem roleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem accountToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tableToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem activityToolStripMenuItem;
     }
 }
